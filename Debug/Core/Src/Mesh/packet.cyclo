@@ -1,0 +1,4 @@
+../Core/Src/Mesh/packet.c:6:9:mesh_crc	4
+../Core/Src/Mesh/packet.c:20:6:validate_packet	1
+../Core/Src/Mesh/packet.c:25:5:mesh_build_packet	12
+../Core/Src/Mesh/packet.c:63:12:process_packet	1
