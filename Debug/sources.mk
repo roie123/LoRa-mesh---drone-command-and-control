@@ -24,6 +24,7 @@ C_DEPS :=
 SUBDIRS := \
 Core/Src/LoRa \
 Core/Src/Mesh \
+Core/Src/Routing \
 Core/Src/Util \
 Core/Src \
 Core/Startup \

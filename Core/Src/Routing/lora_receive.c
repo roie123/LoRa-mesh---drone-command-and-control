@@ -1,7 +1,7 @@
 //
 // Created by royivri on 11/11/25.
 //
-
+#include "FreeRTOS.h"
 #include "lora_receive.h"
 
 #include <string.h>
@@ -17,7 +17,7 @@
 
 
 void lora_receive_task(void *args) {
-    packet_router_args *router_args = (packet_router_args *) args;
+    Packet_router_args *router_args = (Packet_router_args *) args;
     uint8_t rx_buffer[32];
     uint8_t length;
     for (;;) {

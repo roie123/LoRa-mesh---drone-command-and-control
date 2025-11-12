@@ -39,7 +39,11 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
- ../Core/Inc/LoRa.h ../Core/Inc/main.h ../Core/Inc/Node.h
+ ../Core/Inc/LoRa.h ../Core/Inc/main.h ../Core/Inc/Node.h \
+ ../Core/Src/Routing/lora_receive.h \
+ ../Core/Src/Util/queue_implementation.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
+ ../Core/Src/Routing/packet_router.h
 ../Core/Inc/main.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
 ../Core/Inc/stm32f1xx_hal_conf.h:
@@ -84,3 +88,7 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Core/Inc/LoRa.h:
 ../Core/Inc/main.h:
 ../Core/Inc/Node.h:
+../Core/Src/Routing/lora_receive.h:
+../Core/Src/Util/queue_implementation.h:
+../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
+../Core/Src/Routing/packet_router.h:

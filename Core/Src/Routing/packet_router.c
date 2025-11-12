@@ -1,6 +1,7 @@
 //
 // Created by royivri on 11/11/25.
 //
+#include "FreeRTOS.h"
 #include "packet_router.h"
 #include "queue.h"
 #include "packet.h"

@@ -8,7 +8,7 @@
 
 #include "packet.h"
 #include "queue.h"
-
+QueueHandle_t packet_queue = NULL;
 void init_packet_queue(void) {
     // Queue can hold 10 packets at a time
     packet_queue = xQueueCreate(10, sizeof(MeshPacket));

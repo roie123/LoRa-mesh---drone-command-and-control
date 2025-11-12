@@ -5,13 +5,19 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../Core/Src/Util/Flags.c 
+../Core/Src/Util/Flags.c \
+../Core/Src/Util/id.c \
+../Core/Src/Util/queue_implementation.c 
 
 OBJS += \
-./Core/Src/Util/Flags.o 
+./Core/Src/Util/Flags.o \
+./Core/Src/Util/id.o \
+./Core/Src/Util/queue_implementation.o 
 
 C_DEPS += \
-./Core/Src/Util/Flags.d 
+./Core/Src/Util/Flags.d \
+./Core/Src/Util/id.d \
+./Core/Src/Util/queue_implementation.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -21,7 +27,7 @@ Core/Src/Util/%.o Core/Src/Util/%.su Core/Src/Util/%.cyclo: ../Core/Src/Util/%.c
 clean: clean-Core-2f-Src-2f-Util
 
 clean-Core-2f-Src-2f-Util:
-	-$(RM) ./Core/Src/Util/Flags.cyclo ./Core/Src/Util/Flags.d ./Core/Src/Util/Flags.o ./Core/Src/Util/Flags.su
+	-$(RM) ./Core/Src/Util/Flags.cyclo ./Core/Src/Util/Flags.d ./Core/Src/Util/Flags.o ./Core/Src/Util/Flags.su ./Core/Src/Util/id.cyclo ./Core/Src/Util/id.d ./Core/Src/Util/id.o ./Core/Src/Util/id.su ./Core/Src/Util/queue_implementation.cyclo ./Core/Src/Util/queue_implementation.d ./Core/Src/Util/queue_implementation.o ./Core/Src/Util/queue_implementation.su
 
 .PHONY: clean-Core-2f-Src-2f-Util
 
