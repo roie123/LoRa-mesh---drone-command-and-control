@@ -44,16 +44,16 @@ void discover_nodes_task(void *argument) {
                     get_flags()->broadcasting = false;
                     xSemaphoreGive(get_flags_mutex());
                 }
-
+                vTaskDelay(pdMS_TO_TICKS(1000));
                 //STILL ON LORA TRANSMIT
-                uint8_t notified = ulTaskNotifyTake(pdTRUE,(3000)); // i am waiting for an  interrupt from ISR
-                if (notified) {// I got a packet back from another node
-                //TODO :: i need to implement a sort of router from LoRa receive, than wake this task up to connect to another node
-
-
-                }else { // the timeout run out
-
-                }
+                // uint8_t notified = ulTaskNotifyTake(pdTRUE,(3000)); // i am waiting for an  interrupt from ISR
+                // if (notified) {// I got a packet back from another node
+                // //TODO :: i need to implement a sort of router from LoRa receive, than wake this task up to connect to another node
+                //
+                //
+                // }else { // the timeout run out
+                //
+                // }
 
             }
 
