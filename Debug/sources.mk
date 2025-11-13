@@ -24,7 +24,10 @@ C_DEPS :=
 SUBDIRS := \
 Core/Src/LoRa \
 Core/Src/Mesh \
+Core/Src/RX \
 Core/Src/Routing \
+Core/Src/TEST \
+Core/Src/TX \
 Core/Src/Util \
 Core/Src \
 Core/Startup \

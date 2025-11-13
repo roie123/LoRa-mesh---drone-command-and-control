@@ -4,6 +4,7 @@
 #include "FreeRTOS.h"
 #include "lora_receive.h"
 
+#include <stdio.h>
 #include <string.h>
 
 #include "LoRa.h"
@@ -15,28 +16,29 @@
 #include "task.h"
 #include "../Util/queue_implementation.h"
 
-
-void lora_receive_task(void *args) {
-    Packet_router_args *router_args = (Packet_router_args *) args;
-    uint8_t rx_buffer[32];
-    uint8_t length;
-    for (;;) {
-        ulTaskNotifyTake(pdTRUE,portMAX_DELAY);
-        length = LoRa_receive(router_args->_LoRa, rx_buffer, sizeof(rx_buffer));
-
-        if (length > 0) {
-            MeshPacket pkt;
-            pkt.length = length;
-            memcpy(pkt.payload, rx_buffer, length);
-            if (xQueueSend(packet_queue,&pkt,0)!= pdPASS) {
-                //my queue is full
-                //TODO : handle full queue
-
-            }
-
-
-
-        }
-
-    }
-}
+//
+// void lora_receive_task(void *args) {
+//     Lora_receive_args *lora_receive_args = (Lora_receive_args *) args;
+//     uint8_t rx_buffer[32];
+//     uint8_t length;
+//     printf("DIDO FIRED");
+//     for (;;) {
+//         ulTaskNotifyTake(pdTRUE,portMAX_DELAY);
+//         length = LoRa_receive(lora_receive_args->_LoRa, rx_buffer, sizeof(rx_buffer));
+//
+//         if (length > 0) {
+//             MeshPacket pkt;
+//             pkt.length = length;
+//             memcpy(pkt.payload, rx_buffer, length);
+//             if (xQueueSend(packet_queue,&pkt,0)!= pdPASS) {
+//                 //my queue is full
+//                 //TODO : handle full queue
+//
+//             }
+//
+//
+//
+//         }
+//
+//     }
+// }

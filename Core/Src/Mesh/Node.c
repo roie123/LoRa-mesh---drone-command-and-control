@@ -11,6 +11,7 @@
 #include <string.h>
 #include <sys/types.h>
 
+#include "commands.h"
 #include "flags.h"
 #include "General.h"
 #include "packet.h"
@@ -21,7 +22,7 @@ void discover_nodes_task(void *argument) {
     MeshPacket packet;
 
     memset(&packet, 0, sizeof(MeshPacket));
-    uint8_t payload[3] = {0x00, 0x00, 0x00};
+    uint8_t payload[1] = {CONNECT_REQUEST};
     uint8_t payload_len = sizeof(payload);
 
 
@@ -44,16 +45,16 @@ void discover_nodes_task(void *argument) {
                     get_flags()->broadcasting = false;
                     xSemaphoreGive(get_flags_mutex());
                 }
-                vTaskDelay(pdMS_TO_TICKS(1000));
+                // vTaskDelay(pdMS_TO_TICKS(5000));
                 //STILL ON LORA TRANSMIT
-                // uint8_t notified = ulTaskNotifyTake(pdTRUE,(3000)); // i am waiting for an  interrupt from ISR
-                // if (notified) {// I got a packet back from another node
-                // //TODO :: i need to implement a sort of router from LoRa receive, than wake this task up to connect to another node
-                //
-                //
-                // }else { // the timeout run out
-                //
-                // }
+                uint8_t notified = ulTaskNotifyTake(pdTRUE,(5000)); // i am waiting for an  interrupt from ISR
+                if (notified) {// I got a packet back from another node
+                //TODO :: i need to implement a sort of router from LoRa receive, than wake this task up to connect to another node
+
+
+                }else { // the timeout run out
+
+                }
 
             }
 

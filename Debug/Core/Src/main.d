@@ -24,6 +24,7 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../Core/Inc/FreeRTOSConfig.h \
@@ -39,11 +40,14 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
- ../Core/Inc/LoRa.h ../Core/Inc/main.h ../Core/Inc/Node.h \
- ../Core/Src/Routing/lora_receive.h \
+ ../Core/Inc/id.h ../Core/Inc/LoRa.h ../Core/Inc/main.h \
+ ../Core/Inc/Node.h ../Core/Src/Routing/lora_receive.h \
  ../Core/Src/Util/queue_implementation.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
- ../Core/Src/Routing/packet_router.h
+ ../Core/Src/RX/RX_Queue.h ../Core/Src/Routing/packet_router.h \
+ ../Core/Src/Routing/routing_task.h ../Core/Inc/packet.h \
+ ../Core/Src/RX/RX_Task.h ../Core/Src/TEST/tranmit_test.h \
+ ../Core/Src/TX/TX_Queue.h ../Core/Src/TX/TX_Task.h
 ../Core/Inc/main.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
 ../Core/Inc/stm32f1xx_hal_conf.h:
@@ -70,6 +74,7 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
 ../Core/Inc/FreeRTOSConfig.h:
@@ -85,10 +90,18 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
+../Core/Inc/id.h:
 ../Core/Inc/LoRa.h:
 ../Core/Inc/main.h:
 ../Core/Inc/Node.h:
 ../Core/Src/Routing/lora_receive.h:
 ../Core/Src/Util/queue_implementation.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
+../Core/Src/RX/RX_Queue.h:
 ../Core/Src/Routing/packet_router.h:
+../Core/Src/Routing/routing_task.h:
+../Core/Inc/packet.h:
+../Core/Src/RX/RX_Task.h:
+../Core/Src/TEST/tranmit_test.h:
+../Core/Src/TX/TX_Queue.h:
+../Core/Src/TX/TX_Task.h:

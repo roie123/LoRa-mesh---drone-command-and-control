@@ -16,6 +16,7 @@ typedef enum {
     DECREASE_THROTTLE=5,
     CONNECT_REQUEST=6,
     CONNECT_ACK=7,
+    CONNECTION_MADE=8,
 
 
 }Commands;

@@ -14,7 +14,7 @@
 
 #define MESH_PREAMBLE 0xAA // per suggestion, i use alt bits to help detect transitions 1010101010
 #define MESH_VERSION 0x01 // if i want to update vesrion i dont need to update all the boards
-#define MESH_MAX_PAYLOAD 240 //my lora limit is 250
+#define MESH_MAX_PAYLOAD 10 //my lora limit is 250
 #define MESH_CRC8_POLY 0x07
 
 

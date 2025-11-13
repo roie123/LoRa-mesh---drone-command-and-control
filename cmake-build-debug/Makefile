@@ -160,6 +160,30 @@ Core/Src/LoRa/LoRa.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/LoRa/LoRa.c.s
 .PHONY : Core/Src/LoRa/LoRa.c.s
 
+Core/Src/Mesh/Node.obj: Core/Src/Mesh/Node.c.obj
+.PHONY : Core/Src/Mesh/Node.obj
+
+# target to build an object file
+Core/Src/Mesh/Node.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Mesh/Node.c.obj
+.PHONY : Core/Src/Mesh/Node.c.obj
+
+Core/Src/Mesh/Node.i: Core/Src/Mesh/Node.c.i
+.PHONY : Core/Src/Mesh/Node.i
+
+# target to preprocess a source file
+Core/Src/Mesh/Node.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Mesh/Node.c.i
+.PHONY : Core/Src/Mesh/Node.c.i
+
+Core/Src/Mesh/Node.s: Core/Src/Mesh/Node.c.s
+.PHONY : Core/Src/Mesh/Node.s
+
+# target to generate assembly for a file
+Core/Src/Mesh/Node.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Mesh/Node.c.s
+.PHONY : Core/Src/Mesh/Node.c.s
+
 Core/Src/Mesh/packet.obj: Core/Src/Mesh/packet.c.obj
 .PHONY : Core/Src/Mesh/packet.obj
 
@@ -183,6 +207,150 @@ Core/Src/Mesh/packet.s: Core/Src/Mesh/packet.c.s
 Core/Src/Mesh/packet.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Mesh/packet.c.s
 .PHONY : Core/Src/Mesh/packet.c.s
+
+Core/Src/RX/RX_Queue.obj: Core/Src/RX/RX_Queue.cpp.obj
+.PHONY : Core/Src/RX/RX_Queue.obj
+
+# target to build an object file
+Core/Src/RX/RX_Queue.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/RX/RX_Queue.cpp.obj
+.PHONY : Core/Src/RX/RX_Queue.cpp.obj
+
+Core/Src/RX/RX_Queue.i: Core/Src/RX/RX_Queue.cpp.i
+.PHONY : Core/Src/RX/RX_Queue.i
+
+# target to preprocess a source file
+Core/Src/RX/RX_Queue.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/RX/RX_Queue.cpp.i
+.PHONY : Core/Src/RX/RX_Queue.cpp.i
+
+Core/Src/RX/RX_Queue.s: Core/Src/RX/RX_Queue.cpp.s
+.PHONY : Core/Src/RX/RX_Queue.s
+
+# target to generate assembly for a file
+Core/Src/RX/RX_Queue.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/RX/RX_Queue.cpp.s
+.PHONY : Core/Src/RX/RX_Queue.cpp.s
+
+Core/Src/Routing/lora_receive.obj: Core/Src/Routing/lora_receive.c.obj
+.PHONY : Core/Src/Routing/lora_receive.obj
+
+# target to build an object file
+Core/Src/Routing/lora_receive.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/lora_receive.c.obj
+.PHONY : Core/Src/Routing/lora_receive.c.obj
+
+Core/Src/Routing/lora_receive.i: Core/Src/Routing/lora_receive.c.i
+.PHONY : Core/Src/Routing/lora_receive.i
+
+# target to preprocess a source file
+Core/Src/Routing/lora_receive.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/lora_receive.c.i
+.PHONY : Core/Src/Routing/lora_receive.c.i
+
+Core/Src/Routing/lora_receive.s: Core/Src/Routing/lora_receive.c.s
+.PHONY : Core/Src/Routing/lora_receive.s
+
+# target to generate assembly for a file
+Core/Src/Routing/lora_receive.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/lora_receive.c.s
+.PHONY : Core/Src/Routing/lora_receive.c.s
+
+Core/Src/Routing/packet_router.obj: Core/Src/Routing/packet_router.c.obj
+.PHONY : Core/Src/Routing/packet_router.obj
+
+# target to build an object file
+Core/Src/Routing/packet_router.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/packet_router.c.obj
+.PHONY : Core/Src/Routing/packet_router.c.obj
+
+Core/Src/Routing/packet_router.i: Core/Src/Routing/packet_router.c.i
+.PHONY : Core/Src/Routing/packet_router.i
+
+# target to preprocess a source file
+Core/Src/Routing/packet_router.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/packet_router.c.i
+.PHONY : Core/Src/Routing/packet_router.c.i
+
+Core/Src/Routing/packet_router.s: Core/Src/Routing/packet_router.c.s
+.PHONY : Core/Src/Routing/packet_router.s
+
+# target to generate assembly for a file
+Core/Src/Routing/packet_router.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/packet_router.c.s
+.PHONY : Core/Src/Routing/packet_router.c.s
+
+Core/Src/Util/Flags.obj: Core/Src/Util/Flags.c.obj
+.PHONY : Core/Src/Util/Flags.obj
+
+# target to build an object file
+Core/Src/Util/Flags.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Util/Flags.c.obj
+.PHONY : Core/Src/Util/Flags.c.obj
+
+Core/Src/Util/Flags.i: Core/Src/Util/Flags.c.i
+.PHONY : Core/Src/Util/Flags.i
+
+# target to preprocess a source file
+Core/Src/Util/Flags.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Util/Flags.c.i
+.PHONY : Core/Src/Util/Flags.c.i
+
+Core/Src/Util/Flags.s: Core/Src/Util/Flags.c.s
+.PHONY : Core/Src/Util/Flags.s
+
+# target to generate assembly for a file
+Core/Src/Util/Flags.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Util/Flags.c.s
+.PHONY : Core/Src/Util/Flags.c.s
+
+Core/Src/Util/id.obj: Core/Src/Util/id.c.obj
+.PHONY : Core/Src/Util/id.obj
+
+# target to build an object file
+Core/Src/Util/id.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Util/id.c.obj
+.PHONY : Core/Src/Util/id.c.obj
+
+Core/Src/Util/id.i: Core/Src/Util/id.c.i
+.PHONY : Core/Src/Util/id.i
+
+# target to preprocess a source file
+Core/Src/Util/id.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Util/id.c.i
+.PHONY : Core/Src/Util/id.c.i
+
+Core/Src/Util/id.s: Core/Src/Util/id.c.s
+.PHONY : Core/Src/Util/id.s
+
+# target to generate assembly for a file
+Core/Src/Util/id.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Util/id.c.s
+.PHONY : Core/Src/Util/id.c.s
+
+Core/Src/Util/queue_implementation.obj: Core/Src/Util/queue_implementation.c.obj
+.PHONY : Core/Src/Util/queue_implementation.obj
+
+# target to build an object file
+Core/Src/Util/queue_implementation.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Util/queue_implementation.c.obj
+.PHONY : Core/Src/Util/queue_implementation.c.obj
+
+Core/Src/Util/queue_implementation.i: Core/Src/Util/queue_implementation.c.i
+.PHONY : Core/Src/Util/queue_implementation.i
+
+# target to preprocess a source file
+Core/Src/Util/queue_implementation.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Util/queue_implementation.c.i
+.PHONY : Core/Src/Util/queue_implementation.c.i
+
+Core/Src/Util/queue_implementation.s: Core/Src/Util/queue_implementation.c.s
+.PHONY : Core/Src/Util/queue_implementation.s
+
+# target to generate assembly for a file
+Core/Src/Util/queue_implementation.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Util/queue_implementation.c.s
+.PHONY : Core/Src/Util/queue_implementation.c.s
 
 Core/Src/freertos.obj: Core/Src/freertos.c.obj
 .PHONY : Core/Src/freertos.obj
@@ -720,6 +888,30 @@ Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.s
 .PHONY : Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.s
 
+Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.obj: Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
+.PHONY : Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.obj
+
+# target to build an object file
+Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
+.PHONY : Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
+
+Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.i: Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.i
+.PHONY : Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.i
+
+# target to preprocess a source file
+Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.i
+.PHONY : Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.i
+
+Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.s: Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.s
+.PHONY : Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.s
+
+# target to generate assembly for a file
+Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.s
+.PHONY : Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.s
+
 Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.obj: Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.obj
 
@@ -973,9 +1165,30 @@ help:
 	@echo "... Core/Src/LoRa/LoRa.obj"
 	@echo "... Core/Src/LoRa/LoRa.i"
 	@echo "... Core/Src/LoRa/LoRa.s"
+	@echo "... Core/Src/Mesh/Node.obj"
+	@echo "... Core/Src/Mesh/Node.i"
+	@echo "... Core/Src/Mesh/Node.s"
 	@echo "... Core/Src/Mesh/packet.obj"
 	@echo "... Core/Src/Mesh/packet.i"
 	@echo "... Core/Src/Mesh/packet.s"
+	@echo "... Core/Src/RX/RX_Queue.obj"
+	@echo "... Core/Src/RX/RX_Queue.i"
+	@echo "... Core/Src/RX/RX_Queue.s"
+	@echo "... Core/Src/Routing/lora_receive.obj"
+	@echo "... Core/Src/Routing/lora_receive.i"
+	@echo "... Core/Src/Routing/lora_receive.s"
+	@echo "... Core/Src/Routing/packet_router.obj"
+	@echo "... Core/Src/Routing/packet_router.i"
+	@echo "... Core/Src/Routing/packet_router.s"
+	@echo "... Core/Src/Util/Flags.obj"
+	@echo "... Core/Src/Util/Flags.i"
+	@echo "... Core/Src/Util/Flags.s"
+	@echo "... Core/Src/Util/id.obj"
+	@echo "... Core/Src/Util/id.i"
+	@echo "... Core/Src/Util/id.s"
+	@echo "... Core/Src/Util/queue_implementation.obj"
+	@echo "... Core/Src/Util/queue_implementation.i"
+	@echo "... Core/Src/Util/queue_implementation.s"
 	@echo "... Core/Src/freertos.obj"
 	@echo "... Core/Src/freertos.i"
 	@echo "... Core/Src/freertos.s"
@@ -1043,6 +1256,9 @@ help:
 	@echo "... Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.obj"
 	@echo "... Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.i"
 	@echo "... Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.s"
+	@echo "... Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.obj"
+	@echo "... Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.i"
+	@echo "... Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.s"
 	@echo "... Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.obj"
 	@echo "... Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.i"
 	@echo "... Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.s"

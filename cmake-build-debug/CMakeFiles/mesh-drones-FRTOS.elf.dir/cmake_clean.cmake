@@ -1,8 +1,22 @@
 file(REMOVE_RECURSE
   "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/LoRa/LoRa.c.obj"
   "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/LoRa/LoRa.c.obj.d"
+  "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Mesh/Node.c.obj"
+  "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Mesh/Node.c.obj.d"
   "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Mesh/packet.c.obj"
   "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Mesh/packet.c.obj.d"
+  "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/RX/RX_Queue.cpp.obj"
+  "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/RX/RX_Queue.cpp.obj.d"
+  "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/lora_receive.c.obj"
+  "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/lora_receive.c.obj.d"
+  "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/packet_router.c.obj"
+  "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/packet_router.c.obj.d"
+  "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Util/Flags.c.obj"
+  "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Util/Flags.c.obj.d"
+  "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Util/id.c.obj"
+  "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Util/id.c.obj.d"
+  "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Util/queue_implementation.c.obj"
+  "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Util/queue_implementation.c.obj.d"
   "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/freertos.c.obj"
   "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/freertos.c.obj.d"
   "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/main.c.obj"
@@ -48,6 +62,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj.d"
   "CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj"
   "CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj.d"
+  "CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj"
+  "CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj.d"
   "CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj"
   "CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj.d"
   "CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj"
@@ -73,6 +89,6 @@ file(REMOVE_RECURSE
 )
 
 # Per-language clean rules from dependency scanning.
-foreach(lang ASM C)
+foreach(lang ASM C CXX)
   include(CMakeFiles/mesh-drones-FRTOS.elf.dir/cmake_clean_${lang}.cmake OPTIONAL)
 endforeach()

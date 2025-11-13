@@ -40,9 +40,9 @@ LoRa newLoRa(){
 \* ----------------------------------------------------------------------------- */
 void LoRa_reset(LoRa* _LoRa){
     HAL_GPIO_WritePin(_LoRa->reset_port, _LoRa->reset_pin, GPIO_PIN_RESET);
-    HAL_Delay(1);
+    short_delay_ms(1);
     HAL_GPIO_WritePin(_LoRa->reset_port, _LoRa->reset_pin, GPIO_PIN_SET);
-    HAL_Delay(100);
+    short_delay_ms(100);
 }
 
 /* ----------------------------------------------------------------------------- *\
@@ -611,10 +611,16 @@ uint16_t LoRa_init(LoRa* _LoRa){
             LoRa_write(_LoRa, RegPreambleLsb, _LoRa->preamble >> 0);
 
         // DIO mapping:   --> DIO: RxDone
-            // read = LoRa_read(_LoRa, RegDioMapping1);  // DEFAULT RESET TO THIS IF I FUCKED UP
-            // data = read | 0x3F;
-            // LoRa_write(_LoRa, RegDioMapping1, data);
-        LoRa_write(_LoRa, RegDioMapping1, 0x00);
+        //     read = LoRa_read(_LoRa, RegDioMapping1);  // DEFAULT RESET TO THIS IF I FUCKED UP
+        //     data = read | 0x3F;
+        //     LoRa_write(_LoRa, RegDioMapping1, data);
+        // // LoRa_write(_LoRa, RegDioMapping1, 0x00);
+
+
+        LoRa_write(_LoRa, RegDioMapping1, 0x00); // DIO0–DIO3 = RxDone
+
+
+
         // goto standby mode:
             LoRa_gotoMode(_LoRa, STNBY_MODE);
             _LoRa->current_mode = STNBY_MODE;
