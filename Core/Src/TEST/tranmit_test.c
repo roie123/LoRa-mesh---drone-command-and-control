@@ -25,6 +25,7 @@ void xTX_test_Task(void *args) {
         // Send packet safely with mutex
         if (xSemaphoreTake(task_args->lora_mutex, portMAX_DELAY) == pdTRUE) {
             LoRa_transmit(task_args->lora, test_payload, sizeof(test_payload), 1000);
+            HAL_GPIO_TogglePin(RECEIVING_LED_GPIO_Port, RECEIVING_LED_Pin);
             xSemaphoreGive(task_args->lora_mutex);
         }
     }

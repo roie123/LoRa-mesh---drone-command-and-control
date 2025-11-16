@@ -58,7 +58,7 @@
 
 /* Private variables ---------------------------------------------------------*/
 SPI_HandleTypeDef hspi2;
-
+bool is_test_mode = false;
 UART_HandleTypeDef huart2;
 
 int __io_putchar(int ch) {
@@ -92,7 +92,6 @@ static RX_Task_args rx_args;
 static TX_TEST_Task_args tx_TEST_args;
 static TX_task_args tx_args;
 static Routing_task_args routing_args;
-
 
 
 TaskHandle_t rxTaskHandle;
@@ -194,16 +193,13 @@ int main(void) {
     tx_TEST_args.lora_mutex = lora_mutex_handle;
 
 
-    routing_args._tx_queue_handle=tx_Queue_handle;
+    routing_args._tx_queue_handle = tx_Queue_handle;
     routing_args._rx_queue_handle = rx_queue_handle;
 
 
-
-    tx_args._lora_mutex_handle=lora_mutex_handle;
-    tx_args._tx_queue_handle=tx_Queue_handle;
-
-
-
+    tx_args._lora_mutex_handle = lora_mutex_handle;
+    tx_args._tx_queue_handle = tx_Queue_handle;
+    tx_args._lora=&myLoRa;
 
     LoRa_startReceiving(&myLoRa);
 
@@ -233,19 +229,24 @@ int main(void) {
     defaultTaskHandle = osThreadNew(StartDefaultTask, NULL, &defaultTask_attributes);
 
     /* USER CODE BEGIN RTOS_THREADS */
-    BaseType_t rx_status = xTaskCreate(xRX_Task, "RX_Task", 256, &rx_args, 5, &rxTaskHandle);
-    BaseType_t router_status = xTaskCreate(routing_task, "Routing_Task", 256, &routing_args, 5, &routingTaskHandle);
-    BaseType_t tx_status = xTaskCreate(xTX_task, "TX_Task", 256, &tx_args, 5, &txTaskHandle);
 
-    // BaseType_t tx_test_status = xTaskCreate(
-    //     xTX_test_Task,
-    //     "LoRa_TX_Test", // test task name
-    //     256,            // stack size
-    //     &tx_args,       // task arguments
-    //     2,              // task priority
-    //     NULL            // handle
-    // );
-    // //
+
+    if (is_test_mode) {
+        BaseType_t tx_test_status = xTaskCreate(
+            xTX_test_Task,
+            "LoRa_TX_Test", // test task name
+            1024, // stack size
+            &tx_TEST_args, // task arguments
+            2, // task priority
+            NULL // handle
+        );
+    } else {
+        BaseType_t rx_status = xTaskCreate(xRX_Task, "RX_Task", 256, &rx_args, 5, &rxTaskHandle);
+        BaseType_t router_status = xTaskCreate(routing_task, "Routing_Task", 256, &routing_args, 5, &routingTaskHandle);
+        BaseType_t tx_status = xTaskCreate(xTX_task, "TX_Task", 256, &tx_args, 5, &txTaskHandle);
+    }
+
+    //
 
 
     /* add threads, ... */
@@ -407,7 +408,7 @@ static void MX_GPIO_Init(void) {
     HAL_GPIO_Init(RESET_GPIO_Port, &GPIO_InitStruct);
 
     /*Configure GPIO pin : DID0_Pin */
-   GPIO_InitStruct.Pin = DID0_Pin;
+    GPIO_InitStruct.Pin = DID0_Pin;
     GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     HAL_GPIO_Init(DID0_GPIO_Port, &GPIO_InitStruct);

@@ -20,27 +20,27 @@ void routing_task(void *args) {
     for (;;) {
         if (xQueueReceive(routing_task_args->_rx_queue_handle, received_byte_array,portMAX_DELAY) == pdPASS) {
             memcpy(&pkt, received_byte_array, sizeof(MeshPacket));
-
+            //TODO : get rid of this line ( just for structure phase)
+            xQueueSend(routing_task_args->_tx_queue_handle,&pkt,portMAX_DELAY);
             if (pkt.dst_id == mesh_id) {
                 handle_my_packets(&pkt);
-                break;
+                continue;
             }
 
             if (pkt.dst_id == BROADCAST_ADDRESS) {
                 handle_connections(&pkt);
-                break;
+                continue;
             }
 
             if (pkt.dst_id != mesh_id && pkt.dst_id != BROADCAST_ADDRESS) {
                 // i did it just for readability
                 handle_forwarding(&pkt);
-                break;
+                continue;
             }
 
 
 
-            //TODO : get rid of this line ( just for structure phase)
-            xQueueSend(routing_task_args->_tx_queue_handle,&pkt,portMAX_DELAY);
+
 
 
 
