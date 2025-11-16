@@ -4,6 +4,7 @@
 
 #include "routing_task.h"
 
+#include <stdio.h>
 #include <string.h>
 
 #include "commands.h"
@@ -21,6 +22,8 @@ void routing_task(void *args) {
         if (xQueueReceive(routing_task_args->_rx_queue_handle, received_byte_array,portMAX_DELAY) == pdPASS) {
             memcpy(&pkt, received_byte_array, sizeof(MeshPacket));
             //TODO : get rid of this line ( just for structure phase)
+            printf("ROUTER : sending to TX_QUEUE \r\n");
+
             xQueueSend(routing_task_args->_tx_queue_handle,&pkt,portMAX_DELAY);
             if (pkt.dst_id == mesh_id) {
                 handle_my_packets(&pkt);

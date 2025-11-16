@@ -37,7 +37,7 @@ void xTX_task(void *args) {
 
 
             )) {
-                printf("LoRa transmit_safe\n");
+                printf("xTX : SENT PACKET  \r\n");
 
 
 

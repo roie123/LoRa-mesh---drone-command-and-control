@@ -38,7 +38,7 @@ void xRX_Task(void *args) {
                 sizeof(received_bytes_array),
                 task_args->lora_mutex)) {
                 if (xQueueSend(task_args->_rx_queue_handle,received_bytes_array,pdMS_TO_TICKS(2000))==pdTRUE) {
-                    printf("SENT TO RX QUEUE");
+                    printf("xRX : SENDING TO RX_QUEUE \r\n ");
                 };
 
 
