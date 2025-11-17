@@ -9,7 +9,6 @@
 
 #include "LoRa.h"
 #include "packet.h"
-#include "packet_router.h"
 #include "portmacro.h"
 #include "projdefs.h"
 #include "queue.h"

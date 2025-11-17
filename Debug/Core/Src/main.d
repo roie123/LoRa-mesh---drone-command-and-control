@@ -44,10 +44,10 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Core/Inc/Node.h ../Core/Src/Routing/lora_receive.h \
  ../Core/Src/Util/queue_implementation.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
- ../Core/Src/RX/RX_Queue.h ../Core/Src/Routing/packet_router.h \
- ../Core/Src/Routing/routing_task.h ../Core/Inc/packet.h \
- ../Core/Src/RX/RX_Task.h ../Core/Src/TEST/tranmit_test.h \
- ../Core/Src/TX/TX_Queue.h ../Core/Src/TX/TX_Task.h
+ ../Core/Src/RX/RX_Queue.h ../Core/Src/Routing/routing_task.h \
+ ../Core/Inc/packet.h ../Core/Src/RX/RX_Task.h \
+ ../Core/Src/TEST/tranmit_test.h ../Core/Src/TX/TX_Queue.h \
+ ../Core/Src/TX/TX_Task.h
 ../Core/Inc/main.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
 ../Core/Inc/stm32f1xx_hal_conf.h:
@@ -98,7 +98,6 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Core/Src/Util/queue_implementation.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
 ../Core/Src/RX/RX_Queue.h:
-../Core/Src/Routing/packet_router.h:
 ../Core/Src/Routing/routing_task.h:
 ../Core/Inc/packet.h:
 ../Core/Src/RX/RX_Task.h:

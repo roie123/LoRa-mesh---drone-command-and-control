@@ -5,12 +5,26 @@ file(REMOVE_RECURSE
   "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Mesh/Node.c.obj.d"
   "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Mesh/packet.c.obj"
   "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Mesh/packet.c.obj.d"
-  "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/RX/RX_Queue.cpp.obj"
-  "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/RX/RX_Queue.cpp.obj.d"
+  "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/RX/RX_Queue.c.obj"
+  "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/RX/RX_Queue.c.obj.d"
+  "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/RX/RX_Task.c.obj"
+  "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/RX/RX_Task.c.obj.d"
+  "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/Connect_to_node_task.c.obj"
+  "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/Connect_to_node_task.c.obj.d"
+  "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/NetworkData.c.obj"
+  "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/NetworkData.c.obj.d"
   "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/lora_receive.c.obj"
   "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/lora_receive.c.obj.d"
   "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/packet_router.c.obj"
   "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/packet_router.c.obj.d"
+  "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/routing_task.c.obj"
+  "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/routing_task.c.obj.d"
+  "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TEST/tranmit_test.c.obj"
+  "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TEST/tranmit_test.c.obj.d"
+  "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TX/TX_Queue.c.obj"
+  "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TX/TX_Queue.c.obj.d"
+  "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TX/TX_Task.c.obj"
+  "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TX/TX_Task.c.obj.d"
   "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Util/Flags.c.obj"
   "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Util/Flags.c.obj.d"
   "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Util/id.c.obj"
@@ -89,6 +103,6 @@ file(REMOVE_RECURSE
 )
 
 # Per-language clean rules from dependency scanning.
-foreach(lang ASM C CXX)
+foreach(lang ASM C)
   include(CMakeFiles/mesh-drones-FRTOS.elf.dir/cmake_clean_${lang}.cmake OPTIONAL)
 endforeach()

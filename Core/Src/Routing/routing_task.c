@@ -8,10 +8,13 @@
 #include <string.h>
 
 #include "commands.h"
+#include "Connect_to_node_task.h"
 #include "General.h"
 #include "id.h"
+#include "NetworkData.h"
 #include "packet.h"
 #include "queue.h"
+#include "../TX/TX_Queue.h"
 
 void routing_task(void *args) {
     Routing_task_args *routing_task_args = (Routing_task_args *) args;
@@ -24,15 +27,72 @@ void routing_task(void *args) {
             //TODO : get rid of this line ( just for structure phase)
             printf("ROUTER : sending to TX_QUEUE \r\n");
 
-            xQueueSend(routing_task_args->_tx_queue_handle,&pkt,portMAX_DELAY);
+
+
+            Commands command = (Commands) pkt.payload[0];
+            // xQueueSend(routing_task_args->_tx_queue_handle,&pkt,portMAX_DELAY);
+
+
+
+
+
             if (pkt.dst_id == mesh_id) {
-                handle_my_packets(&pkt);
+                // handle_my_packets(&pkt);
+
+                switch (command) {
+
+                    case CONNECTION_ACK: {
+                        remove_connection_request(pkt.src_id,routing_task_args->network_data_mutex);
+                        add_connected_node(pkt.src_id,0,0,routing_task_args->network_data_mutex);
+
+
+
+
+                        continue;
+                    }
+
+
+
+                    default: continue;
+                }
+
+
                 continue;
+
             }
 
             if (pkt.dst_id == BROADCAST_ADDRESS) {
-                handle_connections(&pkt);
-                continue;
+
+                switch (command) {
+                    case CONNECT_REQUEST : {
+                            //TODO : implement some security check
+                        if (! is_connection_request_exist(pkt.src_id,routing_task_args->network_data_mutex)) {
+                            add_connection_request(pkt.src_id,routing_task_args->network_data_mutex);
+                            add_connected_node(pkt.src_id,0,0,routing_task_args->network_data_mutex);
+                            send_connection_made_to_node(pkt.src_id,tx_Queue_handle);
+                            printf("CONNECTION REQUEST FROM %x \r\n",pkt.src_id);
+
+
+
+
+                        }else {
+                            continue;
+                        }
+
+
+
+
+
+
+                        continue;
+                    }
+
+
+
+
+
+                    default:continue;
+                }
             }
 
             if (pkt.dst_id != mesh_id && pkt.dst_id != BROADCAST_ADDRESS) {
@@ -63,11 +123,7 @@ uint8_t handle_my_packets(MeshPacket *packet) {
     return 1;
 }
 
-uint8_t handle_connections(MeshPacket *packet) {
-    //TODO : make the routing logic for connecting
 
-    return 1;
-}
 uint8_t handle_forwarding(MeshPacket *packet) {
     //TODO  : make the forwarding logic
     return 1;

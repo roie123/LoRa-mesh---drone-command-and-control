@@ -33,7 +33,6 @@
 #include "Util/queue_implementation.h"
 #include "RX/RX_Queue.h"
 
-#include "Routing/packet_router.h"
 #include "Routing/routing_task.h"
 #include "RX/RX_Task.h"
 #include "TEST/tranmit_test.h"
@@ -58,7 +57,7 @@
 
 /* Private variables ---------------------------------------------------------*/
 SPI_HandleTypeDef hspi2;
-bool is_test_mode = false;
+bool is_test_mode = true;
 UART_HandleTypeDef huart2;
 
 int __io_putchar(int ch) {
@@ -80,14 +79,11 @@ const osThreadAttr_t defaultTask_attributes = {
 };
 /* USER CODE BEGIN PV */
 SemaphoreHandle_t lora_mutex_handle;
+SemaphoreHandle_t network_data_mutex_handle;
 LoRa myLoRa;
 
 
-static DiscoverNodesTask_args discover_args = {
-    .id = 0x01,
-    .msg_id = 0,
-    .lora = &myLoRa
-};
+
 static RX_Task_args rx_args;
 static TX_TEST_Task_args tx_TEST_args;
 static TX_task_args tx_args;
@@ -180,6 +176,13 @@ int main(void) {
 
 
     lora_mutex_handle = xSemaphoreCreateMutex();
+    network_data_mutex_handle = xSemaphoreCreateMutex();
+
+    if (network_data_mutex_handle==NULL) {
+        printf("Network data mutex creation failed\r\n");
+        while (1);
+    }
+
     if (lora_mutex_handle == NULL) {
         printf("Failed to create LoRa mutex!\n");
         while (1); // stop safely
@@ -195,7 +198,7 @@ int main(void) {
 
     routing_args._tx_queue_handle = tx_Queue_handle;
     routing_args._rx_queue_handle = rx_queue_handle;
-
+    routing_args.network_data_mutex = network_data_mutex_handle;
 
     tx_args._lora_mutex_handle = lora_mutex_handle;
     tx_args._tx_queue_handle = tx_Queue_handle;

@@ -3,7 +3,6 @@
 
 # compile ASM with /home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc
 # compile C with /home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc
-# compile CXX with /home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-g++
 ASM_DEFINES = -DDEBUG -DSTM32F103xB -DUSE_HAL_DRIVER
 
 ASM_INCLUDES = -I/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Inc -I/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Drivers/CMSIS/Include -I/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3
@@ -15,10 +14,4 @@ C_DEFINES = -DDEBUG -DSTM32F103xB -DUSE_HAL_DRIVER
 C_INCLUDES = -I/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Inc -I/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Drivers/CMSIS/Include -I/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3
 
 C_FLAGS = -g -std=gnu11 -fdiagnostics-color=always -mcpu=cortex-m3 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g
-
-CXX_DEFINES = -DDEBUG -DSTM32F103xB -DUSE_HAL_DRIVER
-
-CXX_INCLUDES = -I/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Inc -I/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Drivers/CMSIS/Include -I/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3
-
-CXX_FLAGS = -g -fdiagnostics-color=always -mcpu=cortex-m3 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g
 

@@ -208,29 +208,101 @@ Core/Src/Mesh/packet.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Mesh/packet.c.s
 .PHONY : Core/Src/Mesh/packet.c.s
 
-Core/Src/RX/RX_Queue.obj: Core/Src/RX/RX_Queue.cpp.obj
+Core/Src/RX/RX_Queue.obj: Core/Src/RX/RX_Queue.c.obj
 .PHONY : Core/Src/RX/RX_Queue.obj
 
 # target to build an object file
-Core/Src/RX/RX_Queue.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/RX/RX_Queue.cpp.obj
-.PHONY : Core/Src/RX/RX_Queue.cpp.obj
+Core/Src/RX/RX_Queue.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/RX/RX_Queue.c.obj
+.PHONY : Core/Src/RX/RX_Queue.c.obj
 
-Core/Src/RX/RX_Queue.i: Core/Src/RX/RX_Queue.cpp.i
+Core/Src/RX/RX_Queue.i: Core/Src/RX/RX_Queue.c.i
 .PHONY : Core/Src/RX/RX_Queue.i
 
 # target to preprocess a source file
-Core/Src/RX/RX_Queue.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/RX/RX_Queue.cpp.i
-.PHONY : Core/Src/RX/RX_Queue.cpp.i
+Core/Src/RX/RX_Queue.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/RX/RX_Queue.c.i
+.PHONY : Core/Src/RX/RX_Queue.c.i
 
-Core/Src/RX/RX_Queue.s: Core/Src/RX/RX_Queue.cpp.s
+Core/Src/RX/RX_Queue.s: Core/Src/RX/RX_Queue.c.s
 .PHONY : Core/Src/RX/RX_Queue.s
 
 # target to generate assembly for a file
-Core/Src/RX/RX_Queue.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/RX/RX_Queue.cpp.s
-.PHONY : Core/Src/RX/RX_Queue.cpp.s
+Core/Src/RX/RX_Queue.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/RX/RX_Queue.c.s
+.PHONY : Core/Src/RX/RX_Queue.c.s
+
+Core/Src/RX/RX_Task.obj: Core/Src/RX/RX_Task.c.obj
+.PHONY : Core/Src/RX/RX_Task.obj
+
+# target to build an object file
+Core/Src/RX/RX_Task.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/RX/RX_Task.c.obj
+.PHONY : Core/Src/RX/RX_Task.c.obj
+
+Core/Src/RX/RX_Task.i: Core/Src/RX/RX_Task.c.i
+.PHONY : Core/Src/RX/RX_Task.i
+
+# target to preprocess a source file
+Core/Src/RX/RX_Task.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/RX/RX_Task.c.i
+.PHONY : Core/Src/RX/RX_Task.c.i
+
+Core/Src/RX/RX_Task.s: Core/Src/RX/RX_Task.c.s
+.PHONY : Core/Src/RX/RX_Task.s
+
+# target to generate assembly for a file
+Core/Src/RX/RX_Task.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/RX/RX_Task.c.s
+.PHONY : Core/Src/RX/RX_Task.c.s
+
+Core/Src/Routing/Connect_to_node_task.obj: Core/Src/Routing/Connect_to_node_task.c.obj
+.PHONY : Core/Src/Routing/Connect_to_node_task.obj
+
+# target to build an object file
+Core/Src/Routing/Connect_to_node_task.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/Connect_to_node_task.c.obj
+.PHONY : Core/Src/Routing/Connect_to_node_task.c.obj
+
+Core/Src/Routing/Connect_to_node_task.i: Core/Src/Routing/Connect_to_node_task.c.i
+.PHONY : Core/Src/Routing/Connect_to_node_task.i
+
+# target to preprocess a source file
+Core/Src/Routing/Connect_to_node_task.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/Connect_to_node_task.c.i
+.PHONY : Core/Src/Routing/Connect_to_node_task.c.i
+
+Core/Src/Routing/Connect_to_node_task.s: Core/Src/Routing/Connect_to_node_task.c.s
+.PHONY : Core/Src/Routing/Connect_to_node_task.s
+
+# target to generate assembly for a file
+Core/Src/Routing/Connect_to_node_task.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/Connect_to_node_task.c.s
+.PHONY : Core/Src/Routing/Connect_to_node_task.c.s
+
+Core/Src/Routing/NetworkData.obj: Core/Src/Routing/NetworkData.c.obj
+.PHONY : Core/Src/Routing/NetworkData.obj
+
+# target to build an object file
+Core/Src/Routing/NetworkData.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/NetworkData.c.obj
+.PHONY : Core/Src/Routing/NetworkData.c.obj
+
+Core/Src/Routing/NetworkData.i: Core/Src/Routing/NetworkData.c.i
+.PHONY : Core/Src/Routing/NetworkData.i
+
+# target to preprocess a source file
+Core/Src/Routing/NetworkData.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/NetworkData.c.i
+.PHONY : Core/Src/Routing/NetworkData.c.i
+
+Core/Src/Routing/NetworkData.s: Core/Src/Routing/NetworkData.c.s
+.PHONY : Core/Src/Routing/NetworkData.s
+
+# target to generate assembly for a file
+Core/Src/Routing/NetworkData.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/NetworkData.c.s
+.PHONY : Core/Src/Routing/NetworkData.c.s
 
 Core/Src/Routing/lora_receive.obj: Core/Src/Routing/lora_receive.c.obj
 .PHONY : Core/Src/Routing/lora_receive.obj
@@ -279,6 +351,102 @@ Core/Src/Routing/packet_router.s: Core/Src/Routing/packet_router.c.s
 Core/Src/Routing/packet_router.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/packet_router.c.s
 .PHONY : Core/Src/Routing/packet_router.c.s
+
+Core/Src/Routing/routing_task.obj: Core/Src/Routing/routing_task.c.obj
+.PHONY : Core/Src/Routing/routing_task.obj
+
+# target to build an object file
+Core/Src/Routing/routing_task.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/routing_task.c.obj
+.PHONY : Core/Src/Routing/routing_task.c.obj
+
+Core/Src/Routing/routing_task.i: Core/Src/Routing/routing_task.c.i
+.PHONY : Core/Src/Routing/routing_task.i
+
+# target to preprocess a source file
+Core/Src/Routing/routing_task.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/routing_task.c.i
+.PHONY : Core/Src/Routing/routing_task.c.i
+
+Core/Src/Routing/routing_task.s: Core/Src/Routing/routing_task.c.s
+.PHONY : Core/Src/Routing/routing_task.s
+
+# target to generate assembly for a file
+Core/Src/Routing/routing_task.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/routing_task.c.s
+.PHONY : Core/Src/Routing/routing_task.c.s
+
+Core/Src/TEST/tranmit_test.obj: Core/Src/TEST/tranmit_test.c.obj
+.PHONY : Core/Src/TEST/tranmit_test.obj
+
+# target to build an object file
+Core/Src/TEST/tranmit_test.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TEST/tranmit_test.c.obj
+.PHONY : Core/Src/TEST/tranmit_test.c.obj
+
+Core/Src/TEST/tranmit_test.i: Core/Src/TEST/tranmit_test.c.i
+.PHONY : Core/Src/TEST/tranmit_test.i
+
+# target to preprocess a source file
+Core/Src/TEST/tranmit_test.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TEST/tranmit_test.c.i
+.PHONY : Core/Src/TEST/tranmit_test.c.i
+
+Core/Src/TEST/tranmit_test.s: Core/Src/TEST/tranmit_test.c.s
+.PHONY : Core/Src/TEST/tranmit_test.s
+
+# target to generate assembly for a file
+Core/Src/TEST/tranmit_test.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TEST/tranmit_test.c.s
+.PHONY : Core/Src/TEST/tranmit_test.c.s
+
+Core/Src/TX/TX_Queue.obj: Core/Src/TX/TX_Queue.c.obj
+.PHONY : Core/Src/TX/TX_Queue.obj
+
+# target to build an object file
+Core/Src/TX/TX_Queue.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TX/TX_Queue.c.obj
+.PHONY : Core/Src/TX/TX_Queue.c.obj
+
+Core/Src/TX/TX_Queue.i: Core/Src/TX/TX_Queue.c.i
+.PHONY : Core/Src/TX/TX_Queue.i
+
+# target to preprocess a source file
+Core/Src/TX/TX_Queue.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TX/TX_Queue.c.i
+.PHONY : Core/Src/TX/TX_Queue.c.i
+
+Core/Src/TX/TX_Queue.s: Core/Src/TX/TX_Queue.c.s
+.PHONY : Core/Src/TX/TX_Queue.s
+
+# target to generate assembly for a file
+Core/Src/TX/TX_Queue.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TX/TX_Queue.c.s
+.PHONY : Core/Src/TX/TX_Queue.c.s
+
+Core/Src/TX/TX_Task.obj: Core/Src/TX/TX_Task.c.obj
+.PHONY : Core/Src/TX/TX_Task.obj
+
+# target to build an object file
+Core/Src/TX/TX_Task.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TX/TX_Task.c.obj
+.PHONY : Core/Src/TX/TX_Task.c.obj
+
+Core/Src/TX/TX_Task.i: Core/Src/TX/TX_Task.c.i
+.PHONY : Core/Src/TX/TX_Task.i
+
+# target to preprocess a source file
+Core/Src/TX/TX_Task.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TX/TX_Task.c.i
+.PHONY : Core/Src/TX/TX_Task.c.i
+
+Core/Src/TX/TX_Task.s: Core/Src/TX/TX_Task.c.s
+.PHONY : Core/Src/TX/TX_Task.s
+
+# target to generate assembly for a file
+Core/Src/TX/TX_Task.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TX/TX_Task.c.s
+.PHONY : Core/Src/TX/TX_Task.c.s
 
 Core/Src/Util/Flags.obj: Core/Src/Util/Flags.c.obj
 .PHONY : Core/Src/Util/Flags.obj
@@ -1174,12 +1342,33 @@ help:
 	@echo "... Core/Src/RX/RX_Queue.obj"
 	@echo "... Core/Src/RX/RX_Queue.i"
 	@echo "... Core/Src/RX/RX_Queue.s"
+	@echo "... Core/Src/RX/RX_Task.obj"
+	@echo "... Core/Src/RX/RX_Task.i"
+	@echo "... Core/Src/RX/RX_Task.s"
+	@echo "... Core/Src/Routing/Connect_to_node_task.obj"
+	@echo "... Core/Src/Routing/Connect_to_node_task.i"
+	@echo "... Core/Src/Routing/Connect_to_node_task.s"
+	@echo "... Core/Src/Routing/NetworkData.obj"
+	@echo "... Core/Src/Routing/NetworkData.i"
+	@echo "... Core/Src/Routing/NetworkData.s"
 	@echo "... Core/Src/Routing/lora_receive.obj"
 	@echo "... Core/Src/Routing/lora_receive.i"
 	@echo "... Core/Src/Routing/lora_receive.s"
 	@echo "... Core/Src/Routing/packet_router.obj"
 	@echo "... Core/Src/Routing/packet_router.i"
 	@echo "... Core/Src/Routing/packet_router.s"
+	@echo "... Core/Src/Routing/routing_task.obj"
+	@echo "... Core/Src/Routing/routing_task.i"
+	@echo "... Core/Src/Routing/routing_task.s"
+	@echo "... Core/Src/TEST/tranmit_test.obj"
+	@echo "... Core/Src/TEST/tranmit_test.i"
+	@echo "... Core/Src/TEST/tranmit_test.s"
+	@echo "... Core/Src/TX/TX_Queue.obj"
+	@echo "... Core/Src/TX/TX_Queue.i"
+	@echo "... Core/Src/TX/TX_Queue.s"
+	@echo "... Core/Src/TX/TX_Task.obj"
+	@echo "... Core/Src/TX/TX_Task.i"
+	@echo "... Core/Src/TX/TX_Task.s"
 	@echo "... Core/Src/Util/Flags.obj"
 	@echo "... Core/Src/Util/Flags.i"
 	@echo "... Core/Src/Util/Flags.s"

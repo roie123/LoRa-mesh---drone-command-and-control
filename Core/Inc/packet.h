@@ -36,6 +36,7 @@ typedef struct __attribute__((packed)) {
     uint8_t length;
     uint8_t payload[MESH_MAX_PAYLOAD];
     uint8_t crc;
+    int8_t rssi;
 } MeshPacket;
 
 uint8_t mesh_crc(const uint8_t *data , uint8_t len);
