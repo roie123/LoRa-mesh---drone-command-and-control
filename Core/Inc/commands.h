@@ -17,6 +17,8 @@ typedef enum {
     CONNECT_REQUEST=6,
     CONNECTION_ACK=7,
     CONNECTION_MADE=8,
+    PING_COMMAND=9,
+
 
 
 }Commands;

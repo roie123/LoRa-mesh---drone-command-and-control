@@ -87,6 +87,13 @@ void routing_task(void *args) {
                         continue;
                     }
 
+                    case PING_COMMAND : {
+
+
+
+
+                    }
+
 
 
 

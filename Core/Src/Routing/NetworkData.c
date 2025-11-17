@@ -70,6 +70,7 @@ int add_connected_node(uint8_t id, uint8_t type, int rssi, SemaphoreHandle_t net
 
 
         if (idx >= 0) {
+            connected_nodes[idx].last_seen = xTaskGetTickCount();
             connected_nodes[idx].type = type;
             connected_nodes[idx].rssi = rssi;
             xSemaphoreGive(network_data_mutex);
@@ -80,6 +81,7 @@ int add_connected_node(uint8_t id, uint8_t type, int rssi, SemaphoreHandle_t net
         for (int i = 0; i < MAX_NODES; i++) {
             if (connected_nodes[i].id == 0) {
                 // empty slot
+                connected_nodes[i].last_seen = xTaskGetTickCount();
                 connected_nodes[i].id = id;
                 connected_nodes[i].type = type;
                 connected_nodes[i].rssi = rssi;
@@ -124,6 +126,7 @@ int find_node(uint8_t id) {
 int remove_node(uint8_t id, SemaphoreHandle_t network_data_mutex) {
     int idx = find_node_safe(id, network_data_mutex);
     if (idx < 0) return -1;
+    connected_nodes[idx].last_seen = xTaskGetTickCount();
 
     connected_nodes[idx].id = 0;
     connected_nodes[idx].type = 0;

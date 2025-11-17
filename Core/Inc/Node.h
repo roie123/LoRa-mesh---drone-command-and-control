@@ -17,6 +17,7 @@ typedef struct {
     uint8_t id;
     uint8_t type;
     int rssi;
+    TickType_t last_seen;
 } Node;
 
 // uint8_t connect_to_node_by_id(uint8_t node_id, uint8_t node_type);
