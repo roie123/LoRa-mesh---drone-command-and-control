@@ -50,4 +50,11 @@ int add_connected_node(uint8_t id, uint8_t type, int rssi,SemaphoreHandle_t netw
 int remove_node(uint8_t id,SemaphoreHandle_t network_data_mutex);
 int find_node_safe(uint8_t id,SemaphoreHandle_t network_data_mutex);
 int find_node(uint8_t id);
+
+
+
+
+void last_packets_sent_add(uint8_t packet_id);
+bool last_packets_sent_remove(uint8_t packet_id);
+ int8_t last_packets_sent_find(uint8_t packet_id);
 #endif //NETWORKDATA_H

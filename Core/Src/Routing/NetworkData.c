@@ -183,7 +183,7 @@ void add_received_packet(CompressedPacket *pkt) {
 //  ****************************************************************************************************** /
 
 // Add a new sent packet to the FIFO
-static void last_packets_sent_add(uint8_t packet_id) {
+ void last_packets_sent_add(uint8_t packet_id) {
     if (fifo_count < LAST_PACKETS_SENT_MAX) {
         uint8_t end = (fifo_start + fifo_count) % LAST_PACKETS_SENT_MAX;
         last_packets_sent[end] = packet_id;
@@ -196,7 +196,7 @@ static void last_packets_sent_add(uint8_t packet_id) {
 }
 
 // Remove a packet by value (first occurrence)
-static bool last_packets_sent_remove(uint8_t packet_id) {
+ bool last_packets_sent_remove(uint8_t packet_id) {
     for (uint8_t i = 0; i < fifo_count; i++) {
         uint8_t idx = (fifo_start + i) % LAST_PACKETS_SENT_MAX;
         if (last_packets_sent[idx] == packet_id) {
@@ -214,7 +214,7 @@ static bool last_packets_sent_remove(uint8_t packet_id) {
 }
 
 // Find a packet by value, returns index in FIFO or -1
-static int8_t last_packets_sent_find(uint8_t packet_id) {
+ int8_t last_packets_sent_find(uint8_t packet_id) {
     for (uint8_t i = 0; i < fifo_count; i++) {
         uint8_t idx = (fifo_start + i) % LAST_PACKETS_SENT_MAX;
         if (last_packets_sent[idx] == packet_id) {
