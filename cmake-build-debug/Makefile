@@ -208,6 +208,54 @@ Core/Src/Mesh/packet.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Mesh/packet.c.s
 .PHONY : Core/Src/Mesh/packet.c.s
 
+Core/Src/Network/PING_task.obj: Core/Src/Network/PING_task.c.obj
+.PHONY : Core/Src/Network/PING_task.obj
+
+# target to build an object file
+Core/Src/Network/PING_task.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Network/PING_task.c.obj
+.PHONY : Core/Src/Network/PING_task.c.obj
+
+Core/Src/Network/PING_task.i: Core/Src/Network/PING_task.c.i
+.PHONY : Core/Src/Network/PING_task.i
+
+# target to preprocess a source file
+Core/Src/Network/PING_task.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Network/PING_task.c.i
+.PHONY : Core/Src/Network/PING_task.c.i
+
+Core/Src/Network/PING_task.s: Core/Src/Network/PING_task.c.s
+.PHONY : Core/Src/Network/PING_task.s
+
+# target to generate assembly for a file
+Core/Src/Network/PING_task.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Network/PING_task.c.s
+.PHONY : Core/Src/Network/PING_task.c.s
+
+Core/Src/Network/PONG_Queue.obj: Core/Src/Network/PONG_Queue.c.obj
+.PHONY : Core/Src/Network/PONG_Queue.obj
+
+# target to build an object file
+Core/Src/Network/PONG_Queue.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Network/PONG_Queue.c.obj
+.PHONY : Core/Src/Network/PONG_Queue.c.obj
+
+Core/Src/Network/PONG_Queue.i: Core/Src/Network/PONG_Queue.c.i
+.PHONY : Core/Src/Network/PONG_Queue.i
+
+# target to preprocess a source file
+Core/Src/Network/PONG_Queue.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Network/PONG_Queue.c.i
+.PHONY : Core/Src/Network/PONG_Queue.c.i
+
+Core/Src/Network/PONG_Queue.s: Core/Src/Network/PONG_Queue.c.s
+.PHONY : Core/Src/Network/PONG_Queue.s
+
+# target to generate assembly for a file
+Core/Src/Network/PONG_Queue.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Network/PONG_Queue.c.s
+.PHONY : Core/Src/Network/PONG_Queue.c.s
+
 Core/Src/RX/RX_Queue.obj: Core/Src/RX/RX_Queue.c.obj
 .PHONY : Core/Src/RX/RX_Queue.obj
 
@@ -327,30 +375,6 @@ Core/Src/Routing/lora_receive.s: Core/Src/Routing/lora_receive.c.s
 Core/Src/Routing/lora_receive.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/lora_receive.c.s
 .PHONY : Core/Src/Routing/lora_receive.c.s
-
-Core/Src/Routing/packet_router.obj: Core/Src/Routing/packet_router.c.obj
-.PHONY : Core/Src/Routing/packet_router.obj
-
-# target to build an object file
-Core/Src/Routing/packet_router.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/packet_router.c.obj
-.PHONY : Core/Src/Routing/packet_router.c.obj
-
-Core/Src/Routing/packet_router.i: Core/Src/Routing/packet_router.c.i
-.PHONY : Core/Src/Routing/packet_router.i
-
-# target to preprocess a source file
-Core/Src/Routing/packet_router.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/packet_router.c.i
-.PHONY : Core/Src/Routing/packet_router.c.i
-
-Core/Src/Routing/packet_router.s: Core/Src/Routing/packet_router.c.s
-.PHONY : Core/Src/Routing/packet_router.s
-
-# target to generate assembly for a file
-Core/Src/Routing/packet_router.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/packet_router.c.s
-.PHONY : Core/Src/Routing/packet_router.c.s
 
 Core/Src/Routing/routing_task.obj: Core/Src/Routing/routing_task.c.obj
 .PHONY : Core/Src/Routing/routing_task.obj
@@ -1339,6 +1363,12 @@ help:
 	@echo "... Core/Src/Mesh/packet.obj"
 	@echo "... Core/Src/Mesh/packet.i"
 	@echo "... Core/Src/Mesh/packet.s"
+	@echo "... Core/Src/Network/PING_task.obj"
+	@echo "... Core/Src/Network/PING_task.i"
+	@echo "... Core/Src/Network/PING_task.s"
+	@echo "... Core/Src/Network/PONG_Queue.obj"
+	@echo "... Core/Src/Network/PONG_Queue.i"
+	@echo "... Core/Src/Network/PONG_Queue.s"
 	@echo "... Core/Src/RX/RX_Queue.obj"
 	@echo "... Core/Src/RX/RX_Queue.i"
 	@echo "... Core/Src/RX/RX_Queue.s"
@@ -1354,9 +1384,6 @@ help:
 	@echo "... Core/Src/Routing/lora_receive.obj"
 	@echo "... Core/Src/Routing/lora_receive.i"
 	@echo "... Core/Src/Routing/lora_receive.s"
-	@echo "... Core/Src/Routing/packet_router.obj"
-	@echo "... Core/Src/Routing/packet_router.i"
-	@echo "... Core/Src/Routing/packet_router.s"
 	@echo "... Core/Src/Routing/routing_task.obj"
 	@echo "... Core/Src/Routing/routing_task.i"
 	@echo "... Core/Src/Routing/routing_task.s"

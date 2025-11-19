@@ -15,7 +15,7 @@
 #include "packet.h"
 #include "queue.h"
 #include "../TX/TX_Queue.h"
-
+#include "../Network/PONG_Queue.h"
 void routing_task(void *args) {
     Routing_task_args *routing_task_args = (Routing_task_args *) args;
     uint8_t received_byte_array[sizeof(MeshPacket)];
@@ -89,7 +89,13 @@ void routing_task(void *args) {
 
                     case PING_COMMAND : {
 
-
+                    // Ping ping;
+                    //     ping.src_id = pkt.src_id;
+                    //     ping.signal_strength = 0; // TODO : implement rssi check
+                    //
+                        // xQueueSend(routing_task_args->_pong_queue_handle,&ping,portMAX_DELAY);  //do i really need it ?
+                        add_connected_node(pkt.src_id,0,0,routing_task_args->network_data_mutex);
+                        continue;
 
 
                     }

@@ -11,7 +11,7 @@
 QueueHandle_t tx_Queue_handle = NULL; // ✅ define it exactly once
 
 QueueHandle_t TX_Queue_init(void) {
-    tx_Queue_handle = xQueueCreate(5, sizeof(MeshPacket));
+    tx_Queue_handle = xQueueCreate(10, sizeof(MeshPacket));
     if (!tx_Queue_handle) {
         printf("TX Queue creation failed\n");
     }

@@ -13,7 +13,9 @@
 typedef struct {
     xQueueHandle _rx_queue_handle;
     xQueueHandle _tx_queue_handle;
+    xQueueHandle _pong_queue_handle;
     SemaphoreHandle_t network_data_mutex;
+
 } Routing_task_args;
 
 

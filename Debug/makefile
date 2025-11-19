@@ -20,6 +20,7 @@ RM := rm -rf
 -include Core/Src/TEST/subdir.mk
 -include Core/Src/Routing/subdir.mk
 -include Core/Src/RX/subdir.mk
+-include Core/Src/Network/subdir.mk
 -include Core/Src/Mesh/subdir.mk
 -include Core/Src/LoRa/subdir.mk
 -include Core/Src/subdir.mk

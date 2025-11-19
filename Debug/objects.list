@@ -1,6 +1,8 @@
 "./Core/Src/LoRa/LoRa.o"
 "./Core/Src/Mesh/Node.o"
 "./Core/Src/Mesh/packet.o"
+"./Core/Src/Network/PING_task.o"
+"./Core/Src/Network/PONG_Queue.o"
 "./Core/Src/RX/RX_Queue.o"
 "./Core/Src/RX/RX_Task.o"
 "./Core/Src/Routing/Connect_to_node_task.o"

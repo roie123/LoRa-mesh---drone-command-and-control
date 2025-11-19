@@ -135,8 +135,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-LG2BjF"
-      binary: "/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-LG2BjF"
+      source: "/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-Hj1HNB"
+      binary: "/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-Hj1HNB"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -145,13 +145,13 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-LG2BjF'
+        Change Dir: '/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-Hj1HNB'
         
-        Run Build Command(s): /opt/clion/bin/cmake/linux/x64/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_e1eeb/fast
-        /usr/bin/make  -f CMakeFiles/cmTC_e1eeb.dir/build.make CMakeFiles/cmTC_e1eeb.dir/build
-        make[1]: Entering directory '/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-LG2BjF'
-        Building C object CMakeFiles/cmTC_e1eeb.dir/CMakeCCompilerABI.c.obj
-        /home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_e1eeb.dir/CMakeCCompilerABI.c.obj -c /opt/clion/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): /opt/clion/bin/cmake/linux/x64/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_a8c54/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_a8c54.dir/build.make CMakeFiles/cmTC_a8c54.dir/build
+        make[1]: Entering directory '/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-Hj1HNB'
+        Building C object CMakeFiles/cmTC_a8c54.dir/CMakeCCompilerABI.c.obj
+        /home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_a8c54.dir/CMakeCCompilerABI.c.obj -c /opt/clion/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCCompilerABI.c
         Using built-in specs.
         COLLECT_GCC=/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc
         Target: arm-none-eabi
@@ -159,8 +159,8 @@ events:
         Thread model: single
         Supported LTO compression algorithms: zlib
         gcc version 13.3.1 20240614 (GNU Tools for STM32 13.3.rel1.20240926-1715) 
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_e1eeb.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_e1eeb.dir/'
-         /home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/cc1 -quiet -v -iprefix /home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/ -isysroot /home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../arm-none-eabi -D__USES_INITFINI__ /opt/clion/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_e1eeb.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -fdiagnostics-color=always -o /tmp/ccuYlDsL.s
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_a8c54.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_a8c54.dir/'
+         /home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/cc1 -quiet -v -iprefix /home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/ -isysroot /home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../arm-none-eabi -D__USES_INITFINI__ /opt/clion/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_a8c54.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -fdiagnostics-color=always -o /tmp/ccbCH3PY.s
         GNU C17 (GNU Tools for STM32 13.3.rel1.20240926-1715) version 13.3.1 20240614 (arm-none-eabi)
         	compiled by GNU C version 7.5.0, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
         
@@ -177,18 +177,18 @@ events:
          /home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/include
         End of search list.
         Compiler executable checksum: 886fc8797c2ec62bf06cb75422e2a1cc
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_e1eeb.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_e1eeb.dir/'
-         /home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/as -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_e1eeb.dir/CMakeCCompilerABI.c.obj /tmp/ccuYlDsL.s
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_a8c54.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_a8c54.dir/'
+         /home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/as -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_a8c54.dir/CMakeCCompilerABI.c.obj /tmp/ccbCH3PY.s
         GNU assembler version 2.42.0 (arm-none-eabi) using BFD version (GNU Tools for STM32 13.3.rel1.20240926-1715) 2.42.0.20240614
         COMPILER_PATH=/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/:/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/:/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/
         LIBRARY_PATH=/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/:/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/:/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/:/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_e1eeb.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_e1eeb.dir/CMakeCCompilerABI.c.'
-        Linking C static library libcmTC_e1eeb.a
-        /opt/clion/bin/cmake/linux/x64/bin/cmake -P CMakeFiles/cmTC_e1eeb.dir/cmake_clean_target.cmake
-        /opt/clion/bin/cmake/linux/x64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e1eeb.dir/link.txt --verbose=1
-        arm-none-eabi-ar qc libcmTC_e1eeb.a CMakeFiles/cmTC_e1eeb.dir/CMakeCCompilerABI.c.obj
-        /home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-ranlib libcmTC_e1eeb.a
-        make[1]: Leaving directory '/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-LG2BjF'
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_a8c54.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_a8c54.dir/CMakeCCompilerABI.c.'
+        Linking C static library libcmTC_a8c54.a
+        /opt/clion/bin/cmake/linux/x64/bin/cmake -P CMakeFiles/cmTC_a8c54.dir/cmake_clean_target.cmake
+        /opt/clion/bin/cmake/linux/x64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a8c54.dir/link.txt --verbose=1
+        arm-none-eabi-ar qc libcmTC_a8c54.a CMakeFiles/cmTC_a8c54.dir/CMakeCCompilerABI.c.obj
+        /home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-ranlib libcmTC_a8c54.a
+        make[1]: Leaving directory '/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-Hj1HNB'
         
       exitCode: 0
   -
@@ -221,13 +221,13 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
-        ignore line: [Change Dir: '/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-LG2BjF']
+        ignore line: [Change Dir: '/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-Hj1HNB']
         ignore line: []
-        ignore line: [Run Build Command(s): /opt/clion/bin/cmake/linux/x64/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_e1eeb/fast]
-        ignore line: [/usr/bin/make  -f CMakeFiles/cmTC_e1eeb.dir/build.make CMakeFiles/cmTC_e1eeb.dir/build]
-        ignore line: [make[1]: Entering directory '/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-LG2BjF']
-        ignore line: [Building C object CMakeFiles/cmTC_e1eeb.dir/CMakeCCompilerABI.c.obj]
-        ignore line: [/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_e1eeb.dir/CMakeCCompilerABI.c.obj -c /opt/clion/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): /opt/clion/bin/cmake/linux/x64/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_a8c54/fast]
+        ignore line: [/usr/bin/make  -f CMakeFiles/cmTC_a8c54.dir/build.make CMakeFiles/cmTC_a8c54.dir/build]
+        ignore line: [make[1]: Entering directory '/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-Hj1HNB']
+        ignore line: [Building C object CMakeFiles/cmTC_a8c54.dir/CMakeCCompilerABI.c.obj]
+        ignore line: [/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_a8c54.dir/CMakeCCompilerABI.c.obj -c /opt/clion/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCCompilerABI.c]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc]
         ignore line: [Target: arm-none-eabi]
@@ -235,8 +235,8 @@ events:
         ignore line: [Thread model: single]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 13.3.1 20240614 (GNU Tools for STM32 13.3.rel1.20240926-1715) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_e1eeb.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_e1eeb.dir/']
-        ignore line: [ /home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/cc1 -quiet -v -iprefix /home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/ -isysroot /home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../arm-none-eabi -D__USES_INITFINI__ /opt/clion/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_e1eeb.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -fdiagnostics-color=always -o /tmp/ccuYlDsL.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_a8c54.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_a8c54.dir/']
+        ignore line: [ /home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/cc1 -quiet -v -iprefix /home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/ -isysroot /home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../arm-none-eabi -D__USES_INITFINI__ /opt/clion/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_a8c54.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -fdiagnostics-color=always -o /tmp/ccbCH3PY.s]
         ignore line: [GNU C17 (GNU Tools for STM32 13.3.rel1.20240926-1715) version 13.3.1 20240614 (arm-none-eabi)]
         ignore line: [	compiled by GNU C version 7.5.0  GMP version 6.2.1  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.15-1-g835ea3a-GMP]
         ignore line: []
@@ -253,18 +253,18 @@ events:
         ignore line: [ /home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 886fc8797c2ec62bf06cb75422e2a1cc]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_e1eeb.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_e1eeb.dir/']
-        ignore line: [ /home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/as -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_e1eeb.dir/CMakeCCompilerABI.c.obj /tmp/ccuYlDsL.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_a8c54.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_a8c54.dir/']
+        ignore line: [ /home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/as -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_a8c54.dir/CMakeCCompilerABI.c.obj /tmp/ccbCH3PY.s]
         ignore line: [GNU assembler version 2.42.0 (arm-none-eabi) using BFD version (GNU Tools for STM32 13.3.rel1.20240926-1715) 2.42.0.20240614]
         ignore line: [COMPILER_PATH=/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/:/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/:/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/]
         ignore line: [LIBRARY_PATH=/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/:/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/:/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/:/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_e1eeb.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_e1eeb.dir/CMakeCCompilerABI.c.']
-        ignore line: [Linking C static library libcmTC_e1eeb.a]
-        ignore line: [/opt/clion/bin/cmake/linux/x64/bin/cmake -P CMakeFiles/cmTC_e1eeb.dir/cmake_clean_target.cmake]
-        ignore line: [/opt/clion/bin/cmake/linux/x64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e1eeb.dir/link.txt --verbose=1]
-        ignore line: [arm-none-eabi-ar qc libcmTC_e1eeb.a CMakeFiles/cmTC_e1eeb.dir/CMakeCCompilerABI.c.obj]
-        ignore line: [/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-ranlib libcmTC_e1eeb.a]
-        ignore line: [make[1]: Leaving directory '/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-LG2BjF']
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_a8c54.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_a8c54.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C static library libcmTC_a8c54.a]
+        ignore line: [/opt/clion/bin/cmake/linux/x64/bin/cmake -P CMakeFiles/cmTC_a8c54.dir/cmake_clean_target.cmake]
+        ignore line: [/opt/clion/bin/cmake/linux/x64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a8c54.dir/link.txt --verbose=1]
+        ignore line: [arm-none-eabi-ar qc libcmTC_a8c54.a CMakeFiles/cmTC_a8c54.dir/CMakeCCompilerABI.c.obj]
+        ignore line: [/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-ranlib libcmTC_a8c54.a]
+        ignore line: [make[1]: Leaving directory '/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-Hj1HNB']
         ignore line: []
         ignore line: []
         implicit libs: []
@@ -282,8 +282,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-TtgjOP"
-      binary: "/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-TtgjOP"
+      source: "/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-OkpJRk"
+      binary: "/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-OkpJRk"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -293,13 +293,13 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-TtgjOP'
+        Change Dir: '/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-OkpJRk'
         
-        Run Build Command(s): /opt/clion/bin/cmake/linux/x64/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_ee626/fast
-        /usr/bin/make  -f CMakeFiles/cmTC_ee626.dir/build.make CMakeFiles/cmTC_ee626.dir/build
-        make[1]: Entering directory '/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-TtgjOP'
-        Building CXX object CMakeFiles/cmTC_ee626.dir/CMakeCXXCompilerABI.cpp.obj
-        /home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-g++   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_ee626.dir/CMakeCXXCompilerABI.cpp.obj -c /opt/clion/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /opt/clion/bin/cmake/linux/x64/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_00357/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_00357.dir/build.make CMakeFiles/cmTC_00357.dir/build
+        make[1]: Entering directory '/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-OkpJRk'
+        Building CXX object CMakeFiles/cmTC_00357.dir/CMakeCXXCompilerABI.cpp.obj
+        /home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-g++   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_00357.dir/CMakeCXXCompilerABI.cpp.obj -c /opt/clion/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
         COLLECT_GCC=/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-g++
         Target: arm-none-eabi
@@ -307,8 +307,8 @@ events:
         Thread model: single
         Supported LTO compression algorithms: zlib
         gcc version 13.3.1 20240614 (GNU Tools for STM32 13.3.rel1.20240926-1715) 
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_ee626.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_ee626.dir/'
-         /home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/cc1plus -quiet -v -iprefix /home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/ -isysroot /home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../arm-none-eabi -D__USES_INITFINI__ /opt/clion/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_ee626.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -fdiagnostics-color=always -o /tmp/ccXYTDlb.s
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_00357.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_00357.dir/'
+         /home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/cc1plus -quiet -v -iprefix /home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/ -isysroot /home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../arm-none-eabi -D__USES_INITFINI__ /opt/clion/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_00357.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -fdiagnostics-color=always -o /tmp/ccev0ySX.s
         GNU C++17 (GNU Tools for STM32 13.3.rel1.20240926-1715) version 13.3.1 20240614 (arm-none-eabi)
         	compiled by GNU C version 7.5.0, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
         
@@ -331,18 +331,18 @@ events:
          /home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/include
         End of search list.
         Compiler executable checksum: 799ebe4e0c1d25309a7a428a946f0718
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_ee626.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_ee626.dir/'
-         /home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/as -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_ee626.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccXYTDlb.s
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_00357.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_00357.dir/'
+         /home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/as -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_00357.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccev0ySX.s
         GNU assembler version 2.42.0 (arm-none-eabi) using BFD version (GNU Tools for STM32 13.3.rel1.20240926-1715) 2.42.0.20240614
         COMPILER_PATH=/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/:/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/:/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/
         LIBRARY_PATH=/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/:/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/:/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/:/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_ee626.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_ee626.dir/CMakeCXXCompilerABI.cpp.'
-        Linking CXX static library libcmTC_ee626.a
-        /opt/clion/bin/cmake/linux/x64/bin/cmake -P CMakeFiles/cmTC_ee626.dir/cmake_clean_target.cmake
-        /opt/clion/bin/cmake/linux/x64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ee626.dir/link.txt --verbose=1
-        arm-none-eabi-ar qc libcmTC_ee626.a CMakeFiles/cmTC_ee626.dir/CMakeCXXCompilerABI.cpp.obj
-        /home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-ranlib libcmTC_ee626.a
-        make[1]: Leaving directory '/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-TtgjOP'
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_00357.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_00357.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX static library libcmTC_00357.a
+        /opt/clion/bin/cmake/linux/x64/bin/cmake -P CMakeFiles/cmTC_00357.dir/cmake_clean_target.cmake
+        /opt/clion/bin/cmake/linux/x64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_00357.dir/link.txt --verbose=1
+        arm-none-eabi-ar qc libcmTC_00357.a CMakeFiles/cmTC_00357.dir/CMakeCXXCompilerABI.cpp.obj
+        /home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-ranlib libcmTC_00357.a
+        make[1]: Leaving directory '/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-OkpJRk'
         
       exitCode: 0
   -
@@ -381,13 +381,13 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
-        ignore line: [Change Dir: '/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-TtgjOP']
+        ignore line: [Change Dir: '/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-OkpJRk']
         ignore line: []
-        ignore line: [Run Build Command(s): /opt/clion/bin/cmake/linux/x64/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_ee626/fast]
-        ignore line: [/usr/bin/make  -f CMakeFiles/cmTC_ee626.dir/build.make CMakeFiles/cmTC_ee626.dir/build]
-        ignore line: [make[1]: Entering directory '/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-TtgjOP']
-        ignore line: [Building CXX object CMakeFiles/cmTC_ee626.dir/CMakeCXXCompilerABI.cpp.obj]
-        ignore line: [/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-g++   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_ee626.dir/CMakeCXXCompilerABI.cpp.obj -c /opt/clion/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /opt/clion/bin/cmake/linux/x64/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_00357/fast]
+        ignore line: [/usr/bin/make  -f CMakeFiles/cmTC_00357.dir/build.make CMakeFiles/cmTC_00357.dir/build]
+        ignore line: [make[1]: Entering directory '/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-OkpJRk']
+        ignore line: [Building CXX object CMakeFiles/cmTC_00357.dir/CMakeCXXCompilerABI.cpp.obj]
+        ignore line: [/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-g++   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_00357.dir/CMakeCXXCompilerABI.cpp.obj -c /opt/clion/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-g++]
         ignore line: [Target: arm-none-eabi]
@@ -395,8 +395,8 @@ events:
         ignore line: [Thread model: single]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 13.3.1 20240614 (GNU Tools for STM32 13.3.rel1.20240926-1715) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_ee626.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_ee626.dir/']
-        ignore line: [ /home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/cc1plus -quiet -v -iprefix /home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/ -isysroot /home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../arm-none-eabi -D__USES_INITFINI__ /opt/clion/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_ee626.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -fdiagnostics-color=always -o /tmp/ccXYTDlb.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_00357.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_00357.dir/']
+        ignore line: [ /home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/cc1plus -quiet -v -iprefix /home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/ -isysroot /home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../arm-none-eabi -D__USES_INITFINI__ /opt/clion/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_00357.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -fdiagnostics-color=always -o /tmp/ccev0ySX.s]
         ignore line: [GNU C++17 (GNU Tools for STM32 13.3.rel1.20240926-1715) version 13.3.1 20240614 (arm-none-eabi)]
         ignore line: [	compiled by GNU C version 7.5.0  GMP version 6.2.1  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.15-1-g835ea3a-GMP]
         ignore line: []
@@ -419,18 +419,18 @@ events:
         ignore line: [ /home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 799ebe4e0c1d25309a7a428a946f0718]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_ee626.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_ee626.dir/']
-        ignore line: [ /home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/as -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_ee626.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccXYTDlb.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_00357.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_00357.dir/']
+        ignore line: [ /home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/as -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_00357.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccev0ySX.s]
         ignore line: [GNU assembler version 2.42.0 (arm-none-eabi) using BFD version (GNU Tools for STM32 13.3.rel1.20240926-1715) 2.42.0.20240614]
         ignore line: [COMPILER_PATH=/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/:/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/:/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/]
         ignore line: [LIBRARY_PATH=/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/:/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/:/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/:/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_ee626.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_ee626.dir/CMakeCXXCompilerABI.cpp.']
-        ignore line: [Linking CXX static library libcmTC_ee626.a]
-        ignore line: [/opt/clion/bin/cmake/linux/x64/bin/cmake -P CMakeFiles/cmTC_ee626.dir/cmake_clean_target.cmake]
-        ignore line: [/opt/clion/bin/cmake/linux/x64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ee626.dir/link.txt --verbose=1]
-        ignore line: [arm-none-eabi-ar qc libcmTC_ee626.a CMakeFiles/cmTC_ee626.dir/CMakeCXXCompilerABI.cpp.obj]
-        ignore line: [/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-ranlib libcmTC_ee626.a]
-        ignore line: [make[1]: Leaving directory '/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-TtgjOP']
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_00357.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_00357.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX static library libcmTC_00357.a]
+        ignore line: [/opt/clion/bin/cmake/linux/x64/bin/cmake -P CMakeFiles/cmTC_00357.dir/cmake_clean_target.cmake]
+        ignore line: [/opt/clion/bin/cmake/linux/x64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_00357.dir/link.txt --verbose=1]
+        ignore line: [arm-none-eabi-ar qc libcmTC_00357.a CMakeFiles/cmTC_00357.dir/CMakeCXXCompilerABI.cpp.obj]
+        ignore line: [/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-ranlib libcmTC_00357.a]
+        ignore line: [make[1]: Leaving directory '/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-OkpJRk']
         ignore line: []
         ignore line: []
         implicit libs: []
