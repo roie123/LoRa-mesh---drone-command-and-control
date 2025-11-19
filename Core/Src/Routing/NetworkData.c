@@ -164,6 +164,10 @@ void remove_packet(uint8_t dst_id, uint8_t msg_id) {
     memset(&last_received_packets[index], 0, sizeof(CompressedPacket));
 }
 
+uint8_t get_global_msg_id() {
+    return ++global_msg_id;
+}
+
 void add_received_packet(CompressedPacket *pkt) {
     for (int i = 0; i < 10; i++) {
         if (last_received_packets[i].dst_id == 0) {

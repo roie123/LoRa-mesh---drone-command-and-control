@@ -7,6 +7,7 @@
 #include <stdio.h>
 
 #include "packet.h"
+#include "../Routing/NetworkData.h"
 
 uint8_t LoRa_transmit_safe(LoRa *lora, uint8_t *data, uint8_t length, uint16_t timeout, SemaphoreHandle_t lora_mutex_handle) {
     uint8_t status = 0;
@@ -27,6 +28,7 @@ void xTX_task(void *args) {
 
     for (;;) {
         if (xQueueReceive(task_args->_tx_queue_handle,&packet_from_queue,portMAX_DELAY) == pdTRUE) {
+            packet_from_queue.msg_id=get_global_msg_id();
 
             if (LoRa_transmit_safe(
             task_args->_lora,

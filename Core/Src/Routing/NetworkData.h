@@ -16,7 +16,7 @@
 #define LAST_PACKETS_SENT_MAX 10
 
 
-
+static uint8_t global_msg_id=0;
 extern uint8_t connection_requests[10];
 extern Node connected_nodes[MAX_NODES];
 extern CompressedPacket last_received_packets[LAST_PACKETS_RECEIVED_MAX];
@@ -30,7 +30,7 @@ extern uint8_t last_packets_sent[LAST_PACKETS_SENT_MAX];
 static uint8_t fifo_start = 0;   // index of oldest packet
 static uint8_t fifo_count = 0;   // number of packets stored
 
-
+uint8_t get_global_msg_id();
 
 void add_received_packet(CompressedPacket *pkt);
 
