@@ -4,6 +4,8 @@
 
 #include "NetworkData.h"
 
+#include <string.h>
+
 
 //ONLY 1 task is allowed to change this array
 uint8_t connection_requests[MAX_CONNECTIONS_REQUESTS] = {0};
@@ -11,10 +13,8 @@ uint8_t connection_requests[MAX_CONNECTIONS_REQUESTS] = {0};
 
 Node connected_nodes[MAX_NODES] = {0};
 
-CompressedPacket last_received_packets[10]={0};
-
-
-
+CompressedPacket last_received_packets[10] = {0};
+uint8_t last_packets_sent[LAST_PACKETS_SENT_MAX] = {0};
 
 
 int add_connection_request(uint8_t value, SemaphoreHandle_t network_data_mutex) {
@@ -140,60 +140,82 @@ int remove_node(uint8_t id, SemaphoreHandle_t network_data_mutex) {
     return idx;
 }
 
+inline uint8_t compute_key(uint8_t dst_id, uint8_t msg_id) {
+    return dst_id ^ msg_id;
+}
 
-uint8_t last_received_count = 0;
+int find_in_last_packets(uint8_t dst_id, uint8_t msg_id) {
+    uint8_t key = compute_key(dst_id, msg_id);
 
-/* Add packet: overwrite oldest if full */
-void add_received_packet(const CompressedPacket *pkt)
-{
-    if (!pkt) return;
+    for (int i = 0; i < 10; i++) {
+        if ((last_received_packets[i].dst_id ^ last_received_packets[i].msg_id) == key) {
+            return i; // return index
+        }
+    }
 
-    /* Check if dst_id already exists → update it */
-    for (int i = 0; i < last_received_count; i++) {
-        if (last_received_packets[i].dst_id == pkt->dst_id) {
-            last_received_packets[i] = *pkt; // overwrite
+    return -1; // not found
+}
+
+void remove_packet(uint8_t dst_id, uint8_t msg_id) {
+    int index = find_in_last_packets(dst_id, msg_id);
+    if (index < 0) return;
+
+    // Clear entry
+    memset(&last_received_packets[index], 0, sizeof(CompressedPacket));
+}
+
+void add_received_packet(CompressedPacket *pkt) {
+    for (int i = 0; i < 10; i++) {
+        if (last_received_packets[i].dst_id == 0) {
+            last_received_packets[i] = *pkt;
             return;
         }
     }
 
-    /* If not full → append */
-    if (last_received_count < LAST_RECEIVED_MAX) {
-        last_received_packets[last_received_count++] = *pkt;
-    }
-    else {
-        /* Full → overwrite index 0 and shift left */
-        for (int i = 1; i < LAST_RECEIVED_MAX; i++) {
-            last_received_packets[i - 1] = last_received_packets[i];
-        }
-        last_received_packets[LAST_RECEIVED_MAX - 1] = *pkt;
+    // Table full → overwrite slot 0
+    last_received_packets[0] = *pkt;
+}
+
+//  ****************************************************************************************************** /
+
+// Add a new sent packet to the FIFO
+static void last_packets_sent_add(uint8_t packet_id) {
+    if (fifo_count < LAST_PACKETS_SENT_MAX) {
+        uint8_t end = (fifo_start + fifo_count) % LAST_PACKETS_SENT_MAX;
+        last_packets_sent[end] = packet_id;
+        fifo_count++;
+    } else {
+        // FIFO full → overwrite oldest
+        last_packets_sent[fifo_start] = packet_id;
+        fifo_start = (fifo_start + 1) % LAST_PACKETS_SENT_MAX;
     }
 }
 
-bool remove_received_packet(uint8_t dst_id)
-{
-    for (int i = 0; i < last_received_count; i++) {
-        if (last_received_packets[i].dst_id == dst_id) {
-
-            /* Shift left */
-            for (int j = i + 1; j < last_received_count; j++) {
-                last_received_packets[j - 1] = last_received_packets[j];
+// Remove a packet by value (first occurrence)
+static bool last_packets_sent_remove(uint8_t packet_id) {
+    for (uint8_t i = 0; i < fifo_count; i++) {
+        uint8_t idx = (fifo_start + i) % LAST_PACKETS_SENT_MAX;
+        if (last_packets_sent[idx] == packet_id) {
+            // Shift everything after it left
+            for (uint8_t j = i; j < fifo_count - 1; j++) {
+                uint8_t from = (fifo_start + j + 1) % LAST_PACKETS_SENT_MAX;
+                uint8_t to = (fifo_start + j) % LAST_PACKETS_SENT_MAX;
+                last_packets_sent[to] = last_packets_sent[from];
             }
-
-            last_received_count--;
+            fifo_count--;
             return true;
         }
     }
     return false; // not found
 }
 
-
-
-CompressedPacket* find_received_packet(uint8_t dst_id)
-{
-    for (int i = 0; i < last_received_count; i++) {
-        if (last_received_packets[i].dst_id == dst_id) {
-            return &last_received_packets[i];
+// Find a packet by value, returns index in FIFO or -1
+static int8_t last_packets_sent_find(uint8_t packet_id) {
+    for (uint8_t i = 0; i < fifo_count; i++) {
+        uint8_t idx = (fifo_start + i) % LAST_PACKETS_SENT_MAX;
+        if (last_packets_sent[idx] == packet_id) {
+            return idx;
         }
     }
-    return NULL;
+    return -1;
 }

@@ -12,20 +12,31 @@
 #include "packet.h"
 #define MAX_NODES 10
 #define MAX_CONNECTIONS_REQUESTS 10
-#define LAST_RECEIVED_MAX 10
-
+#define LAST_PACKETS_RECEIVED_MAX 10
+#define LAST_PACKETS_SENT_MAX 10
 
 
 
 extern uint8_t connection_requests[10];
 extern Node connected_nodes[MAX_NODES];
-extern CompressedPacket last_received_packets[LAST_RECEIVED_MAX];
+extern CompressedPacket last_received_packets[LAST_PACKETS_RECEIVED_MAX];
 extern uint8_t last_received_count;
 
-void add_received_packet(const CompressedPacket *pkt);
+
+
+
+
+extern uint8_t last_packets_sent[LAST_PACKETS_SENT_MAX];
+static uint8_t fifo_start = 0;   // index of oldest packet
+static uint8_t fifo_count = 0;   // number of packets stored
+
+
+
+void add_received_packet(CompressedPacket *pkt);
 
 bool remove_received_packet(uint8_t dst_id);
-CompressedPacket* find_received_packet(uint8_t dst_id);
+int find_in_last_packets(uint8_t dst_id, uint8_t msg_id);
+ uint8_t compute_key(uint8_t dst_id, uint8_t msg_id);
 
 
 
