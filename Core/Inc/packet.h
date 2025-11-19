@@ -39,6 +39,16 @@ typedef struct __attribute__((packed)) {
     int8_t rssi;
 } MeshPacket;
 
+
+typedef struct {
+    uint8_t dst_id;
+    uint8_t flags;
+    uint8_t msg_id;
+    uint8_t payload[MESH_MAX_PAYLOAD];
+
+
+} CompressedPacket;
+
 uint8_t mesh_crc(const uint8_t *data , uint8_t len);
 bool validate_packet(MeshPacket *pkt);
 int mesh_build_packet(MeshPacket *pkt, uint8_t src, uint8_t dst,

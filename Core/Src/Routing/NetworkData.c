@@ -11,6 +11,11 @@ uint8_t connection_requests[MAX_CONNECTIONS_REQUESTS] = {0};
 
 Node connected_nodes[MAX_NODES] = {0};
 
+CompressedPacket last_received_packets[10]={0};
+
+
+
+
 
 int add_connection_request(uint8_t value, SemaphoreHandle_t network_data_mutex) {
     if (xSemaphoreTake(network_data_mutex, portMAX_DELAY) == pdTRUE) {
@@ -133,4 +138,62 @@ int remove_node(uint8_t id, SemaphoreHandle_t network_data_mutex) {
     connected_nodes[idx].rssi = 0;
 
     return idx;
+}
+
+
+uint8_t last_received_count = 0;
+
+/* Add packet: overwrite oldest if full */
+void add_received_packet(const CompressedPacket *pkt)
+{
+    if (!pkt) return;
+
+    /* Check if dst_id already exists → update it */
+    for (int i = 0; i < last_received_count; i++) {
+        if (last_received_packets[i].dst_id == pkt->dst_id) {
+            last_received_packets[i] = *pkt; // overwrite
+            return;
+        }
+    }
+
+    /* If not full → append */
+    if (last_received_count < LAST_RECEIVED_MAX) {
+        last_received_packets[last_received_count++] = *pkt;
+    }
+    else {
+        /* Full → overwrite index 0 and shift left */
+        for (int i = 1; i < LAST_RECEIVED_MAX; i++) {
+            last_received_packets[i - 1] = last_received_packets[i];
+        }
+        last_received_packets[LAST_RECEIVED_MAX - 1] = *pkt;
+    }
+}
+
+bool remove_received_packet(uint8_t dst_id)
+{
+    for (int i = 0; i < last_received_count; i++) {
+        if (last_received_packets[i].dst_id == dst_id) {
+
+            /* Shift left */
+            for (int j = i + 1; j < last_received_count; j++) {
+                last_received_packets[j - 1] = last_received_packets[j];
+            }
+
+            last_received_count--;
+            return true;
+        }
+    }
+    return false; // not found
+}
+
+
+
+CompressedPacket* find_received_packet(uint8_t dst_id)
+{
+    for (int i = 0; i < last_received_count; i++) {
+        if (last_received_packets[i].dst_id == dst_id) {
+            return &last_received_packets[i];
+        }
+    }
+    return NULL;
 }
