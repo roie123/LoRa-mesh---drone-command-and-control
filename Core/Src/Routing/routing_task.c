@@ -6,6 +6,7 @@
 
 #include <stdio.h>
 #include <string.h>
+#include <sys/types.h>
 
 #include "commands.h"
 #include "Connect_to_node_task.h"
@@ -22,7 +23,7 @@ void routing_task(void *args) {
     uint8_t received_byte_array[sizeof(MeshPacket)];
     MeshPacket pkt;
     CompressedPacket compressed_packet;
-
+    MeshPacket packet_to_send;
     for (;;) {
         if (xQueueReceive(routing_task_args->_rx_queue_handle, received_byte_array,portMAX_DELAY) == pdPASS) {
             memcpy(&pkt, received_byte_array, sizeof(MeshPacket));
@@ -35,24 +36,46 @@ void routing_task(void *args) {
 
 
             if (pkt.dst_id == mesh_id) {
-                // handle_my_packets(&pkt);
+
 
                 switch (command) {
                     case CONNECTION_ACK: {
                         remove_connection_request(pkt.src_id, routing_task_args->network_data_mutex);
                         add_connected_node(pkt.src_id, 0, 0, routing_task_args->network_data_mutex);
+                        last_packets_sent_remove(pkt.src_id , pkt.msg_id);
 
 
                         continue;
                     }
 
 
-                    default: continue;
+                    case MOVE_FORWARD: {
+                        //TODO : send to drone
+                        uint8_t ack_payload[1]={ACKNOWLEDGE};
+                        mesh_build_packet(&packet_to_send,mesh_id,pkt.src_id,0,0,ack_payload,sizeof(ack_payload));
+
+                        xQueueSend(routing_task_args->_tx_queue_handle,&packet_to_send,pdMS_TO_TICKS(100));
+
+
+                        continue;
+                    }
+                    case ACKNOWLEDGE : {
+                        last_packets_sent_remove(pkt.src_id,pkt.msg_id);
+
+                    }
+
+
+                    default: {
+                        // last_packets_sent_remove(pkt.src_id ^ pkt.dst_id); /TODO 
+                        continue;
+                    };
                 }
 
 
                 continue;
             }
+
+
 
             if (pkt.dst_id == BROADCAST_ADDRESS) {
                 switch (command) {
@@ -96,9 +119,8 @@ void routing_task(void *args) {
 
                     add_received_packet(&compressed_packet);
                     pkt.max_hops--;
-                    xQueueSend(routing_task_args->_tx_queue_handle,&pkt,pdMS_TO_TICKS(100));
-
-                }else {
+                    xQueueSend(routing_task_args->_tx_queue_handle, &pkt, pdMS_TO_TICKS(100));
+                } else {
                     continue;
                 }
 
@@ -111,15 +133,7 @@ void routing_task(void *args) {
 }
 
 
-uint8_t handle_my_packets(MeshPacket *packet) {
-    Commands command = (Commands) packet->payload[0];
-    switch (packet->payload[0]) {
-        //TODO transmit to drone via uart
 
-        default: return 1;
-    }
-    return 1;
-}
 
 
 uint8_t handle_forwarding(MeshPacket *packet) {

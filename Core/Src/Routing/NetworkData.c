@@ -14,7 +14,7 @@ uint8_t connection_requests[MAX_CONNECTIONS_REQUESTS] = {0};
 Node connected_nodes[MAX_NODES] = {0};
 
 CompressedPacket last_received_packets[10] = {0};
-uint8_t last_packets_sent[LAST_PACKETS_SENT_MAX] = {0};
+CompressedPacket last_packets_sent[LAST_PACKETS_SENT_MAX] = {0};
 
 
 int add_connection_request(uint8_t value, SemaphoreHandle_t network_data_mutex) {
@@ -182,44 +182,54 @@ void add_received_packet(CompressedPacket *pkt) {
 
 //  ****************************************************************************************************** /
 
-// Add a new sent packet to the FIFO
- void last_packets_sent_add(uint8_t packet_id) {
-    if (fifo_count < LAST_PACKETS_SENT_MAX) {
-        uint8_t end = (fifo_start + fifo_count) % LAST_PACKETS_SENT_MAX;
-        last_packets_sent[end] = packet_id;
-        fifo_count++;
+static uint8_t fifo_start_sent = 0;
+static uint8_t fifo_count_sent = 0;
+
+// Compute key
+static inline uint8_t packet_key(const CompressedPacket* pkt) {
+    return pkt->dst_id ^ pkt->msg_id;
+}
+
+// Add a packet (FIFO, overwrite oldest if full)
+void last_packets_sent_add(const CompressedPacket* pkt) {
+    if (fifo_count_sent < LAST_PACKETS_SENT_MAX) {
+        uint8_t end = (fifo_start_sent + fifo_count_sent) % LAST_PACKETS_SENT_MAX;
+        last_packets_sent[end] = *pkt;
+        fifo_count_sent++;
     } else {
         // FIFO full → overwrite oldest
-        last_packets_sent[fifo_start] = packet_id;
-        fifo_start = (fifo_start + 1) % LAST_PACKETS_SENT_MAX;
+        last_packets_sent[fifo_start_sent] = *pkt;
+        fifo_start_sent = (fifo_start_sent + 1) % LAST_PACKETS_SENT_MAX;
     }
 }
 
-// Remove a packet by value (first occurrence)
- bool last_packets_sent_remove(uint8_t packet_id) {
-    for (uint8_t i = 0; i < fifo_count; i++) {
-        uint8_t idx = (fifo_start + i) % LAST_PACKETS_SENT_MAX;
-        if (last_packets_sent[idx] == packet_id) {
-            // Shift everything after it left
-            for (uint8_t j = i; j < fifo_count - 1; j++) {
-                uint8_t from = (fifo_start + j + 1) % LAST_PACKETS_SENT_MAX;
-                uint8_t to = (fifo_start + j) % LAST_PACKETS_SENT_MAX;
+// Find a packet by key (dst_id ^ msg_id)
+CompressedPacket* last_packets_sent_find(uint8_t dst_id, uint8_t msg_id) {
+    uint8_t key = dst_id ^ msg_id;
+    for (uint8_t i = 0; i < fifo_count_sent; i++) {
+        uint8_t idx = (fifo_start_sent + i) % LAST_PACKETS_SENT_MAX;
+        if (packet_key(&last_packets_sent[idx]) == key) {
+            return &last_packets_sent[idx];
+        }
+    }
+    return NULL; // not found
+}
+
+// Remove a packet by key (dst_id ^ msg_id)
+bool last_packets_sent_remove(uint8_t dst_id, uint8_t msg_id) {
+    uint8_t key = dst_id ^ msg_id;
+    for (uint8_t i = 0; i < fifo_count_sent; i++) {
+        uint8_t idx = (fifo_start_sent + i) % LAST_PACKETS_SENT_MAX;
+        if (packet_key(&last_packets_sent[idx]) == key) {
+            // shift everything after it left
+            for (uint8_t j = i; j < fifo_count_sent - 1; j++) {
+                uint8_t from = (fifo_start_sent + j + 1) % LAST_PACKETS_SENT_MAX;
+                uint8_t to   = (fifo_start_sent + j) % LAST_PACKETS_SENT_MAX;
                 last_packets_sent[to] = last_packets_sent[from];
             }
-            fifo_count--;
+            fifo_count_sent--;
             return true;
         }
     }
-    return false; // not found
-}
-
-// Find a packet by value, returns index in FIFO or -1
- int8_t last_packets_sent_find(uint8_t packet_id) {
-    for (uint8_t i = 0; i < fifo_count; i++) {
-        uint8_t idx = (fifo_start + i) % LAST_PACKETS_SENT_MAX;
-        if (last_packets_sent[idx] == packet_id) {
-            return idx;
-        }
-    }
-    return -1;
+    return false;
 }

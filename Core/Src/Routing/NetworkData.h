@@ -26,7 +26,7 @@ extern uint8_t last_received_count;
 
 
 
-extern uint8_t last_packets_sent[LAST_PACKETS_SENT_MAX];
+extern CompressedPacket last_packets_sent[LAST_PACKETS_SENT_MAX];
 static uint8_t fifo_start = 0;   // index of oldest packet
 static uint8_t fifo_count = 0;   // number of packets stored
 
@@ -54,7 +54,7 @@ int find_node(uint8_t id);
 
 
 
-void last_packets_sent_add(uint8_t packet_id);
-bool last_packets_sent_remove(uint8_t packet_id);
- int8_t last_packets_sent_find(uint8_t packet_id);
+void last_packets_sent_add(const CompressedPacket* pkt);
+bool last_packets_sent_remove(uint8_t dst_id, uint8_t msg_id);
+CompressedPacket* last_packets_sent_find(uint8_t dst_id, uint8_t msg_id);
 #endif //NETWORKDATA_H

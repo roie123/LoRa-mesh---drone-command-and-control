@@ -40,13 +40,12 @@ void xTX_task(void *args) {
 
 
             )) {
-                printf("xTX : SENT PACKET  \r\n");
                 compressed_packet_from_queue.msg_id=packet_from_queue.msg_id;
                 compressed_packet_from_queue.dst_id=packet_from_queue.dst_id;
                 compressed_packet_from_queue.flags=packet_from_queue.flags;
                 memcpy(compressed_packet_from_queue.payload,packet_from_queue.payload,sizeof(packet_from_queue.payload));
 
-                last_packets_sent_add()
+                last_packets_sent_add(&compressed_packet_from_queue);
 
 
 
