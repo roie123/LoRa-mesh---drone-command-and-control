@@ -21,6 +21,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/lora_receive.c.obj.d"
   "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/routing_task.c.obj"
   "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/routing_task.c.obj.d"
+  "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TEST/arm_test.c.obj"
+  "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TEST/arm_test.c.obj.d"
   "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TEST/tranmit_test.c.obj"
   "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TEST/tranmit_test.c.obj.d"
   "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TX/TX_Queue.c.obj"

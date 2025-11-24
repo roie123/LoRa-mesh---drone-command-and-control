@@ -400,6 +400,30 @@ Core/Src/Routing/routing_task.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/routing_task.c.s
 .PHONY : Core/Src/Routing/routing_task.c.s
 
+Core/Src/TEST/arm_test.obj: Core/Src/TEST/arm_test.c.obj
+.PHONY : Core/Src/TEST/arm_test.obj
+
+# target to build an object file
+Core/Src/TEST/arm_test.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TEST/arm_test.c.obj
+.PHONY : Core/Src/TEST/arm_test.c.obj
+
+Core/Src/TEST/arm_test.i: Core/Src/TEST/arm_test.c.i
+.PHONY : Core/Src/TEST/arm_test.i
+
+# target to preprocess a source file
+Core/Src/TEST/arm_test.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TEST/arm_test.c.i
+.PHONY : Core/Src/TEST/arm_test.c.i
+
+Core/Src/TEST/arm_test.s: Core/Src/TEST/arm_test.c.s
+.PHONY : Core/Src/TEST/arm_test.s
+
+# target to generate assembly for a file
+Core/Src/TEST/arm_test.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TEST/arm_test.c.s
+.PHONY : Core/Src/TEST/arm_test.c.s
+
 Core/Src/TEST/tranmit_test.obj: Core/Src/TEST/tranmit_test.c.obj
 .PHONY : Core/Src/TEST/tranmit_test.obj
 
@@ -1387,6 +1411,9 @@ help:
 	@echo "... Core/Src/Routing/routing_task.obj"
 	@echo "... Core/Src/Routing/routing_task.i"
 	@echo "... Core/Src/Routing/routing_task.s"
+	@echo "... Core/Src/TEST/arm_test.obj"
+	@echo "... Core/Src/TEST/arm_test.i"
+	@echo "... Core/Src/TEST/arm_test.s"
 	@echo "... Core/Src/TEST/tranmit_test.obj"
 	@echo "... Core/Src/TEST/tranmit_test.i"
 	@echo "... Core/Src/TEST/tranmit_test.s"

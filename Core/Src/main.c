@@ -39,6 +39,7 @@
 #include "TEST/tranmit_test.h"
 #include "TX/TX_Queue.h"
 #include "TX/TX_Task.h"
+#include "TEST/arm_test.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -198,6 +199,17 @@ int main(void)
 
 
     LoRa_startReceiving(&myLoRa);
+
+
+  setupRC();
+  // HAL_Delay(3);  // ~50Hz update rate
+
+  while (1)
+  {
+    updateRCLoop();
+   // HAL_Delay(20);  // ~50Hz update rate
+  }
+
 
   /* USER CODE END 2 */
 
