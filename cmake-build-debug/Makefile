@@ -136,6 +136,54 @@ mesh-drones-FRTOS.elf/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/build
 .PHONY : mesh-drones-FRTOS.elf/fast
 
+Core/Src/DRONE/RC_Values.obj: Core/Src/DRONE/RC_Values.c.obj
+.PHONY : Core/Src/DRONE/RC_Values.obj
+
+# target to build an object file
+Core/Src/DRONE/RC_Values.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/DRONE/RC_Values.c.obj
+.PHONY : Core/Src/DRONE/RC_Values.c.obj
+
+Core/Src/DRONE/RC_Values.i: Core/Src/DRONE/RC_Values.c.i
+.PHONY : Core/Src/DRONE/RC_Values.i
+
+# target to preprocess a source file
+Core/Src/DRONE/RC_Values.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/DRONE/RC_Values.c.i
+.PHONY : Core/Src/DRONE/RC_Values.c.i
+
+Core/Src/DRONE/RC_Values.s: Core/Src/DRONE/RC_Values.c.s
+.PHONY : Core/Src/DRONE/RC_Values.s
+
+# target to generate assembly for a file
+Core/Src/DRONE/RC_Values.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/DRONE/RC_Values.c.s
+.PHONY : Core/Src/DRONE/RC_Values.c.s
+
+Core/Src/DRONE/xDrone_Link_task.obj: Core/Src/DRONE/xDrone_Link_task.c.obj
+.PHONY : Core/Src/DRONE/xDrone_Link_task.obj
+
+# target to build an object file
+Core/Src/DRONE/xDrone_Link_task.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/DRONE/xDrone_Link_task.c.obj
+.PHONY : Core/Src/DRONE/xDrone_Link_task.c.obj
+
+Core/Src/DRONE/xDrone_Link_task.i: Core/Src/DRONE/xDrone_Link_task.c.i
+.PHONY : Core/Src/DRONE/xDrone_Link_task.i
+
+# target to preprocess a source file
+Core/Src/DRONE/xDrone_Link_task.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/DRONE/xDrone_Link_task.c.i
+.PHONY : Core/Src/DRONE/xDrone_Link_task.c.i
+
+Core/Src/DRONE/xDrone_Link_task.s: Core/Src/DRONE/xDrone_Link_task.c.s
+.PHONY : Core/Src/DRONE/xDrone_Link_task.s
+
+# target to generate assembly for a file
+Core/Src/DRONE/xDrone_Link_task.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/DRONE/xDrone_Link_task.c.s
+.PHONY : Core/Src/DRONE/xDrone_Link_task.c.s
+
 Core/Src/LoRa/LoRa.obj: Core/Src/LoRa/LoRa.c.obj
 .PHONY : Core/Src/LoRa/LoRa.obj
 
@@ -1378,6 +1426,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... mesh-drones-FRTOS.elf"
+	@echo "... Core/Src/DRONE/RC_Values.obj"
+	@echo "... Core/Src/DRONE/RC_Values.i"
+	@echo "... Core/Src/DRONE/RC_Values.s"
+	@echo "... Core/Src/DRONE/xDrone_Link_task.obj"
+	@echo "... Core/Src/DRONE/xDrone_Link_task.i"
+	@echo "... Core/Src/DRONE/xDrone_Link_task.s"
 	@echo "... Core/Src/LoRa/LoRa.obj"
 	@echo "... Core/Src/LoRa/LoRa.i"
 	@echo "... Core/Src/LoRa/LoRa.s"

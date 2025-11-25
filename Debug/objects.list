@@ -1,3 +1,5 @@
+"./Core/Src/DRONE/RC_Values.o"
+"./Core/Src/DRONE/xDrone_Link_task.o"
 "./Core/Src/LoRa/LoRa.o"
 "./Core/Src/Mesh/Node.o"
 "./Core/Src/Mesh/packet.o"

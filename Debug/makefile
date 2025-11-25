@@ -23,6 +23,7 @@ RM := rm -rf
 -include Core/Src/Network/subdir.mk
 -include Core/Src/Mesh/subdir.mk
 -include Core/Src/LoRa/subdir.mk
+-include Core/Src/DRONE/subdir.mk
 -include Core/Src/subdir.mk
 -include objects.mk
 

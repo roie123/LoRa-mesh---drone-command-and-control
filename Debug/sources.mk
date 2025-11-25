@@ -22,6 +22,7 @@ C_DEPS :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
+Core/Src/DRONE \
 Core/Src/LoRa \
 Core/Src/Mesh \
 Core/Src/Network \

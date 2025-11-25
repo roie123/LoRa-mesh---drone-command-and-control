@@ -29,6 +29,7 @@
 #include "id.h"
 #include "LoRa.h"
 #include "Node.h"
+#include "DRONE/xDrone_Link_task.h"
 #include "Network/PING_task.h"
 #include "Routing/lora_receive.h"
 #include "Util/queue_implementation.h"
@@ -86,6 +87,7 @@ TaskHandle_t rxTaskHandle;
 TaskHandle_t txTaskHandle;
 TaskHandle_t routingTaskHandle;
 TaskHandle_t pingTaskHandle;
+TaskHandle_t drone_linkTaskHandle;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -201,14 +203,7 @@ int main(void)
     LoRa_startReceiving(&myLoRa);
 
 
-  setupRC();
-  // HAL_Delay(3);  // ~50Hz update rate
 
-  while (1)
-  {
-    updateRCLoop();
-   // HAL_Delay(20);  // ~50Hz update rate
-  }
 
 
   /* USER CODE END 2 */
@@ -257,6 +252,7 @@ int main(void)
                                                     &routingTaskHandle);
         BaseType_t ping_task_status = xTaskCreate(xPing_task, "Ping Task", 800, &ping_args, 5, &pingTaskHandle);
         BaseType_t tx_status = xTaskCreate(xTX_task, "TX_Task", 800, &tx_args, 5, &txTaskHandle);
+        BaseType_t drone_link_status = xTaskCreate(xDrone_link_task, "Drone_Link_Task", 256, 0, 5, &drone_linkTaskHandle);
 
         uint16_t after = xPortGetFreeHeapSize();
         printf("Free heap after tasks: %u bytes\n", xPortGetFreeHeapSize());

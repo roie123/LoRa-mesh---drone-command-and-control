@@ -33,6 +33,8 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/DRONE/RC_Values.c" "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/DRONE/RC_Values.c.obj" "gcc" "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/DRONE/RC_Values.c.obj.d"
+  "/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/DRONE/xDrone_Link_task.c" "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/DRONE/xDrone_Link_task.c.obj" "gcc" "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/DRONE/xDrone_Link_task.c.obj.d"
   "/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/LoRa/LoRa.c" "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/LoRa/LoRa.c.obj" "gcc" "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/LoRa/LoRa.c.obj.d"
   "/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/Mesh/Node.c" "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Mesh/Node.c.obj" "gcc" "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Mesh/Node.c.obj.d"
   "/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/Mesh/packet.c" "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Mesh/packet.c.obj" "gcc" "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Mesh/packet.c.obj.d"

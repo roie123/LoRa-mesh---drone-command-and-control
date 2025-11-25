@@ -5,12 +5,11 @@
 
 #include <string.h>
 #include "stm32f1xx_hal.h"
-
+#include "../DRONE/xDrone_Link_task.h"
 extern UART_HandleTypeDef huart2;   // UART connected to FC
 
-#define RC_CHANNELS 8
-#define MSP_SET_RAW_RC 200
-#define MSP_FRAME_SIZE (5 + RC_CHANNELS*2 + 1)  // 22 bytes
+
+
 
 uint16_t rc_channels[RC_CHANNELS];
 
@@ -31,7 +30,7 @@ void MSP_SendRC()
     frame[1] = 'M';
     frame[2] = '<';
     frame[3] = RC_CHANNELS * 2;   // payload size
-    frame[4] = MSP_SET_RAW_RC;    // command
+    frame[4] = MSP_SET_RAW_COMMANDS;    // command
 
     // payload: 8 channels, little endian
     for (uint8_t ch = 0; ch < RC_CHANNELS; ch++)
@@ -59,7 +58,6 @@ void setupRC()
     rc_channels[4] = 900;                // arm switch
 
     MSP_SendRC();
-    rc_channels[4] = 1800;
 }
 
 // --- Example loop: sweep roll, toggle arm, ramp throttle ---

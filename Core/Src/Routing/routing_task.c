@@ -15,6 +15,7 @@
 #include "NetworkData.h"
 #include "packet.h"
 #include "queue.h"
+#include "../DRONE/RC_Values.h"
 #include "../TX/TX_Queue.h"
 #include "../Network/PONG_Queue.h"
 
@@ -50,7 +51,8 @@ void routing_task(void *args) {
 
 
                     case MOVE_FORWARD: {
-                        //TODO : send to drone
+                        update_rc_values(MOVE_FORWARD);
+
                         uint8_t ack_payload[1]={ACKNOWLEDGE};
                         mesh_build_packet(&packet_to_send,mesh_id,pkt.src_id,0,0,ack_payload,sizeof(ack_payload));
 
