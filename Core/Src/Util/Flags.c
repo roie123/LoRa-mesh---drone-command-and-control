@@ -10,6 +10,11 @@ static Flags flags_instance = {0};
 // Private mutex
 static SemaphoreHandle_t flags_mutex = NULL;
 
+
+
+BaseType_t dma_busy = false;
+
+
 // Return pointer to singleton
 Flags* get_flags(void) {
     return &flags_instance;

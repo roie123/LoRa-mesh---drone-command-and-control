@@ -5,7 +5,7 @@
 #include "RC_Values.h"
 
 
-Rc_values current_rc_values = {0};
+Rc_values current_rc_values = {900,900,900,900};
 Rc_values next_rc_values = {0};
 
 

@@ -202,8 +202,11 @@ int main(void)
 
     LoRa_startReceiving(&myLoRa);
 
-
-
+//
+// setupRC();
+// while(1){
+//     updateRCLoop();
+// }
 
 
   /* USER CODE END 2 */
@@ -250,9 +253,9 @@ int main(void)
         BaseType_t rx_task_status = xTaskCreate(xRX_Task, "RX_Task", configMINIMAL_STACK_SIZE, &rx_args, 6, &rxTaskHandle);
         BaseType_t router_task_status = xTaskCreate(routing_task, "Routing_Task", configMINIMAL_STACK_SIZE, &routing_args, 5,
                                                     &routingTaskHandle);
-        BaseType_t ping_task_status = xTaskCreate(xPing_task, "Ping Task", 800, &ping_args, 5, &pingTaskHandle);
-        BaseType_t tx_status = xTaskCreate(xTX_task, "TX_Task", 800, &tx_args, 5, &txTaskHandle);
-        BaseType_t drone_link_status = xTaskCreate(xDrone_link_task, "Drone_Link_Task", 256, 0, 5, &drone_linkTaskHandle);
+        BaseType_t ping_task_status = xTaskCreate(xPing_task, "Ping Task", 500, &ping_args, 5, &pingTaskHandle);
+        BaseType_t tx_status = xTaskCreate(xTX_task, "TX_Task", 500, &tx_args, 5, &txTaskHandle);
+        BaseType_t drone_link_status = xTaskCreate(xDrone_link_task, "Drone_Link_Task", 300, 0, 5, &drone_linkTaskHandle);
 
         uint16_t after = xPortGetFreeHeapSize();
         printf("Free heap after tasks: %u bytes\n", xPortGetFreeHeapSize());
@@ -462,7 +465,19 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
         portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
     }
 }
+void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart) {
+  if (huart->Instance == USART2) {
+    dma_busy = pdFALSE;
 
+
+
+  }
+}
+
+void vApplicationStackOverflowHook(TaskHandle_t xTask, char *pcTaskName) {
+  // Breakpoint here
+  for(;;);
+}
 /* USER CODE END 4 */
 
 /* USER CODE BEGIN Header_StartDefaultTask */

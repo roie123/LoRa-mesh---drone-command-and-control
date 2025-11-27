@@ -3,7 +3,12 @@
 //
 
 #include "xDrone_Link_task.h"
+
+#include <string.h>
+
+#include "FreeRTOS.h"
 #include "main.h"
+#include "task.h"
 #include "RC_Values.h"
 #include "stm32f1xx_hal_uart.h"
 static MSP_RC_Frame msp_rc_frame = {
@@ -14,7 +19,9 @@ static MSP_RC_Frame msp_rc_frame = {
     .command = MSP_SET_RAW_COMMANDS,
     .channels = {0}
 };
-extern UART_HandleTypeDef huart2;   // UART connected to FC
+
+
+extern UART_HandleTypeDef huart2; // UART connected to FC
 
 void xDrone_link_task(void *args) {
     for (;;) {
@@ -31,7 +38,7 @@ void xDrone_link_task(void *args) {
         msp_rc_frame.channels[1] = current_rc_values.pitch;
 
 
-        uint8_t *raw = (uint8_t *)&msp_rc_frame;
+        uint8_t *raw = (uint8_t *) &msp_rc_frame;
 
         uint8_t checksum = 0;
 
@@ -41,13 +48,15 @@ void xDrone_link_task(void *args) {
 
         msp_rc_frame.checksum = checksum;
 
+        // uint8_t buffer[sizeof(MSP_RC_Frame)];
+        // memcpy(buffer, &msp_rc_frame, sizeof(MSP_RC_Frame));
 
-
-
-
-        HAL_UART_Transmit(&huart2, (uint8_t *)&msp_rc_frame, sizeof(MSP_RC_Frame), HAL_MAX_DELAY);
-
-
-
+        HAL_StatusTypeDef status = HAL_UART_Transmit(&huart2, (uint8_t*)&msp_rc_frame, sizeof(MSP_RC_Frame), 100);
+        if (status != HAL_OK) {
+            // UART timed out or busy
+            // just log or skip, do not return
+            vTaskDelay(pdMS_TO_TICKS(1));
+        }
+        vTaskDelay(pdMS_TO_TICKS(1000)); // 200Hz updates
     }
 }
