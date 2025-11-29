@@ -136,6 +136,30 @@ mesh-drones-FRTOS.elf/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/build
 .PHONY : mesh-drones-FRTOS.elf/fast
 
+Core/Src/DRONE/Command_Queue.obj: Core/Src/DRONE/Command_Queue.c.obj
+.PHONY : Core/Src/DRONE/Command_Queue.obj
+
+# target to build an object file
+Core/Src/DRONE/Command_Queue.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/DRONE/Command_Queue.c.obj
+.PHONY : Core/Src/DRONE/Command_Queue.c.obj
+
+Core/Src/DRONE/Command_Queue.i: Core/Src/DRONE/Command_Queue.c.i
+.PHONY : Core/Src/DRONE/Command_Queue.i
+
+# target to preprocess a source file
+Core/Src/DRONE/Command_Queue.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/DRONE/Command_Queue.c.i
+.PHONY : Core/Src/DRONE/Command_Queue.c.i
+
+Core/Src/DRONE/Command_Queue.s: Core/Src/DRONE/Command_Queue.c.s
+.PHONY : Core/Src/DRONE/Command_Queue.s
+
+# target to generate assembly for a file
+Core/Src/DRONE/Command_Queue.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/DRONE/Command_Queue.c.s
+.PHONY : Core/Src/DRONE/Command_Queue.c.s
+
 Core/Src/DRONE/RC_Values.obj: Core/Src/DRONE/RC_Values.c.obj
 .PHONY : Core/Src/DRONE/RC_Values.obj
 
@@ -1426,6 +1450,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... mesh-drones-FRTOS.elf"
+	@echo "... Core/Src/DRONE/Command_Queue.obj"
+	@echo "... Core/Src/DRONE/Command_Queue.i"
+	@echo "... Core/Src/DRONE/Command_Queue.s"
 	@echo "... Core/Src/DRONE/RC_Values.obj"
 	@echo "... Core/Src/DRONE/RC_Values.i"
 	@echo "... Core/Src/DRONE/RC_Values.s"

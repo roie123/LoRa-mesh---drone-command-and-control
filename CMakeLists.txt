@@ -56,9 +56,8 @@ add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB)
 file(GLOB_RECURSE SOURCES "Core/*.*" "Middlewares/*.*" "Drivers/*.*")
 
 set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/STM32F103C8TX_FLASH.ld
-        Core/Src/TEST/arm_test.h
-        Core/Src/DRONE/RC_Values.c
-        Core/Src/DRONE/RC_Values.h)
+        Core/Src/DRONE/Command_Queue.c
+        Core/Src/DRONE/Command_Queue.h)
 
 add_link_options(-Wl,-gc-sections,--print-memory-usage,-Map=${PROJECT_BINARY_DIR}/${PROJECT_NAME}.map)
 add_link_options(-mcpu=cortex-m3 -mthumb -mthumb-interwork)

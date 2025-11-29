@@ -29,6 +29,7 @@
 #include "id.h"
 #include "LoRa.h"
 #include "Node.h"
+#include "DRONE/Command_Queue.h"
 #include "DRONE/xDrone_Link_task.h"
 #include "Network/PING_task.h"
 #include "Routing/lora_receive.h"
@@ -62,6 +63,7 @@
 SPI_HandleTypeDef hspi2;
 
 UART_HandleTypeDef huart2;
+DMA_HandleTypeDef hdma_usart2_tx;
 
 /* Definitions for defaultTask */
 osThreadId_t defaultTaskHandle;
@@ -93,6 +95,7 @@ TaskHandle_t drone_linkTaskHandle;
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
+static void MX_DMA_Init(void);
 static void MX_SPI2_Init(void);
 static void MX_USART2_UART_Init(void);
 void StartDefaultTask(void *argument);
@@ -135,6 +138,7 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
   MX_SPI2_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
@@ -144,6 +148,8 @@ int main(void)
     node_id_init();
     RX_Queue_init();
     TX_Queue_init();
+    Command_Queue_init();
+
 
     myLoRa = newLoRa();
     myLoRa.CS_port = NSS_GPIO_Port;
@@ -391,6 +397,22 @@ static void MX_USART2_UART_Init(void)
   /* USER CODE BEGIN USART2_Init 2 */
 
   /* USER CODE END USART2_Init 2 */
+
+}
+
+/**
+  * Enable DMA controller clock
+  */
+static void MX_DMA_Init(void)
+{
+
+  /* DMA controller clock enable */
+  __HAL_RCC_DMA1_CLK_ENABLE();
+
+  /* DMA interrupt init */
+  /* DMA1_Channel7_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Channel7_IRQn, 5, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Channel7_IRQn);
 
 }
 

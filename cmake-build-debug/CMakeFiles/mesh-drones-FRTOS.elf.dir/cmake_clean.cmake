@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/DRONE/Command_Queue.c.obj"
+  "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/DRONE/Command_Queue.c.obj.d"
   "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/DRONE/RC_Values.c.obj"
   "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/DRONE/RC_Values.c.obj.d"
   "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/DRONE/xDrone_Link_task.c.obj"

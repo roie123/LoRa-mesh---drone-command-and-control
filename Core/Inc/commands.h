@@ -19,7 +19,7 @@ typedef enum {
     CONNECTION_MADE=8,
     PING_COMMAND=9,
     ACKNOWLEDGE=10,
-
+    STABLE=11
 
 
 }Commands;

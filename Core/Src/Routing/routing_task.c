@@ -15,6 +15,7 @@
 #include "NetworkData.h"
 #include "packet.h"
 #include "queue.h"
+#include "../DRONE/Command_Queue.h"
 #include "../DRONE/RC_Values.h"
 #include "../TX/TX_Queue.h"
 #include "../Network/PONG_Queue.h"
@@ -51,7 +52,9 @@ void routing_task(void *args) {
 
 
                     case MOVE_FORWARD: {
-                        update_rc_values(MOVE_FORWARD);
+                        // update_rc_values(MOVE_FORWARD); deprecated
+                        Commands cmd_to_queue= MOVE_FORWARD;
+                        xQueueSend(command_queue,&cmd_to_queue,pdMS_TO_TICKS(20));
 
                         uint8_t ack_payload[1]={ACKNOWLEDGE};
                         mesh_build_packet(&packet_to_send,mesh_id,pkt.src_id,0,0,ack_payload,sizeof(ack_payload));

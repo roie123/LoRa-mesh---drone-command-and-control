@@ -6,11 +6,14 @@
 
 #include <string.h>
 
+#include "Command_Queue.h"
+#include "flags.h"
 #include "FreeRTOS.h"
 #include "main.h"
 #include "task.h"
 #include "RC_Values.h"
 #include "stm32f1xx_hal_uart.h"
+#define MAX_COMMAND_TIME_COUNTER 15
 static MSP_RC_Frame msp_rc_frame = {
     .header1 = '$',
     .header2 = 'M',
@@ -19,25 +22,55 @@ static MSP_RC_Frame msp_rc_frame = {
     .command = MSP_SET_RAW_COMMANDS,
     .channels = {0}
 };
-
+//msp_rc_frame.channels[0]   == ROLL
+//msp_rc_frame.channels[1]   == PITCH
+//msp_rc_frame.channels[2]   == THROTTLE
+//msp_rc_frame.channels[3]   == YAW
+//msp_rc_frame.channels[4]   == ARM == AUX1
 
 extern UART_HandleTypeDef huart2; // UART connected to FC
 
 void xDrone_link_task(void *args) {
+    Commands current_command = STABLE;
+    static uint8_t counter = MAX_COMMAND_TIME_COUNTER;
+
     for (;;) {
-        if (current_rc_values.pitch != next_rc_values.pitch) {
-            current_rc_values.pitch < next_rc_values.pitch ? current_rc_values.pitch++ : current_rc_values.pitch--;
+        if (counter==0) {
+            current_command = STABLE;
+            counter = MAX_COMMAND_TIME_COUNTER;
         }
-        if (current_rc_values.throttle != next_rc_values.throttle) {
-            current_rc_values.throttle < next_rc_values.throttle
-                ? current_rc_values.throttle++
-                : current_rc_values.throttle--;
+       if (xQueueReceive(command_queue, &current_command, pdMS_TO_TICKS(2))) {
+           counter= MAX_COMMAND_TIME_COUNTER;
+       }
+
+
+
+        switch (current_command) {
+            case STABLE: {
+                current_rc_values.pitch = 1500;
+                current_rc_values.roll = 1500;
+                current_rc_values.yaw = 1500;
+                current_rc_values.throttle = 1500;
+                break;
+            }
+            case MOVE_FORWARD: {
+                current_rc_values.pitch = 1600;
+                current_rc_values.throttle = 1600;
+                current_rc_values.roll = 1500;
+                current_rc_values.yaw = 1500;
+
+
+                break;
+            }
         }
 
-        msp_rc_frame.channels[0] = current_rc_values.throttle;
-        msp_rc_frame.channels[1] = current_rc_values.pitch;
 
 
+        msp_rc_frame.channels[0]= current_rc_values.roll;
+        msp_rc_frame.channels[1]= current_rc_values.pitch;
+        msp_rc_frame.channels[2] = current_rc_values.throttle;
+        msp_rc_frame.channels[3] = current_rc_values.yaw;
+        msp_rc_frame.channels[4] = 1500;
         uint8_t *raw = (uint8_t *) &msp_rc_frame;
 
         uint8_t checksum = 0;
@@ -51,12 +84,14 @@ void xDrone_link_task(void *args) {
         // uint8_t buffer[sizeof(MSP_RC_Frame)];
         // memcpy(buffer, &msp_rc_frame, sizeof(MSP_RC_Frame));
 
-        HAL_StatusTypeDef status = HAL_UART_Transmit(&huart2, (uint8_t*)&msp_rc_frame, sizeof(MSP_RC_Frame), 100);
-        if (status != HAL_OK) {
-            // UART timed out or busy
-            // just log or skip, do not return
-            vTaskDelay(pdMS_TO_TICKS(1));
+
+        if (!dma_busy) {
+            static uint8_t buffer[sizeof(MSP_RC_Frame)];
+            memcpy(buffer, &msp_rc_frame, sizeof(MSP_RC_Frame));
+            dma_busy = true;
+            HAL_UART_Transmit_DMA(&huart2, buffer, sizeof(MSP_RC_Frame));
+            counter--;
         }
-        vTaskDelay(pdMS_TO_TICKS(1000)); // 200Hz updates
+        vTaskDelay(pdMS_TO_TICKS(200)); // 200Hz updates
     }
 }
