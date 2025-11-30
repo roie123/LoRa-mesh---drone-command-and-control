@@ -2,7 +2,7 @@
 // Created by royivri on 11/13/25.
 //
 
-#include "tranmit_test.h"
+#include "../../Inc/tranmit_test.h"
 
 #include <stdio.h>
 

@@ -2,7 +2,7 @@
 // Created by royivri on 11/11/25.
 //
 #include "FreeRTOS.h"
-#include "queue_implementation.h"
+#include "../../Inc/queue_implementation.h"
 
 #include <stddef.h>
 

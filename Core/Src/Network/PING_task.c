@@ -2,7 +2,7 @@
 // Created by royivri on 11/17/25.
 //
 
-#include "PING_task.h"
+#include "../../Inc/PING_task.h"
 
 #include "FreeRTOS.h"
 #include "queue.h"
@@ -12,7 +12,7 @@
 #include "General.h"
 #include "id.h"
 #include "packet.h"
-#include "../Routing/NetworkData.h"
+#include "../../Inc/NetworkData.h"
 
 
 //TODO : fix complexity

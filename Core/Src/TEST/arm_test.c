@@ -5,7 +5,7 @@
 
 #include <string.h>
 #include "stm32f1xx_hal.h"
-#include "../DRONE/xDrone_Link_task.h"
+#include "../../Inc/xDrone_Link_task.h"
 extern UART_HandleTypeDef huart2;   // UART connected to FC
 
 

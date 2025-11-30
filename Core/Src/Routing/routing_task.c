@@ -2,22 +2,22 @@
 // Created by royivri on 11/13/25.
 //
 
-#include "routing_task.h"
+#include "../../Inc/routing_task.h"
 
 #include <stdio.h>
 #include <string.h>
 #include <sys/types.h>
 
 #include "commands.h"
-#include "Connect_to_node_task.h"
+#include "../../Inc/Connect_to_node_task.h"
 #include "General.h"
 #include "id.h"
-#include "NetworkData.h"
+#include "../../Inc/NetworkData.h"
 #include "packet.h"
 #include "queue.h"
-#include "../DRONE/Command_Queue.h"
-#include "../DRONE/RC_Values.h"
-#include "../TX/TX_Queue.h"
+#include "../../Inc/Command_Queue.h"
+#include "../../Inc/RC_Values.h"
+#include "../../Inc/TX_Queue.h"
 
 void routing_task(void *args) {
     Routing_task_args *routing_task_args = (Routing_task_args *) args;

@@ -3,7 +3,7 @@
 //
 
 #include "FreeRTOS.h"
-#include "Connect_to_node_task.h"
+#include "../../Inc/Connect_to_node_task.h"
 
 #include <string.h>
 

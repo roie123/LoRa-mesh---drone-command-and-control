@@ -232,30 +232,6 @@ Core/Src/LoRa/LoRa.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/LoRa/LoRa.c.s
 .PHONY : Core/Src/LoRa/LoRa.c.s
 
-Core/Src/Mesh/Node.obj: Core/Src/Mesh/Node.c.obj
-.PHONY : Core/Src/Mesh/Node.obj
-
-# target to build an object file
-Core/Src/Mesh/Node.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Mesh/Node.c.obj
-.PHONY : Core/Src/Mesh/Node.c.obj
-
-Core/Src/Mesh/Node.i: Core/Src/Mesh/Node.c.i
-.PHONY : Core/Src/Mesh/Node.i
-
-# target to preprocess a source file
-Core/Src/Mesh/Node.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Mesh/Node.c.i
-.PHONY : Core/Src/Mesh/Node.c.i
-
-Core/Src/Mesh/Node.s: Core/Src/Mesh/Node.c.s
-.PHONY : Core/Src/Mesh/Node.s
-
-# target to generate assembly for a file
-Core/Src/Mesh/Node.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Mesh/Node.c.s
-.PHONY : Core/Src/Mesh/Node.c.s
-
 Core/Src/Mesh/packet.obj: Core/Src/Mesh/packet.c.obj
 .PHONY : Core/Src/Mesh/packet.obj
 
@@ -303,30 +279,6 @@ Core/Src/Network/PING_task.s: Core/Src/Network/PING_task.c.s
 Core/Src/Network/PING_task.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Network/PING_task.c.s
 .PHONY : Core/Src/Network/PING_task.c.s
-
-Core/Src/Network/PONG_Queue.obj: Core/Src/Network/PONG_Queue.c.obj
-.PHONY : Core/Src/Network/PONG_Queue.obj
-
-# target to build an object file
-Core/Src/Network/PONG_Queue.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Network/PONG_Queue.c.obj
-.PHONY : Core/Src/Network/PONG_Queue.c.obj
-
-Core/Src/Network/PONG_Queue.i: Core/Src/Network/PONG_Queue.c.i
-.PHONY : Core/Src/Network/PONG_Queue.i
-
-# target to preprocess a source file
-Core/Src/Network/PONG_Queue.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Network/PONG_Queue.c.i
-.PHONY : Core/Src/Network/PONG_Queue.c.i
-
-Core/Src/Network/PONG_Queue.s: Core/Src/Network/PONG_Queue.c.s
-.PHONY : Core/Src/Network/PONG_Queue.s
-
-# target to generate assembly for a file
-Core/Src/Network/PONG_Queue.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Network/PONG_Queue.c.s
-.PHONY : Core/Src/Network/PONG_Queue.c.s
 
 Core/Src/RX/RX_Queue.obj: Core/Src/RX/RX_Queue.c.obj
 .PHONY : Core/Src/RX/RX_Queue.obj
@@ -423,30 +375,6 @@ Core/Src/Routing/NetworkData.s: Core/Src/Routing/NetworkData.c.s
 Core/Src/Routing/NetworkData.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/NetworkData.c.s
 .PHONY : Core/Src/Routing/NetworkData.c.s
-
-Core/Src/Routing/lora_receive.obj: Core/Src/Routing/lora_receive.c.obj
-.PHONY : Core/Src/Routing/lora_receive.obj
-
-# target to build an object file
-Core/Src/Routing/lora_receive.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/lora_receive.c.obj
-.PHONY : Core/Src/Routing/lora_receive.c.obj
-
-Core/Src/Routing/lora_receive.i: Core/Src/Routing/lora_receive.c.i
-.PHONY : Core/Src/Routing/lora_receive.i
-
-# target to preprocess a source file
-Core/Src/Routing/lora_receive.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/lora_receive.c.i
-.PHONY : Core/Src/Routing/lora_receive.c.i
-
-Core/Src/Routing/lora_receive.s: Core/Src/Routing/lora_receive.c.s
-.PHONY : Core/Src/Routing/lora_receive.s
-
-# target to generate assembly for a file
-Core/Src/Routing/lora_receive.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/lora_receive.c.s
-.PHONY : Core/Src/Routing/lora_receive.c.s
 
 Core/Src/Routing/routing_task.obj: Core/Src/Routing/routing_task.c.obj
 .PHONY : Core/Src/Routing/routing_task.obj
@@ -1462,18 +1390,12 @@ help:
 	@echo "... Core/Src/LoRa/LoRa.obj"
 	@echo "... Core/Src/LoRa/LoRa.i"
 	@echo "... Core/Src/LoRa/LoRa.s"
-	@echo "... Core/Src/Mesh/Node.obj"
-	@echo "... Core/Src/Mesh/Node.i"
-	@echo "... Core/Src/Mesh/Node.s"
 	@echo "... Core/Src/Mesh/packet.obj"
 	@echo "... Core/Src/Mesh/packet.i"
 	@echo "... Core/Src/Mesh/packet.s"
 	@echo "... Core/Src/Network/PING_task.obj"
 	@echo "... Core/Src/Network/PING_task.i"
 	@echo "... Core/Src/Network/PING_task.s"
-	@echo "... Core/Src/Network/PONG_Queue.obj"
-	@echo "... Core/Src/Network/PONG_Queue.i"
-	@echo "... Core/Src/Network/PONG_Queue.s"
 	@echo "... Core/Src/RX/RX_Queue.obj"
 	@echo "... Core/Src/RX/RX_Queue.i"
 	@echo "... Core/Src/RX/RX_Queue.s"
@@ -1486,9 +1408,6 @@ help:
 	@echo "... Core/Src/Routing/NetworkData.obj"
 	@echo "... Core/Src/Routing/NetworkData.i"
 	@echo "... Core/Src/Routing/NetworkData.s"
-	@echo "... Core/Src/Routing/lora_receive.obj"
-	@echo "... Core/Src/Routing/lora_receive.i"
-	@echo "... Core/Src/Routing/lora_receive.s"
 	@echo "... Core/Src/Routing/routing_task.obj"
 	@echo "... Core/Src/Routing/routing_task.i"
 	@echo "... Core/Src/Routing/routing_task.s"

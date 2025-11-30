@@ -2,13 +2,13 @@
 // Created by royivri on 11/13/25.
 //
 
-#include "TX_Task.h"
+#include "../../Inc/TX_Task.h"
 
 #include <stdio.h>
 #include <string.h>
 
 #include "packet.h"
-#include "../Routing/NetworkData.h"
+#include "../../Inc/NetworkData.h"
 
 uint8_t LoRa_transmit_safe(LoRa *lora, uint8_t *data, uint8_t length, uint16_t timeout, SemaphoreHandle_t lora_mutex_handle) {
     uint8_t status = 0;

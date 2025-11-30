@@ -2,16 +2,16 @@
 // Created by royivri on 11/25/25.
 //
 
-#include "xDrone_Link_task.h"
+#include "../../Inc/xDrone_Link_task.h"
 
 #include <string.h>
 
-#include "Command_Queue.h"
+#include "../../Inc/Command_Queue.h"
 #include "flags.h"
 #include "FreeRTOS.h"
 #include "main.h"
 #include "task.h"
-#include "RC_Values.h"
+#include "../../Inc/RC_Values.h"
 #include "stm32f1xx_hal_uart.h"
 #define MAX_COMMAND_TIME_COUNTER 15
 static MSP_RC_Frame msp_rc_frame = {
