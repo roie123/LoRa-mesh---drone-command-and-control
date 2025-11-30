@@ -163,14 +163,7 @@ int main(void)
     uint16_t LoRa_status = 0;
     LoRa_reset(&myLoRa);
 
-    LoRa_status = LoRa_init(&myLoRa); // TODO : check status with  a warning
-    //STARTUP NOTES
-    printf("DEVICE ID  : %x\r\n", mesh_id);
-    if (LoRa_status == 200) {
-        printf("LoRa status : OK\r\n");
-    } else {
-        printf("LoRa status : FAILED\r\n");
-    }
+    LoRa_status = LoRa_init(&myLoRa);
 
 
     lora_mutex_handle = xSemaphoreCreateMutex();
@@ -207,12 +200,6 @@ int main(void)
 
 
     LoRa_startReceiving(&myLoRa);
-
-//
-// setupRC();
-// while(1){
-//     updateRCLoop();
-// }
 
 
   /* USER CODE END 2 */

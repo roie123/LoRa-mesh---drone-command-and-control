@@ -34,52 +34,41 @@ void routing_task(void *args) {
 
 
             Commands command = (Commands) pkt.payload[0];
-            // xQueueSend(routing_task_args->_tx_queue_handle,&pkt,portMAX_DELAY);
 
 
             if (pkt.dst_id == mesh_id) {
-
-
                 switch (command) {
                     case CONNECTION_ACK: {
                         remove_connection_request(pkt.src_id, routing_task_args->network_data_mutex);
                         add_connected_node(pkt.src_id, 0, 0, routing_task_args->network_data_mutex);
-                        last_packets_sent_remove(pkt.src_id , pkt.msg_id);
+                        last_packets_sent_remove(pkt.src_id, pkt.msg_id);
 
 
                         continue;
                     }
 
 
-                    case MOVE_FORWARD: {
-                        // update_rc_values(MOVE_FORWARD); deprecated
-                        Commands cmd_to_queue= MOVE_FORWARD;
-                        xQueueSend(command_queue,&cmd_to_queue,pdMS_TO_TICKS(20));
-
-                        uint8_t ack_payload[1]={ACKNOWLEDGE};
-                        mesh_build_packet(&packet_to_send,mesh_id,pkt.src_id,0,0,ack_payload,sizeof(ack_payload));
-
-                        xQueueSend(routing_task_args->_tx_queue_handle,&packet_to_send,pdMS_TO_TICKS(100));
-
-
+                    case ACKNOWLEDGE: {
+                        last_packets_sent_remove(pkt.src_id, pkt.msg_id);
                         continue;
                     }
-                    case ACKNOWLEDGE : {
-                        last_packets_sent_remove(pkt.src_id,pkt.msg_id);
-
-                    }
-
-
-                    default: {
-                        // last_packets_sent_remove(pkt.src_id ^ pkt.dst_id); /TODO 
-                        continue;
-                    };
                 }
+
+
+                Commands cmd_to_queue = command;
+                xQueueSend(command_queue, &cmd_to_queue, pdMS_TO_TICKS(20));
+
+                uint8_t ack_payload[1] = {ACKNOWLEDGE};
+                mesh_build_packet(&packet_to_send, mesh_id, pkt.src_id, 0, 0, ack_payload, sizeof(ack_payload));
+
+                xQueueSend(routing_task_args->_tx_queue_handle, &packet_to_send, pdMS_TO_TICKS(100));
+
+
+                continue;
 
 
                 continue;
             }
-
 
 
             if (pkt.dst_id == BROADCAST_ADDRESS) {
@@ -100,11 +89,7 @@ void routing_task(void *args) {
                     }
 
                     case PING_COMMAND: {
-                        // Ping ping;
-                        //     ping.src_id = pkt.src_id;
-                        //     ping.signal_strength = 0; // TODO : implement rssi check
-                        //
-                        // xQueueSend(routing_task_args->_pong_queue_handle,&ping,portMAX_DELAY);  //do i really need it ?
+
                         add_connected_node(pkt.src_id, 0, 0, routing_task_args->network_data_mutex);
                         continue;
                     }
@@ -136,9 +121,6 @@ void routing_task(void *args) {
         }
     }
 }
-
-
-
 
 
 uint8_t handle_forwarding(MeshPacket *packet) {
