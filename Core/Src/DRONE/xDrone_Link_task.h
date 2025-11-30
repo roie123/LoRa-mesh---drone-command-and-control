@@ -11,15 +11,15 @@
 #define MSP_FRAME_SIZE (5 + RC_CHANNELS*2 + 1)  // 22 bytes
 
 typedef struct  {
-    uint8_t header1;        // '$'
-    uint8_t header2;        // 'M'
-    uint8_t direction;      // '<'
-    uint8_t payload_size;   // RC_CHANNELS * 2 = 16
-    uint8_t command;        // MSP_SET_RAW_RC = 200
+    uint8_t header1;
+    uint8_t header2;
+    uint8_t direction;
+    uint8_t payload_size;
+    uint8_t command;
 
-    uint16_t channels[RC_CHANNELS];  // little-endian channel data
+    uint16_t channels[RC_CHANNELS];
 
-    uint8_t checksum;       // XOR of bytes [3..(3 + payload_size + 1)]
+    uint8_t checksum;
 } __attribute__((packed)) MSP_RC_Frame;
 
 void xDrone_link_task(void* args);

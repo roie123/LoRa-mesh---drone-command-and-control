@@ -32,7 +32,6 @@
 #include "DRONE/Command_Queue.h"
 #include "DRONE/xDrone_Link_task.h"
 #include "Network/PING_task.h"
-#include "Routing/lora_receive.h"
 #include "Util/queue_implementation.h"
 #include "RX/RX_Queue.h"
 

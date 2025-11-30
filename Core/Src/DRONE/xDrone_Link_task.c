@@ -28,7 +28,7 @@ static MSP_RC_Frame msp_rc_frame = {
 //msp_rc_frame.channels[3]   == YAW
 //msp_rc_frame.channels[4]   == ARM == AUX1
 
-extern UART_HandleTypeDef huart2; // UART connected to FC
+extern UART_HandleTypeDef huart2;
 
 void xDrone_link_task(void *args) {
     Commands current_command = STABLE;
@@ -62,6 +62,7 @@ void xDrone_link_task(void *args) {
 
                 break;
             }
+
         }
 
 
@@ -80,9 +81,6 @@ void xDrone_link_task(void *args) {
             checksum ^= raw[i];
 
         msp_rc_frame.checksum = checksum;
-
-        // uint8_t buffer[sizeof(MSP_RC_Frame)];
-        // memcpy(buffer, &msp_rc_frame, sizeof(MSP_RC_Frame));
 
 
         if (!dma_busy) {

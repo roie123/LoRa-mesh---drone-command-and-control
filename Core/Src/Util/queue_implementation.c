@@ -14,8 +14,7 @@ void init_packet_queue(void) {
     packet_queue = xQueueCreate(10, sizeof(MeshPacket));
 
     if(packet_queue == NULL) {
-        // Handle allocation failure
-        // For example: loop forever, log error, or reset MCU
+
     }
 }
 

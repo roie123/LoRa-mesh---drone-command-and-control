@@ -5,15 +5,12 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../Core/Src/Mesh/Node.c \
 ../Core/Src/Mesh/packet.c 
 
 OBJS += \
-./Core/Src/Mesh/Node.o \
 ./Core/Src/Mesh/packet.o 
 
 C_DEPS += \
-./Core/Src/Mesh/Node.d \
 ./Core/Src/Mesh/packet.d 
 
 
@@ -24,7 +21,7 @@ Core/Src/Mesh/%.o Core/Src/Mesh/%.su Core/Src/Mesh/%.cyclo: ../Core/Src/Mesh/%.c
 clean: clean-Core-2f-Src-2f-Mesh
 
 clean-Core-2f-Src-2f-Mesh:
-	-$(RM) ./Core/Src/Mesh/Node.cyclo ./Core/Src/Mesh/Node.d ./Core/Src/Mesh/Node.o ./Core/Src/Mesh/Node.su ./Core/Src/Mesh/packet.cyclo ./Core/Src/Mesh/packet.d ./Core/Src/Mesh/packet.o ./Core/Src/Mesh/packet.su
+	-$(RM) ./Core/Src/Mesh/packet.cyclo ./Core/Src/Mesh/packet.d ./Core/Src/Mesh/packet.o ./Core/Src/Mesh/packet.su
 
 .PHONY: clean-Core-2f-Src-2f-Mesh
 

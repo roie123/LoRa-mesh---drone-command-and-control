@@ -44,7 +44,6 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Core/Inc/Node.h ../Core/Src/DRONE/Command_Queue.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
  ../Core/Src/DRONE/xDrone_Link_task.h ../Core/Src/Network/PING_task.h \
- ../Core/Src/Routing/lora_receive.h \
  ../Core/Src/Util/queue_implementation.h ../Core/Src/RX/RX_Queue.h \
  ../Core/Src/Routing/routing_task.h ../Core/Inc/packet.h \
  ../Core/Src/RX/RX_Task.h ../Core/Src/TEST/tranmit_test.h \
@@ -100,7 +99,6 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
 ../Core/Src/DRONE/xDrone_Link_task.h:
 ../Core/Src/Network/PING_task.h:
-../Core/Src/Routing/lora_receive.h:
 ../Core/Src/Util/queue_implementation.h:
 ../Core/Src/RX/RX_Queue.h:
 ../Core/Src/Routing/routing_task.h:

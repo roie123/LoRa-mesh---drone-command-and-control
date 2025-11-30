@@ -18,7 +18,6 @@
 #include "../DRONE/Command_Queue.h"
 #include "../DRONE/RC_Values.h"
 #include "../TX/TX_Queue.h"
-#include "../Network/PONG_Queue.h"
 
 void routing_task(void *args) {
     Routing_task_args *routing_task_args = (Routing_task_args *) args;
@@ -29,9 +28,6 @@ void routing_task(void *args) {
     for (;;) {
         if (xQueueReceive(routing_task_args->_rx_queue_handle, received_byte_array,portMAX_DELAY) == pdPASS) {
             memcpy(&pkt, received_byte_array, sizeof(MeshPacket));
-            //TODO : get rid of this line ( just for structure phase)
-            printf("ROUTER : sending to TX_QUEUE \r\n");
-
 
             Commands command = (Commands) pkt.payload[0];
 
@@ -64,7 +60,7 @@ void routing_task(void *args) {
                 xQueueSend(routing_task_args->_tx_queue_handle, &packet_to_send, pdMS_TO_TICKS(100));
 
 
-                continue;
+
 
 
                 continue;
@@ -89,7 +85,6 @@ void routing_task(void *args) {
                     }
 
                     case PING_COMMAND: {
-
                         add_connected_node(pkt.src_id, 0, 0, routing_task_args->network_data_mutex);
                         continue;
                     }
@@ -115,15 +110,8 @@ void routing_task(void *args) {
                 }
 
 
-                handle_forwarding(&pkt);
                 continue;
             }
         }
     }
-}
-
-
-uint8_t handle_forwarding(MeshPacket *packet) {
-    //TODO  : make the forwarding logic
-    return 1;
 }

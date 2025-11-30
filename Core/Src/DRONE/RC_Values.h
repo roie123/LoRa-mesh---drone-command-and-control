@@ -19,8 +19,7 @@ typedef  struct {
 
 
 extern Rc_values current_rc_values;
-extern Rc_values next_rc_values;
 
-void update_rc_values(Commands command);
+
 
 #endif //RC_VALUES_H
