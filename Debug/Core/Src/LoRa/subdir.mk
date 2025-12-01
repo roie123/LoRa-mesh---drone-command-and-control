@@ -5,13 +5,16 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../Core/Src/LoRa/LoRa.c 
+../Core/Src/LoRa/LoRa.c \
+../Core/Src/LoRa/LoRa_Startup.c 
 
 OBJS += \
-./Core/Src/LoRa/LoRa.o 
+./Core/Src/LoRa/LoRa.o \
+./Core/Src/LoRa/LoRa_Startup.o 
 
 C_DEPS += \
-./Core/Src/LoRa/LoRa.d 
+./Core/Src/LoRa/LoRa.d \
+./Core/Src/LoRa/LoRa_Startup.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -21,7 +24,7 @@ Core/Src/LoRa/%.o Core/Src/LoRa/%.su Core/Src/LoRa/%.cyclo: ../Core/Src/LoRa/%.c
 clean: clean-Core-2f-Src-2f-LoRa
 
 clean-Core-2f-Src-2f-LoRa:
-	-$(RM) ./Core/Src/LoRa/LoRa.cyclo ./Core/Src/LoRa/LoRa.d ./Core/Src/LoRa/LoRa.o ./Core/Src/LoRa/LoRa.su
+	-$(RM) ./Core/Src/LoRa/LoRa.cyclo ./Core/Src/LoRa/LoRa.d ./Core/Src/LoRa/LoRa.o ./Core/Src/LoRa/LoRa.su ./Core/Src/LoRa/LoRa_Startup.cyclo ./Core/Src/LoRa/LoRa_Startup.d ./Core/Src/LoRa/LoRa_Startup.o ./Core/Src/LoRa/LoRa_Startup.su
 
 .PHONY: clean-Core-2f-Src-2f-LoRa
 

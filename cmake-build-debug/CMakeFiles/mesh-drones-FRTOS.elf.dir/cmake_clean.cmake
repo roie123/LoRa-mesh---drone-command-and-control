@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/DRONE/xDrone_Link_task.c.obj.d"
   "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/LoRa/LoRa.c.obj"
   "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/LoRa/LoRa.c.obj.d"
+  "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/LoRa/LoRa_Startup.c.obj"
+  "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/LoRa/LoRa_Startup.c.obj.d"
   "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Mesh/packet.c.obj"
   "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Mesh/packet.c.obj.d"
   "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Network/PING_task.c.obj"

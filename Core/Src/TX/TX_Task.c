@@ -8,7 +8,9 @@
 #include <string.h>
 
 #include "packet.h"
+#include "TX_Queue.h"
 #include "../../Inc/NetworkData.h"
+#include "../LoRa/LoRa_Startup.h"
 
 uint8_t LoRa_transmit_safe(LoRa *lora, uint8_t *data, uint8_t length, uint16_t timeout, SemaphoreHandle_t lora_mutex_handle) {
     uint8_t status = 0;
@@ -23,20 +25,19 @@ uint8_t LoRa_transmit_safe(LoRa *lora, uint8_t *data, uint8_t length, uint16_t t
 }
 
 void xTX_task(void *args) {
-    TX_task_args *task_args = (TX_task_args *) args;
     MeshPacket packet_from_queue;
     CompressedPacket compressed_packet_from_queue;
 
     for (;;) {
-        if (xQueueReceive(task_args->_tx_queue_handle,&packet_from_queue,portMAX_DELAY) == pdTRUE) {
+        if (xQueueReceive(tx_Queue_handle,&packet_from_queue,portMAX_DELAY) == pdTRUE) {
             packet_from_queue.msg_id=get_global_msg_id();
 
             if (LoRa_transmit_safe(
-            task_args->_lora,
+            &myLoRa,
             (uint8_t*)&packet_from_queue,
             sizeof(MeshPacket),
             2000,
-            task_args->_lora_mutex_handle
+            lora_mutex_handle
 
 
             )) {

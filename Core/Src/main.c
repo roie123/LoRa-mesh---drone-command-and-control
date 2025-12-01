@@ -28,6 +28,7 @@
 #include "flags.h"
 #include "id.h"
 #include "LoRa.h"
+#include "NetworkData.h"
 #include "Node.h"
 #include "TX_Task.h"
 #include "../Inc/Command_Queue.h"
@@ -41,6 +42,7 @@
 #include "../Inc/tranmit_test.h"
 #include "../Inc/TX_Queue.h"
 #include "../Inc/arm_test.h"
+#include "LoRa/LoRa_Startup.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -72,9 +74,7 @@ const osThreadAttr_t defaultTask_attributes = {
   .priority = (osPriority_t) osPriorityNormal,
 };
 /* USER CODE BEGIN PV */
-SemaphoreHandle_t lora_mutex_handle;
-SemaphoreHandle_t network_data_mutex_handle;
-LoRa myLoRa;
+
 
 
 bool is_test_mode = false;
@@ -142,63 +142,14 @@ int main(void)
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 
-    // init_packet_queue(); //Deprecated
+
     flags_init();
     node_id_init();
     RX_Queue_init();
     TX_Queue_init();
     Command_Queue_init();
-
-
-    myLoRa = newLoRa();
-    myLoRa.CS_port = NSS_GPIO_Port;
-    myLoRa.CS_pin = NSS_Pin;
-    myLoRa.reset_port = RESET_GPIO_Port;
-    myLoRa.reset_pin = RESET_Pin;
-    myLoRa.DIO0_port = DID0_GPIO_Port;
-    myLoRa.DIO0_pin = DID0_Pin;
-    myLoRa.power = POWER_17db;
-    myLoRa.hSPIx = &hspi2;
-    uint16_t LoRa_status = 0;
-    LoRa_reset(&myLoRa);
-
-    LoRa_status = LoRa_init(&myLoRa);
-
-
-    lora_mutex_handle = xSemaphoreCreateMutex();
-    network_data_mutex_handle = xSemaphoreCreateMutex();
-
-    if (network_data_mutex_handle == NULL) {
-        printf("Network data mutex creation failed\r\n");
-        while (1);
-    }
-
-    if (lora_mutex_handle == NULL) {
-        printf("Failed to create LoRa mutex!\n");
-        while (1);
-    }
-
-    rx_args.lora = &myLoRa;
-    rx_args.lora_mutex = lora_mutex_handle;
-    rx_args._rx_queue_handle = rx_queue_handle;
-
-    tx_TEST_args.lora = &myLoRa;
-    tx_TEST_args.lora_mutex = lora_mutex_handle;
-
-
-    routing_args._tx_queue_handle = tx_Queue_handle;
-    routing_args._rx_queue_handle = rx_queue_handle;
-    routing_args.network_data_mutex = network_data_mutex_handle;
-
-    tx_args._lora_mutex_handle = lora_mutex_handle;
-    tx_args._tx_queue_handle = tx_Queue_handle;
-    tx_args._lora = &myLoRa;
-
-    ping_args._network_mutex_handle = network_data_mutex_handle;
-    ping_args._tx_queue_handle = tx_Queue_handle;
-
-
-    LoRa_startReceiving(&myLoRa);
+    LoRa_Startup();
+    network_data_init();
 
 
   /* USER CODE END 2 */
@@ -239,8 +190,6 @@ int main(void)
             NULL // handle
         );
     } else {
-        printf("sizeof(MeshPacket) = %u\n", (unsigned) sizeof(MeshPacket));
-        printf("Free heap before tasks: %u bytes\n", xPortGetFreeHeapSize());
         uint16_t before = xPortGetFreeHeapSize();
         BaseType_t rx_task_status = xTaskCreate(xRX_Task, "RX_Task", configMINIMAL_STACK_SIZE, &rx_args, 6, &rxTaskHandle);
         BaseType_t router_task_status = xTaskCreate(routing_task, "Routing_Task", configMINIMAL_STACK_SIZE, &routing_args, 5,
@@ -250,7 +199,6 @@ int main(void)
         BaseType_t drone_link_status = xTaskCreate(xDrone_link_task, "Drone_Link_Task", 300, 0, 5, &drone_linkTaskHandle);
 
         uint16_t after = xPortGetFreeHeapSize();
-        printf("Free heap after tasks: %u bytes\n", xPortGetFreeHeapSize());
     }
 
     //

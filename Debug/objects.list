@@ -2,6 +2,7 @@
 "./Core/Src/DRONE/RC_Values.o"
 "./Core/Src/DRONE/xDrone_Link_task.o"
 "./Core/Src/LoRa/LoRa.o"
+"./Core/Src/LoRa/LoRa_Startup.o"
 "./Core/Src/Mesh/packet.o"
 "./Core/Src/Network/PING_task.o"
 "./Core/Src/RX/RX_Queue.o"

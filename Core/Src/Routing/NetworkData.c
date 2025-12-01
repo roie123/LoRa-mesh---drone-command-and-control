@@ -15,7 +15,16 @@ Node connected_nodes[MAX_NODES] = {0};
 
 CompressedPacket last_received_packets[10] = {0};
 CompressedPacket last_packets_sent[LAST_PACKETS_SENT_MAX] = {0};
+SemaphoreHandle_t network_data_mutex_handle;
 
+
+
+
+
+uint8_t network_data_init(void) {
+    network_data_mutex_handle= xSemaphoreCreateMutex();
+    return 1;
+}
 
 int add_connection_request(uint8_t value, SemaphoreHandle_t network_data_mutex) {
     if (xSemaphoreTake(network_data_mutex, portMAX_DELAY) == pdTRUE) {
@@ -163,6 +172,7 @@ void remove_packet(uint8_t dst_id, uint8_t msg_id) {
     // Clear entry
     memset(&last_received_packets[index], 0, sizeof(CompressedPacket));
 }
+
 
 uint8_t get_global_msg_id() {
     return ++global_msg_id;

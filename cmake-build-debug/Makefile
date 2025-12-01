@@ -232,6 +232,30 @@ Core/Src/LoRa/LoRa.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/LoRa/LoRa.c.s
 .PHONY : Core/Src/LoRa/LoRa.c.s
 
+Core/Src/LoRa/LoRa_Startup.obj: Core/Src/LoRa/LoRa_Startup.c.obj
+.PHONY : Core/Src/LoRa/LoRa_Startup.obj
+
+# target to build an object file
+Core/Src/LoRa/LoRa_Startup.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/LoRa/LoRa_Startup.c.obj
+.PHONY : Core/Src/LoRa/LoRa_Startup.c.obj
+
+Core/Src/LoRa/LoRa_Startup.i: Core/Src/LoRa/LoRa_Startup.c.i
+.PHONY : Core/Src/LoRa/LoRa_Startup.i
+
+# target to preprocess a source file
+Core/Src/LoRa/LoRa_Startup.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/LoRa/LoRa_Startup.c.i
+.PHONY : Core/Src/LoRa/LoRa_Startup.c.i
+
+Core/Src/LoRa/LoRa_Startup.s: Core/Src/LoRa/LoRa_Startup.c.s
+.PHONY : Core/Src/LoRa/LoRa_Startup.s
+
+# target to generate assembly for a file
+Core/Src/LoRa/LoRa_Startup.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/LoRa/LoRa_Startup.c.s
+.PHONY : Core/Src/LoRa/LoRa_Startup.c.s
+
 Core/Src/Mesh/packet.obj: Core/Src/Mesh/packet.c.obj
 .PHONY : Core/Src/Mesh/packet.obj
 
@@ -1390,6 +1414,9 @@ help:
 	@echo "... Core/Src/LoRa/LoRa.obj"
 	@echo "... Core/Src/LoRa/LoRa.i"
 	@echo "... Core/Src/LoRa/LoRa.s"
+	@echo "... Core/Src/LoRa/LoRa_Startup.obj"
+	@echo "... Core/Src/LoRa/LoRa_Startup.i"
+	@echo "... Core/Src/LoRa/LoRa_Startup.s"
 	@echo "... Core/Src/Mesh/packet.obj"
 	@echo "... Core/Src/Mesh/packet.i"
 	@echo "... Core/Src/Mesh/packet.s"

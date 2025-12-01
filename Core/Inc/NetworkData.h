@@ -21,7 +21,8 @@ extern uint8_t connection_requests[10];
 extern Node connected_nodes[MAX_NODES];
 extern CompressedPacket last_received_packets[LAST_PACKETS_RECEIVED_MAX];
 extern uint8_t last_received_count;
-
+extern SemaphoreHandle_t network_data_mutex_handle;
+uint8_t network_data_init(void);
 
 
 
