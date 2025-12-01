@@ -17,6 +17,16 @@
 
 
 //TODO : fix complexity
+/**
+ * @brief Periodically sends PING packets and removes timed-out nodes.
+ *
+ * This task broadcasts a PING packet at a fixed interval and updates the
+ * connected-nodes table. Nodes whose last_seen timestamp exceeds the timeout
+ * threshold are cleared. After maintenance, the task pushes a PING packet to
+ * the TX queue for transmission.
+ *
+ * @param args Pointer to Ping_task_args (unused in current implementation).
+ */
 
 void xPing_task(void *args) {
     Ping_task_args *ping_args = (Ping_task_args *)args;

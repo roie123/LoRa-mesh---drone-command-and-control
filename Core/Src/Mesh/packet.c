@@ -2,6 +2,17 @@
 #include <stdint.h>
 #include <string.h>
 
+/**
+ * @brief Computes an 8-bit CRC for a given data buffer.
+ *
+ * Uses a standard CRC-8 algorithm with polynomial 0x07 to compute a checksum
+ * over the specified number of bytes.
+ *
+ * @param data Pointer to the data buffer.
+ * @param len Number of bytes to include in the CRC computation.
+ *
+ * @return Computed 8-bit CRC value.
+ */
 
 uint8_t mesh_crc(const uint8_t *data, uint8_t len) {
     uint8_t crc = 0x00;
@@ -16,11 +27,38 @@ uint8_t mesh_crc(const uint8_t *data, uint8_t len) {
     }
     return crc;
 }
+/**
+ * @brief Validates the integrity of a MeshPacket using CRC.
+ *
+ * Computes the CRC over the packet fields and payload, and compares it to
+ * the CRC stored in the packet.
+ *
+ * @param pkt Pointer to the MeshPacket to validate.
+ *
+ * @return true if the computed CRC matches the packet's CRC, false otherwise.
+ */
 
 bool validate_packet(MeshPacket *pkt) {
     uint8_t calc = mesh_crc((uint8_t *) pkt, 9 + pkt->length);
     return (calc == pkt->crc);
 }
+/**
+ * @brief Constructs and validates a mesh network packet.
+ *
+ * Initializes all fields of a MeshPacket including preamble, version, source
+ * and destination IDs, flags, hop counts, message ID, and payload. Computes
+ * the CRC for the packet and performs basic integrity checks.
+ *
+ * @param pkt Pointer to the MeshPacket to build.
+ * @param src Source node ID.
+ * @param dst Destination node ID.
+ * @param flags Packet flags.
+ * @param msg_id Message ID.
+ * @param payload Pointer to the payload data.
+ * @param length Length of the payload (must be <= MESH_MAX_PAYLOAD).
+ *
+ * @return true (non-zero) if packet was successfully built and validated, false (0) otherwise.
+ */
 
 int mesh_build_packet(MeshPacket *pkt, uint8_t src, uint8_t dst, uint8_t flags, uint8_t msg_id, const uint8_t *payload,
                        uint8_t length) {

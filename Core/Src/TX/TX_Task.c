@@ -11,6 +11,20 @@
 #include "TX_Queue.h"
 #include "../../Inc/NetworkData.h"
 #include "../../Inc/LoRa_Startup.h"
+/**
+ * @brief Thread-safe wrapper for LoRa_transmit().
+ *
+ * Acquires the LoRa mutex, transmits the given data buffer, then releases the
+ * mutex. Ensures exclusive access to the LoRa radio during transmission.
+ *
+ * @param lora   Pointer to the LoRa driver instance.
+ * @param data   Buffer to transmit.
+ * @param length Number of bytes to send.
+ * @param timeout Transmission timeout (ms).
+ * @param lora_mutex_handle Mutex protecting LoRa access.
+ *
+ * @return Transmission status (non-zero on success).
+ */
 
 uint8_t LoRa_transmit_safe(LoRa *lora, uint8_t *data, uint8_t length, uint16_t timeout, SemaphoreHandle_t lora_mutex_handle) {
     uint8_t status = 0;
@@ -23,6 +37,16 @@ uint8_t LoRa_transmit_safe(LoRa *lora, uint8_t *data, uint8_t length, uint16_t t
 
     return status;
 }
+/**
+ * @brief Transmit task that sends mesh packets over LoRa.
+ *
+ * Waits for outgoing MeshPacket objects from the TX queue, assigns a global
+ * message ID, and transmits them using a thread-safe LoRa send function.
+ * Successfully transmitted packets are stored in the "last sent" list for
+ * acknowledgment tracking and deduplication.
+ *
+ * @param args Unused.
+ */
 
 void xTX_task(void *args) {
     MeshPacket packet_from_queue;

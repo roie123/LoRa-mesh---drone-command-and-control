@@ -20,6 +20,22 @@
 #include "../../Inc/RC_Values.h"
 #include "../../Inc/TX_Queue.h"
 
+
+
+
+
+/**
+ * @brief Routes incoming mesh packets and performs local handling.
+ *
+ * This FreeRTOS task waits for packets from the RX queue, parses them, and:
+ *  - Handles packets addressed to this node (process command, update tables, send ACK).
+ *  - Handles broadcast packets (connection requests, ping updates).
+ *  - Forwards packets not meant for this node, with duplicate filtering and hop decrement.
+ *
+ * Ensures safe access to shared network data and reliable delivery (ACK + history tracking).
+ *
+ * @param args Unused.
+ */
 void routing_task(void *args) {
     uint8_t received_byte_array[sizeof(MeshPacket)];
     MeshPacket pkt;
@@ -75,7 +91,6 @@ void routing_task(void *args) {
                             add_connection_request(pkt.src_id, network_data_mutex_handle);
                             add_connected_node(pkt.src_id, 0, 0, network_data_mutex_handle);
                             send_connection_made_to_node(pkt.src_id, tx_Queue_handle);
-                            printf("CONNECTION REQUEST FROM %x \r\n", pkt.src_id);
                         } else {
                             continue;
                         }
@@ -96,7 +111,7 @@ void routing_task(void *args) {
 
             if (pkt.dst_id != mesh_id && pkt.dst_id != BROADCAST_ADDRESS) {
                 // i need to forward this packet
-                if (!find_in_last_packets(pkt.dst_id, pkt.msg_id)) {
+                if (!find_in_last_packets(pkt.dst_id, pkt.msg_id)) {// i check if i didnt already got this packet
                     compressed_packet.dst_id = pkt.dst_id;
                     compressed_packet.msg_id = pkt.msg_id;
                     memcpy(&compressed_packet.payload, pkt.payload, sizeof(pkt.payload));
@@ -104,7 +119,7 @@ void routing_task(void *args) {
 
                     add_received_packet(&compressed_packet);
                     pkt.max_hops--;
-                    xQueueSend(tx_Queue_handle, &pkt, pdMS_TO_TICKS(100));
+                    xQueueSend(tx_Queue_handle, &pkt, pdMS_TO_TICKS(100)); //forwarding
                 } else {
                     continue;
                 }

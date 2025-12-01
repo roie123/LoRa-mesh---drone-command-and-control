@@ -30,6 +30,20 @@ static MSP_RC_Frame msp_rc_frame = {
 
 extern UART_HandleTypeDef huart2;
 
+
+
+/**
+ * @brief Generates and sends MSP RC control frames based on received commands.
+ *
+ * This task reads commands from the command queue, updates RC channel values
+ * accordingly, and builds an MSP RC frame. If no command is received for a
+ * specified duration, the task returns to STABLE mode. Frames are transmitted
+ * over UART using DMA when available, and a countdown prevents stale commands
+ * from persisting indefinitely.
+ *
+ * @param args Unused.
+ */
+
 void xDrone_link_task(void *args) {
     Commands current_command = STABLE;
     static uint8_t counter = MAX_COMMAND_TIME_COUNTER;

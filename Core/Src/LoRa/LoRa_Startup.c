@@ -12,6 +12,14 @@ SemaphoreHandle_t lora_mutex_handle;
 
 
 
+/**
+ * @brief Initializes the LoRa module and prepares it for reception.
+ *
+ * Creates a mutex for thread-safe access, configures GPIO and SPI settings,
+ * resets and initializes the LoRa module, and starts continuous reception.
+ *
+ * @return 1 if initialization succeeds, 0 if it fails.
+ */
 
 uint8_t LoRa_Startup() {
 

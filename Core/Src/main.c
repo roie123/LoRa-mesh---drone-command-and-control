@@ -42,7 +42,7 @@
 #include "../Inc/tranmit_test.h"
 #include "../Inc/TX_Queue.h"
 #include "../Inc/arm_test.h"
-#include "LoRa/LoRa_Startup.h"
+#include "LoRa_Startup.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
