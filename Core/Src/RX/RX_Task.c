@@ -16,7 +16,7 @@
 #include "stm32f1xx_hal_gpio.h"
 #include "task.h"
 #include "../Inc/LoRa.h"
-#include "../LoRa/LoRa_Startup.h"
+#include "../../Inc/LoRa_Startup.h"
 
 uint8_t LoRa_receive_safe(LoRa *lora, uint8_t *data, uint8_t length, SemaphoreHandle_t lora_mutex_handle) {
     uint8_t bytes = 0;

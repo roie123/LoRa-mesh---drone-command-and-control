@@ -10,7 +10,7 @@
 #include "packet.h"
 #include "TX_Queue.h"
 #include "../../Inc/NetworkData.h"
-#include "../LoRa/LoRa_Startup.h"
+#include "../../Inc/LoRa_Startup.h"
 
 uint8_t LoRa_transmit_safe(LoRa *lora, uint8_t *data, uint8_t length, uint16_t timeout, SemaphoreHandle_t lora_mutex_handle) {
     uint8_t status = 0;

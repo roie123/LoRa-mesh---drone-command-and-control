@@ -74,16 +74,6 @@ const osThreadAttr_t defaultTask_attributes = {
   .priority = (osPriority_t) osPriorityNormal,
 };
 /* USER CODE BEGIN PV */
-
-
-
-bool is_test_mode = false;
-static RX_Task_args rx_args;
-static TX_TEST_Task_args tx_TEST_args;
-static TX_task_args tx_args;
-static Routing_task_args routing_args;
-static Ping_task_args ping_args;
-
 TaskHandle_t rxTaskHandle;
 TaskHandle_t txTaskHandle;
 TaskHandle_t routingTaskHandle;
@@ -180,26 +170,16 @@ int main(void)
   /* USER CODE BEGIN RTOS_THREADS */
 
 
-    if (is_test_mode) {
-        BaseType_t tx_test_status = xTaskCreate(
-            xTX_test_Task,
-            "LoRa_TX_Test", // test task name
-            1024, // stack size
-            &tx_TEST_args, // task arguments
-            2, // task priority
-            NULL // handle
-        );
-    } else {
-        uint16_t before = xPortGetFreeHeapSize();
-        BaseType_t rx_task_status = xTaskCreate(xRX_Task, "RX_Task", configMINIMAL_STACK_SIZE, &rx_args, 6, &rxTaskHandle);
-        BaseType_t router_task_status = xTaskCreate(routing_task, "Routing_Task", configMINIMAL_STACK_SIZE, &routing_args, 5,
-                                                    &routingTaskHandle);
-        BaseType_t ping_task_status = xTaskCreate(xPing_task, "Ping Task", 500, &ping_args, 5, &pingTaskHandle);
-        BaseType_t tx_status = xTaskCreate(xTX_task, "TX_Task", 500, &tx_args, 5, &txTaskHandle);
-        BaseType_t drone_link_status = xTaskCreate(xDrone_link_task, "Drone_Link_Task", 300, 0, 5, &drone_linkTaskHandle);
+        bool tasks_created_successfully =false;
 
-        uint16_t after = xPortGetFreeHeapSize();
-    }
+        tasks_created_successfully = xTaskCreate(xRX_Task, "RX_Task", configMINIMAL_STACK_SIZE, 0, 6, &rxTaskHandle);
+        tasks_created_successfully = xTaskCreate(routing_task, "Routing_Task", configMINIMAL_STACK_SIZE, 0, 5,
+                                                    &routingTaskHandle);
+        tasks_created_successfully = xTaskCreate(xPing_task, "Ping Task", 500, 0, 5, &pingTaskHandle);
+        tasks_created_successfully = xTaskCreate(xTX_task, "TX_Task", 500, 0, 5, &txTaskHandle);
+        tasks_created_successfully = xTaskCreate(xDrone_link_task, "Drone_Link_Task", 300, 0, 5, &drone_linkTaskHandle);
+
+
 
     //
 

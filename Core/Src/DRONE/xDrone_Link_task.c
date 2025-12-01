@@ -43,7 +43,7 @@ void xDrone_link_task(void *args) {
            counter= MAX_COMMAND_TIME_COUNTER;
        }
 
-     current_command = MOVE_FORWARD;
+
 
 
         switch (current_command) {

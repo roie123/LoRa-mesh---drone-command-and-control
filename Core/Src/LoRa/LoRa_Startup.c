@@ -2,7 +2,7 @@
 // Created by royivri on 12/1/25.
 //
 
-#include "LoRa_Startup.h"
+#include "../../Inc/LoRa_Startup.h"
 #include "LoRa.h"
 #include "main.h"
 #include "FreeRTOS.h"
