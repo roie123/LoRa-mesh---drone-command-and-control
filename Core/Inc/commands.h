@@ -4,7 +4,7 @@
 
 #ifndef COMMANDS_H
 #define COMMANDS_H
-
+#define MANUAL_COMMAND_IDENTIFIER 0x00
 
 
 typedef enum {
@@ -19,7 +19,10 @@ typedef enum {
     CONNECTION_MADE=8,
     PING_COMMAND=9,
     ACKNOWLEDGE=10,
-    STABLE=11
+    STABLE=11,
+    SWITCH=12,
+    PITCH_UP=13,
+    PITCH_DOWN=14
 
 
 }Commands;

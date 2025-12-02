@@ -140,7 +140,7 @@ int main(void)
     Command_Queue_init();
     LoRa_Startup();
     network_data_init();
-
+    Drone_link_init();
 
   /* USER CODE END 2 */
 
@@ -356,6 +356,30 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, RECEIVING_LED_Pin|TRANSMITING_LED_Pin|OK_LED_Pin, GPIO_PIN_RESET);
 
+  /*Configure GPIO pins : PITCH_UP_BUTTON_Pin PITCH_DOWN_BUTTON_Pin */
+  GPIO_InitStruct.Pin = PITCH_UP_BUTTON_Pin|PITCH_DOWN_BUTTON_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : RIGHT_BUTTON_Pin */
+  GPIO_InitStruct.Pin = RIGHT_BUTTON_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(RIGHT_BUTTON_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : LEFT_BUTTON_Pin */
+  GPIO_InitStruct.Pin = LEFT_BUTTON_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(LEFT_BUTTON_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : SWITCH_BUTTON_Pin BUTTON_Pin */
+  GPIO_InitStruct.Pin = SWITCH_BUTTON_Pin|BUTTON_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
   /*Configure GPIO pins : NSS_Pin RECEIVING_LED_Pin TRANSMITING_LED_Pin OK_LED_Pin */
   GPIO_InitStruct.Pin = NSS_Pin|RECEIVING_LED_Pin|TRANSMITING_LED_Pin|OK_LED_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
@@ -376,13 +400,10 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(DID0_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : BUTTON_Pin */
-  GPIO_InitStruct.Pin = BUTTON_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
-  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
-  HAL_GPIO_Init(BUTTON_GPIO_Port, &GPIO_InitStruct);
-
   /* EXTI interrupt init*/
+  HAL_NVIC_SetPriority(EXTI1_IRQn, 5, 0);
+  HAL_NVIC_EnableIRQ(EXTI1_IRQn);
+
   HAL_NVIC_SetPriority(EXTI9_5_IRQn, 5, 0);
   HAL_NVIC_EnableIRQ(EXTI9_5_IRQn);
 
@@ -394,12 +415,28 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
     BaseType_t xHigherPriorityTaskWoken = pdFALSE;
-    HAL_GPIO_TogglePin(RECEIVING_LED_GPIO_Port,RECEIVING_LED_Pin);
     if (GPIO_Pin == DID0_Pin) {
-        // HAL_GPIO_WritePin(OK_LED_GPIO_Port, OK_LED_Pin, SET);
-        vTaskNotifyGiveFromISR(rxTaskHandle, &xHigherPriorityTaskWoken);
-        portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
+      vTaskNotifyGiveFromISR(rxTaskHandle, &xHigherPriorityTaskWoken);
+      portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
+    }else if (GPIO_Pin ==SWITCH_BUTTON_Pin) {
+      //TODO : send command to current selected drone
+      send_command_fromISR(SWITCH,&xHigherPriorityTaskWoken);
+
     }
+    else if (GPIO_Pin ==PITCH_UP_BUTTON_Pin) {
+      send_command_fromISR(PITCH_UP,&xHigherPriorityTaskWoken);
+
+    }
+    else if (GPIO_Pin ==PITCH_DOWN_BUTTON_Pin) {
+      send_command_fromISR(PITCH_DOWN, &xHigherPriorityTaskWoken);
+
+    }
+
+
+
+
+
+  portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
 }
 void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart) {
   if (huart->Instance == USART2) {

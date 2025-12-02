@@ -43,8 +43,42 @@ void routing_task(void *args) {
     MeshPacket packet_to_send;
     for (;;) {
         if (xQueueReceive(rx_queue_handle, received_byte_array,portMAX_DELAY) == pdPASS) {
-            memcpy(&pkt, received_byte_array, sizeof(MeshPacket));
+            if (received_byte_array[0]==MANUAL_COMMAND_IDENTIFIER) {
+                Commands cmd = received_byte_array[1];
+                switch (cmd) {
+                    case SWITCH : {
+                        if (current_selected_drone==0xff) {
+                            current_selected_drone=0;
+                            continue;
+                        }
+                        if (xSemaphoreTake(network_data_mutex_handle,10)==pdPASS) {
 
+                            for (int i = current_selected_drone; i < MAX_NODES; ++i) {
+                                if (connected_nodes[current_selected_drone].id!=0) {
+                                    current_selected_drone=i;
+                                    break;
+                                }
+                            }
+                            current_selected_drone=0xff;
+                            xSemaphoreGive(network_data_mutex_handle);
+
+
+                            continue;
+                        }
+
+                    }
+
+
+
+
+
+                    default: break;
+                }
+
+
+                continue;
+            }
+            memcpy(&pkt, received_byte_array, sizeof(MeshPacket));
             Commands command = (Commands) pkt.payload[0];
 
 

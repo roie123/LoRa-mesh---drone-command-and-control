@@ -43,14 +43,15 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Core/Inc/id.h ../Core/Inc/LoRa.h ../Core/Inc/main.h \
  ../Core/Inc/NetworkData.h ../Core/Inc/Node.h ../Core/Inc/packet.h \
  ../Core/Inc/Node.h ../Core/Inc/TX_Task.h \
- ../Core/Src/../Inc/Command_Queue.h \
+ ../Core/Src/../Inc/Command_Queue.h ../Core/Src/../Inc/commands.h \
+ ../Core/Src/../Inc/packet.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
- ../Core/Src/../Inc/xDrone_Link_task.h ../Core/Src/../Inc/PING_task.h \
- ../Core/Src/../Inc/queue_implementation.h ../Core/Src/../Inc/RX_Queue.h \
- ../Core/Src/../Inc/routing_task.h ../Core/Src/../Inc/packet.h \
+ ../Core/Src/../Inc/RX_Queue.h ../Core/Src/../Inc/xDrone_Link_task.h \
+ ../Core/Src/../Inc/PING_task.h ../Core/Src/../Inc/queue_implementation.h \
+ ../Core/Src/../Inc/RX_Queue.h ../Core/Src/../Inc/routing_task.h \
  ../Core/Src/../Inc/RX_Task.h ../Core/Src/../Inc/tranmit_test.h \
  ../Core/Src/../Inc/TX_Queue.h ../Core/Src/../Inc/arm_test.h \
- ../Core/Src/LoRa/LoRa_Startup.h
+ ../Core/Inc/LoRa_Startup.h
 ../Core/Inc/main.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
 ../Core/Inc/stm32f1xx_hal_conf.h:
@@ -102,15 +103,17 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Core/Inc/Node.h:
 ../Core/Inc/TX_Task.h:
 ../Core/Src/../Inc/Command_Queue.h:
+../Core/Src/../Inc/commands.h:
+../Core/Src/../Inc/packet.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
+../Core/Src/../Inc/RX_Queue.h:
 ../Core/Src/../Inc/xDrone_Link_task.h:
 ../Core/Src/../Inc/PING_task.h:
 ../Core/Src/../Inc/queue_implementation.h:
 ../Core/Src/../Inc/RX_Queue.h:
 ../Core/Src/../Inc/routing_task.h:
-../Core/Src/../Inc/packet.h:
 ../Core/Src/../Inc/RX_Task.h:
 ../Core/Src/../Inc/tranmit_test.h:
 ../Core/Src/../Inc/TX_Queue.h:
 ../Core/Src/../Inc/arm_test.h:
-../Core/Src/LoRa/LoRa_Startup.h:
+../Core/Inc/LoRa_Startup.h:

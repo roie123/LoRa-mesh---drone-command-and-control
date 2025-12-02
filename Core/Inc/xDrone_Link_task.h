@@ -5,10 +5,15 @@
 #ifndef XDRONE_LINK_TASK_H
 #define XDRONE_LINK_TASK_H
 #include <stdint.h>
+#include "FreeRTOS.h"
+#include "semphr.h"
 #define RC_CHANNELS 8
 #define MSP_PAYLOAD_SIZE 16
 #define MSP_SET_RAW_COMMANDS 200
 #define MSP_FRAME_SIZE (5 + RC_CHANNELS*2 + 1)  // 22 bytes
+
+extern SemaphoreHandle_t dma_mutex_handle;
+uint8_t Drone_link_init();
 
 typedef struct  {
     uint8_t header1;
@@ -23,4 +28,5 @@ typedef struct  {
 } __attribute__((packed)) MSP_RC_Frame;
 
 void xDrone_link_task(void* args);
+
 #endif //XDRONE_LINK_TASK_H

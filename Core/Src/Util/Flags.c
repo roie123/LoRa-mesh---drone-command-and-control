@@ -12,7 +12,7 @@ static SemaphoreHandle_t flags_mutex = NULL;
 
 
 
-BaseType_t dma_busy = false;
+volatile bool  dma_busy = false;
 
 
 // Return pointer to singleton

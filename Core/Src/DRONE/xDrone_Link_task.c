@@ -29,8 +29,21 @@ static MSP_RC_Frame msp_rc_frame = {
 //msp_rc_frame.channels[4]   == ARM == AUX1
 
 extern UART_HandleTypeDef huart2;
+SemaphoreHandle_t dma_mutex_handle;
 
 
+uint8_t Drone_link_init() {
+dma_mutex_handle = xSemaphoreCreateMutex();
+
+    if (dma_mutex_handle == NULL) {
+        return 0;
+    }
+
+
+
+
+    return 1;
+}
 
 /**
  * @brief Generates and sends MSP RC control frames based on received commands.
@@ -77,6 +90,16 @@ void xDrone_link_task(void *args) {
 
                 break;
             }
+            case PITCH_UP: {
+                current_rc_values.pitch+=5;
+                break;
+            }
+                case PITCH_DOWN: {
+                current_rc_values.pitch-=5;
+                break;
+            }
+
+                //TODO : implement full manual commands (throttle roll...)
 
         }
 
@@ -96,13 +119,21 @@ void xDrone_link_task(void *args) {
 
         msp_rc_frame.checksum = checksum;
 
+        if (xSemaphoreTake(dma_mutex_handle,0)) {
 
-        if (!dma_busy) {
-            static uint8_t buffer[sizeof(MSP_RC_Frame)];
-            memcpy(buffer, &msp_rc_frame, sizeof(MSP_RC_Frame));
-            dma_busy = true;
-            HAL_UART_Transmit_DMA(&huart2, buffer, sizeof(MSP_RC_Frame));
-            counter--;
+            if (!dma_busy) {
+                static uint8_t buffer[sizeof(MSP_RC_Frame)];
+                memcpy(buffer, &msp_rc_frame, sizeof(MSP_RC_Frame));
+                dma_busy = true;
+                HAL_UART_Transmit_DMA(&huart2, buffer, sizeof(MSP_RC_Frame));
+                counter--;
+            }
+
+
+
+
+            xSemaphoreGive(dma_mutex_handle);
+
         }
         vTaskDelay(pdMS_TO_TICKS(200)); // 200Hz updates
     }
