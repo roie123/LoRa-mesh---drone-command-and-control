@@ -43,7 +43,8 @@ void routing_task(void *args) {
     MeshPacket packet_to_send;
     for (;;) {
         if (xQueueReceive(rx_queue_handle, received_byte_array,portMAX_DELAY) == pdPASS) {
-            if (received_byte_array[0]==MANUAL_COMMAND_IDENTIFIER) {
+
+            if (received_byte_array[0]==MANUAL_COMMAND_IDENTIFIER) { //MANUAL DRONE CONTROL
                 Commands cmd = received_byte_array[1];
                 switch (cmd) {
                     case SWITCH : {
@@ -51,28 +52,48 @@ void routing_task(void *args) {
                             current_selected_drone=0;
                             continue;
                         }
+                        uint8_t temp = current_selected_drone;
                         if (xSemaphoreTake(network_data_mutex_handle,10)==pdPASS) {
 
                             for (int i = current_selected_drone; i < MAX_NODES; ++i) {
-                                if (connected_nodes[current_selected_drone].id!=0) {
+                                if (connected_nodes[i].id!=0) {
                                     current_selected_drone=i;
                                     break;
                                 }
-                            }
-                            current_selected_drone=0xff;
-                            xSemaphoreGive(network_data_mutex_handle);
 
+                            }
+                            xSemaphoreGive(network_data_mutex_handle);
+                            if (temp==current_selected_drone) {
+                                current_selected_drone=0xff;
+                            }
 
                             continue;
                         }
 
+                        break;
+
+                    }
+
+
+
+                        default: {
+                        uint8_t packet_payload[1]={received_byte_array[1]}; // this is the command
+
+                        xSemaphoreTake(network_data_mutex_handle,10);
+                        uint8_t temp_address = connected_nodes[current_selected_drone].id;
+                        mesh_build_packet(&packet_to_send,
+                            mesh_id,
+                            temp_address,
+                            0,0,packet_payload,sizeof(packet_payload));
+
+                        xSemaphoreGive(network_data_mutex_handle);
+                        xQueueSend(tx_Queue_handle,&packet_to_send,10);
                     }
 
 
 
 
 
-                    default: break;
                 }
 
 
@@ -82,7 +103,7 @@ void routing_task(void *args) {
             Commands command = (Commands) pkt.payload[0];
 
 
-            if (pkt.dst_id == mesh_id) {
+            if (pkt.dst_id == (uint8_t)mesh_id) {
                 switch (command) {
                     case CONNECTION_ACK: {
                         remove_connection_request(pkt.src_id,network_data_mutex_handle);

@@ -36,7 +36,7 @@ command_queue = xQueueCreate(5,sizeof(Commands));
 
 }
 void send_command_fromISR(Commands cmd, BaseType_t *pxHigherPriorityTaskWoken) {
-    if (cmd!=SWITCH &&current_selected_drone==0xff) { // its a command for me
+    if (cmd!=SWITCH && current_selected_drone==0xff) { // its a command for me
         xQueueSendFromISR(command_queue, &cmd, pxHigherPriorityTaskWoken);
     }else { // its a command to forward to another drone or its a switch
         uint8_t byte_array_to_router[sizeof(MeshPacket)];
