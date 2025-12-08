@@ -8156,48 +8156,48 @@ LOAD /home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm
  .debug_line    0x0001b24b      0x694 ./Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.o
  .debug_line    0x0001b8df      0x74c ./Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o
 
-.debug_str      0x00000000    0x99c7c
- .debug_str     0x00000000    0x99c7c ./Core/Src/DRONE/Command_Queue.o
+.debug_str      0x00000000    0x99c7b
+ .debug_str     0x00000000    0x99c7b ./Core/Src/DRONE/Command_Queue.o
                                0xca6a (size before relaxing)
- .debug_str     0x00099c7c     0x3dd9 ./Core/Src/DRONE/RC_Values.o
- .debug_str     0x00099c7c    0x8d80f ./Core/Src/DRONE/xDrone_Link_task.o
- .debug_str     0x00099c7c    0x859df ./Core/Src/LoRa/LoRa.o
- .debug_str     0x00099c7c    0x8d7ad ./Core/Src/LoRa/LoRa_Startup.o
- .debug_str     0x00099c7c     0x74a9 ./Core/Src/Mesh/packet.o
- .debug_str     0x00099c7c    0x8dd96 ./Core/Src/Network/PING_task.o
- .debug_str     0x00099c7c     0xbf07 ./Core/Src/RX/RX_Queue.o
- .debug_str     0x00099c7c    0x8df7f ./Core/Src/RX/RX_Task.o
- .debug_str     0x00099c7c    0x8ccdf ./Core/Src/Routing/Connect_to_node_task.o
- .debug_str     0x00099c7c    0x8d768 ./Core/Src/Routing/NetworkData.o
- .debug_str     0x00099c7c    0x8e8c7 ./Core/Src/Routing/routing_task.o
- .debug_str     0x00099c7c     0xbed5 ./Core/Src/TX/TX_Queue.o
- .debug_str     0x00099c7c    0x8e11f ./Core/Src/TX/TX_Task.o
- .debug_str     0x00099c7c     0xc1ca ./Core/Src/Util/Flags.o
- .debug_str     0x00099c7c     0x3dde ./Core/Src/Util/id.o
- .debug_str     0x00099c7c    0x8fef3 ./Core/Src/main.o
- .debug_str     0x00099c7c    0x8591f ./Core/Src/stm32f1xx_hal_msp.o
- .debug_str     0x00099c7c    0x854b0 ./Core/Src/stm32f1xx_hal_timebase_tim.o
- .debug_str     0x00099c7c    0x856fa ./Core/Src/stm32f1xx_it.o
- .debug_str     0x00099c7c     0x9990 ./Core/Src/syscalls.o
- .debug_str     0x00099c7c     0x772e ./Core/Src/sysmem.o
- .debug_str     0x00099c7c    0x84be8 ./Core/Src/system_stm32f1xx.o
- .debug_str     0x00099c7c       0x88 ./Core/Startup/startup_stm32f103c8tx.o
- .debug_str     0x00099c7c    0x8531b ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_str     0x00099c7c    0x85267 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
- .debug_str     0x00099c7c    0x84f91 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
- .debug_str     0x00099c7c    0x84f6e ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
- .debug_str     0x00099c7c    0x85017 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
- .debug_str     0x00099c7c    0x8550e ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.o
- .debug_str     0x00099c7c    0x86019 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
- .debug_str     0x00099c7c    0x85825 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
- .debug_str     0x00099c7c    0x85688 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
- .debug_str     0x00099c7c    0x8fb03 ./Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.o
- .debug_str     0x00099c7c     0xab2b ./Middlewares/Third_Party/FreeRTOS/Source/list.o
- .debug_str     0x00099c7c     0xc66b ./Middlewares/Third_Party/FreeRTOS/Source/queue.o
- .debug_str     0x00099c7c     0xd470 ./Middlewares/Third_Party/FreeRTOS/Source/tasks.o
- .debug_str     0x00099c7c     0xcebc ./Middlewares/Third_Party/FreeRTOS/Source/timers.o
- .debug_str     0x00099c7c     0xb754 ./Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.o
- .debug_str     0x00099c7c     0xb46d ./Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o
+ .debug_str     0x00099c7b     0x3dd9 ./Core/Src/DRONE/RC_Values.o
+ .debug_str     0x00099c7b    0x8d80e ./Core/Src/DRONE/xDrone_Link_task.o
+ .debug_str     0x00099c7b    0x859df ./Core/Src/LoRa/LoRa.o
+ .debug_str     0x00099c7b    0x8d7ad ./Core/Src/LoRa/LoRa_Startup.o
+ .debug_str     0x00099c7b     0x74a9 ./Core/Src/Mesh/packet.o
+ .debug_str     0x00099c7b    0x8dd96 ./Core/Src/Network/PING_task.o
+ .debug_str     0x00099c7b     0xbf07 ./Core/Src/RX/RX_Queue.o
+ .debug_str     0x00099c7b    0x8df7f ./Core/Src/RX/RX_Task.o
+ .debug_str     0x00099c7b    0x8ccdf ./Core/Src/Routing/Connect_to_node_task.o
+ .debug_str     0x00099c7b    0x8d768 ./Core/Src/Routing/NetworkData.o
+ .debug_str     0x00099c7b    0x8e8c7 ./Core/Src/Routing/routing_task.o
+ .debug_str     0x00099c7b     0xbed5 ./Core/Src/TX/TX_Queue.o
+ .debug_str     0x00099c7b    0x8e11f ./Core/Src/TX/TX_Task.o
+ .debug_str     0x00099c7b     0xc1ca ./Core/Src/Util/Flags.o
+ .debug_str     0x00099c7b     0x3dde ./Core/Src/Util/id.o
+ .debug_str     0x00099c7b    0x8fef3 ./Core/Src/main.o
+ .debug_str     0x00099c7b    0x8591f ./Core/Src/stm32f1xx_hal_msp.o
+ .debug_str     0x00099c7b    0x854b0 ./Core/Src/stm32f1xx_hal_timebase_tim.o
+ .debug_str     0x00099c7b    0x856fa ./Core/Src/stm32f1xx_it.o
+ .debug_str     0x00099c7b     0x9990 ./Core/Src/syscalls.o
+ .debug_str     0x00099c7b     0x772e ./Core/Src/sysmem.o
+ .debug_str     0x00099c7b    0x84be8 ./Core/Src/system_stm32f1xx.o
+ .debug_str     0x00099c7b       0x88 ./Core/Startup/startup_stm32f103c8tx.o
+ .debug_str     0x00099c7b    0x8531b ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_str     0x00099c7b    0x85267 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
+ .debug_str     0x00099c7b    0x84f91 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
+ .debug_str     0x00099c7b    0x84f6e ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
+ .debug_str     0x00099c7b    0x85017 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
+ .debug_str     0x00099c7b    0x8550e ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.o
+ .debug_str     0x00099c7b    0x86019 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
+ .debug_str     0x00099c7b    0x85825 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
+ .debug_str     0x00099c7b    0x85688 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
+ .debug_str     0x00099c7b    0x8fb03 ./Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.o
+ .debug_str     0x00099c7b     0xab2b ./Middlewares/Third_Party/FreeRTOS/Source/list.o
+ .debug_str     0x00099c7b     0xc66b ./Middlewares/Third_Party/FreeRTOS/Source/queue.o
+ .debug_str     0x00099c7b     0xd470 ./Middlewares/Third_Party/FreeRTOS/Source/tasks.o
+ .debug_str     0x00099c7b     0xcebc ./Middlewares/Third_Party/FreeRTOS/Source/timers.o
+ .debug_str     0x00099c7b     0xb754 ./Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.o
+ .debug_str     0x00099c7b     0xb46d ./Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o
 
 .comment        0x00000000       0x43
  .comment       0x00000000       0x43 ./Core/Src/DRONE/Command_Queue.o

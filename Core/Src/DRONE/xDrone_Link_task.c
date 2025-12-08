@@ -13,7 +13,7 @@
 #include "task.h"
 #include "../../Inc/RC_Values.h"
 #include "stm32f1xx_hal_uart.h"
-#define MAX_COMMAND_TIME_COUNTER 15
+#define MAX_COMMAND_TIME_COUNTER 5
 static MSP_RC_Frame msp_rc_frame = {
     .header1 = '$',
     .header2 = 'M',
@@ -91,11 +91,11 @@ void xDrone_link_task(void *args) {
                 break;
             }
             case PITCH_UP: {
-                current_rc_values.pitch+=5;
+                current_rc_values.pitch+=20;
                 break;
             }
                 case PITCH_DOWN: {
-                current_rc_values.pitch-=5;
+                current_rc_values.pitch-=20;
                 break;
             }
 
@@ -135,6 +135,6 @@ void xDrone_link_task(void *args) {
             xSemaphoreGive(dma_mutex_handle);
 
         }
-        vTaskDelay(pdMS_TO_TICKS(200)); // 200Hz updates
+        vTaskDelay(pdMS_TO_TICKS(20)); // 200Hz updates
     }
 }

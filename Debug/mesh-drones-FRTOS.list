@@ -39,9 +39,9 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  17 .debug_line   0001c02b  00000000  00000000  0004f024  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    00099c7c  00000000  00000000  0006b04f  2**0
+ 18 .debug_str    00099c7b  00000000  00000000  0006b04f  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000043  00000000  00000000  00104ccb  2**0
+ 19 .comment      00000043  00000000  00000000  00104cca  2**0
                   CONTENTS, READONLY
  20 .debug_frame  00007164  00000000  00000000  00104d10  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
@@ -909,7 +909,7 @@ void xDrone_link_task(void *args) {
  8000a2a:	73fb      	strb	r3, [r7, #15]
             counter = MAX_COMMAND_TIME_COUNTER;
  8000a2c:	4b68      	ldr	r3, [pc, #416]	@ (8000bd0 <xDrone_link_task+0x1bc>)
- 8000a2e:	220f      	movs	r2, #15
+ 8000a2e:	2205      	movs	r2, #5
  8000a30:	701a      	strb	r2, [r3, #0]
         }
        if (xQueueReceive(command_queue, &current_command, pdMS_TO_TICKS(2))) {
@@ -924,7 +924,7 @@ void xDrone_link_task(void *args) {
  8000a46:	d002      	beq.n	8000a4e <xDrone_link_task+0x3a>
            counter= MAX_COMMAND_TIME_COUNTER;
  8000a48:	4b61      	ldr	r3, [pc, #388]	@ (8000bd0 <xDrone_link_task+0x1bc>)
- 8000a4a:	220f      	movs	r2, #15
+ 8000a4a:	2205      	movs	r2, #5
  8000a4c:	701a      	strb	r2, [r3, #0]
        }
 
@@ -996,10 +996,10 @@ void xDrone_link_task(void *args) {
  8000ada:	e00d      	b.n	8000af8 <xDrone_link_task+0xe4>
             }
             case PITCH_UP: {
-                current_rc_values.pitch+=5;
+                current_rc_values.pitch+=20;
  8000adc:	4b3e      	ldr	r3, [pc, #248]	@ (8000bd8 <xDrone_link_task+0x1c4>)
  8000ade:	881b      	ldrh	r3, [r3, #0]
- 8000ae0:	3305      	adds	r3, #5
+ 8000ae0:	3314      	adds	r3, #20
  8000ae2:	b29a      	uxth	r2, r3
  8000ae4:	4b3c      	ldr	r3, [pc, #240]	@ (8000bd8 <xDrone_link_task+0x1c4>)
  8000ae6:	801a      	strh	r2, [r3, #0]
@@ -1007,10 +1007,10 @@ void xDrone_link_task(void *args) {
  8000ae8:	e006      	b.n	8000af8 <xDrone_link_task+0xe4>
             }
                 case PITCH_DOWN: {
-                current_rc_values.pitch-=5;
+                current_rc_values.pitch-=20;
  8000aea:	4b3b      	ldr	r3, [pc, #236]	@ (8000bd8 <xDrone_link_task+0x1c4>)
  8000aec:	881b      	ldrh	r3, [r3, #0]
- 8000aee:	3b05      	subs	r3, #5
+ 8000aee:	3b14      	subs	r3, #20
  8000af0:	b29a      	uxth	r2, r3
  8000af2:	4b39      	ldr	r3, [pc, #228]	@ (8000bd8 <xDrone_link_task+0x1c4>)
  8000af4:	801a      	strh	r2, [r3, #0]
@@ -1146,8 +1146,8 @@ void xDrone_link_task(void *args) {
  8000bc4:	f005 fd48 	bl	8006658 <xQueueGenericSend>
 
         }
-        vTaskDelay(pdMS_TO_TICKS(200)); // 200Hz updates
- 8000bc8:	20c8      	movs	r0, #200	@ 0xc8
+        vTaskDelay(pdMS_TO_TICKS(20)); // 200Hz updates
+ 8000bc8:	2014      	movs	r0, #20
  8000bca:	f006 fc8d 	bl	80074e8 <vTaskDelay>
     for (;;) {
  8000bce:	e727      	b.n	8000a20 <xDrone_link_task+0xc>
