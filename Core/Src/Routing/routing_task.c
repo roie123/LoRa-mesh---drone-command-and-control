@@ -51,26 +51,33 @@ void routing_task(void *args) {
                         if (current_selected_drone==CURRENT_SELECTED_DRONE_THIS_DRONE) {
                             current_selected_drone=0;
                             continue;
-                        }
-                        uint8_t temp = current_selected_drone;
-                        if (xSemaphoreTake(network_data_mutex_handle,10)==pdPASS) {
+                        }else {
 
-                            for (int i = current_selected_drone+1; i < MAX_NODES; ++i) {
-                                if (connected_nodes[i].id!=0) {
-                                    current_selected_drone=i;
-                                    break;
+
+                            uint8_t temp = current_selected_drone;
+                            if (xSemaphoreTake(network_data_mutex_handle,10)==pdPASS) {
+
+                                for (int i = current_selected_drone+1; i < MAX_NODES; ++i) {
+                                    if (connected_nodes[i].id!=0) {
+                                        current_selected_drone=i;
+                                        break;
+                                    }
+
+                                }
+                                xSemaphoreGive(network_data_mutex_handle);
+                                if (temp==current_selected_drone) {
+                                    current_selected_drone=CURRENT_SELECTED_DRONE_THIS_DRONE;
                                 }
 
-                            }
-                            xSemaphoreGive(network_data_mutex_handle);
-                            if (temp==current_selected_drone) {
-                                current_selected_drone=CURRENT_SELECTED_DRONE_THIS_DRONE;
+                                continue;
                             }
 
-                            continue;
+                            break;
+
+
+
                         }
 
-                        break;
 
                     }
 
