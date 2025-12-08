@@ -48,14 +48,14 @@ void routing_task(void *args) {
                 Commands cmd = received_byte_array[1];
                 switch (cmd) {
                     case SWITCH : {
-                        if (current_selected_drone==0xff) {
+                        if (current_selected_drone==CURRENT_SELECTED_DRONE_THIS_DRONE) {
                             current_selected_drone=0;
                             continue;
                         }
                         uint8_t temp = current_selected_drone;
                         if (xSemaphoreTake(network_data_mutex_handle,10)==pdPASS) {
 
-                            for (int i = current_selected_drone; i < MAX_NODES; ++i) {
+                            for (int i = current_selected_drone+1; i < MAX_NODES; ++i) {
                                 if (connected_nodes[i].id!=0) {
                                     current_selected_drone=i;
                                     break;
@@ -64,7 +64,7 @@ void routing_task(void *args) {
                             }
                             xSemaphoreGive(network_data_mutex_handle);
                             if (temp==current_selected_drone) {
-                                current_selected_drone=0xff;
+                                current_selected_drone=CURRENT_SELECTED_DRONE_THIS_DRONE;
                             }
 
                             continue;
@@ -100,6 +100,15 @@ void routing_task(void *args) {
                 continue;
             }
             memcpy(&pkt, received_byte_array, sizeof(MeshPacket));
+            uint8_t source_node_local_index = find_node_safe(pkt.src_id,network_data_mutex_handle);
+            if (source_node_local_index >-1) {
+                if (xSemaphoreTake(network_data_mutex_handle,10) == pdPASS) {
+                    connected_nodes[source_node_local_index].rssi= pkt.rssi;
+
+                    xSemaphoreGive(network_data_mutex_handle);
+                }
+            }
+            
             Commands command = (Commands) pkt.payload[0];
 
 

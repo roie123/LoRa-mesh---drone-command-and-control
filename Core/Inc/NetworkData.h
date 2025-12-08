@@ -14,7 +14,7 @@
 #define MAX_CONNECTIONS_REQUESTS 10
 #define LAST_PACKETS_RECEIVED_MAX 10
 #define LAST_PACKETS_SENT_MAX 10
-
+#define CURRENT_SELECTED_DRONE_THIS_DRONE 255
 
 static uint8_t global_msg_id=0;
 extern uint8_t connection_requests[10];

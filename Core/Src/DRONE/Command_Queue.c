@@ -7,8 +7,9 @@
 #include <stdio.h>
 
 #include "commands.h"
+#include "NetworkData.h"
 QueueHandle_t command_queue=NULL;
-volatile uint8_t current_selected_drone = 0xff;  // 0xff / 255 value means this is the current selected drone to command
+volatile uint8_t current_selected_drone = CURRENT_SELECTED_DRONE_THIS_DRONE;  // 0xff / 255 value means this is the current selected drone to command
  SemaphoreHandle_t current_selected_drone_mutex_handle=NULL;
 
 /**

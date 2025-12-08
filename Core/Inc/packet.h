@@ -23,7 +23,7 @@
 #define FLAG_ACK        (1 << 1)
 #define FLAG_ROUTE_DISC (1 << 2)
 #define FLAG_ENCRYPTED  (1 << 3)
-
+#define RSSI_INDEX offsetof(MeshPacket, rssi)
 typedef struct __attribute__((packed)) {
     uint8_t preamble;
     uint8_t version;

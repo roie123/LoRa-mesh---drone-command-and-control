@@ -63,6 +63,7 @@ void xRX_Task(void *args) {
                 received_bytes_array,
                 sizeof(received_bytes_array),
                 lora_mutex_handle)) {
+                received_bytes_array[RSSI_INDEX]=LoRa_getRSSI(&myLoRa);
                 if (xQueueSend(rx_queue_handle,received_bytes_array,pdMS_TO_TICKS(2000))==pdTRUE) {
 
 
