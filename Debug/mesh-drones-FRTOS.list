@@ -33,15 +33,15 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  14 .debug_aranges 00001a50  00000000  00000000  0002e888  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_rnglists 00001430  00000000  00000000  000302d8  2**0
+ 15 .debug_rnglists 0000142f  00000000  00000000  000302d8  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_macro  0001db18  00000000  00000000  00031708  2**0
+ 16 .debug_macro  0001db18  00000000  00000000  00031707  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   0001c36e  00000000  00000000  0004f220  2**0
+ 17 .debug_line   0001c370  00000000  00000000  0004f21f  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    00099cd9  00000000  00000000  0006b58e  2**0
+ 18 .debug_str    00099cd9  00000000  00000000  0006b58f  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000043  00000000  00000000  00105267  2**0
+ 19 .comment      00000043  00000000  00000000  00105268  2**0
                   CONTENTS, READONLY
  20 .debug_frame  00007164  00000000  00000000  001052ac  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
@@ -4486,12 +4486,14 @@ void routing_task(void *args) {
  80020b0:	701a      	strb	r2, [r3, #0]
                             continue;
  80020b2:	e18a      	b.n	80023ca <routing_task+0x362>
-                        }
-                        uint8_t temp = current_selected_drone;
+                        }else {
+
+
+                            uint8_t temp = current_selected_drone;
  80020b4:	4b9d      	ldr	r3, [pc, #628]	@ (800232c <routing_task+0x2c4>)
  80020b6:	781b      	ldrb	r3, [r3, #0]
  80020b8:	f887 3068 	strb.w	r3, [r7, #104]	@ 0x68
-                        if (xSemaphoreTake(network_data_mutex_handle,10)==pdPASS) {
+                            if (xSemaphoreTake(network_data_mutex_handle,10)==pdPASS) {
  80020bc:	4b9c      	ldr	r3, [pc, #624]	@ (8002330 <routing_task+0x2c8>)
  80020be:	681b      	ldr	r3, [r3, #0]
  80020c0:	210a      	movs	r1, #10
@@ -4501,14 +4503,14 @@ void routing_task(void *args) {
  80020ca:	2b01      	cmp	r3, #1
  80020cc:	d164      	bne.n	8002198 <routing_task+0x130>
 
-                            for (int i = current_selected_drone+1; i < MAX_NODES; ++i) {
+                                for (int i = current_selected_drone+1; i < MAX_NODES; ++i) {
  80020ce:	4b97      	ldr	r3, [pc, #604]	@ (800232c <routing_task+0x2c4>)
  80020d0:	781b      	ldrb	r3, [r3, #0]
  80020d2:	b2db      	uxtb	r3, r3
  80020d4:	3301      	adds	r3, #1
  80020d6:	66fb      	str	r3, [r7, #108]	@ 0x6c
  80020d8:	e011      	b.n	80020fe <routing_task+0x96>
-                                if (connected_nodes[i].id!=0) {
+                                    if (connected_nodes[i].id!=0) {
  80020da:	4996      	ldr	r1, [pc, #600]	@ (8002334 <routing_task+0x2cc>)
  80020dc:	6efa      	ldr	r2, [r7, #108]	@ 0x6c
  80020de:	4613      	mov	r3, r2
@@ -4519,44 +4521,44 @@ void routing_task(void *args) {
  80020e8:	781b      	ldrb	r3, [r3, #0]
  80020ea:	2b00      	cmp	r3, #0
  80020ec:	d004      	beq.n	80020f8 <routing_task+0x90>
-                                    current_selected_drone=i;
+                                        current_selected_drone=i;
  80020ee:	6efb      	ldr	r3, [r7, #108]	@ 0x6c
  80020f0:	b2da      	uxtb	r2, r3
  80020f2:	4b8e      	ldr	r3, [pc, #568]	@ (800232c <routing_task+0x2c4>)
  80020f4:	701a      	strb	r2, [r3, #0]
-                                    break;
+                                        break;
  80020f6:	e005      	b.n	8002104 <routing_task+0x9c>
-                            for (int i = current_selected_drone+1; i < MAX_NODES; ++i) {
+                                for (int i = current_selected_drone+1; i < MAX_NODES; ++i) {
  80020f8:	6efb      	ldr	r3, [r7, #108]	@ 0x6c
  80020fa:	3301      	adds	r3, #1
  80020fc:	66fb      	str	r3, [r7, #108]	@ 0x6c
  80020fe:	6efb      	ldr	r3, [r7, #108]	@ 0x6c
  8002100:	2b09      	cmp	r3, #9
  8002102:	ddea      	ble.n	80020da <routing_task+0x72>
-                                }
+                                    }
 
-                            }
-                            xSemaphoreGive(network_data_mutex_handle);
+                                }
+                                xSemaphoreGive(network_data_mutex_handle);
  8002104:	4b8a      	ldr	r3, [pc, #552]	@ (8002330 <routing_task+0x2c8>)
  8002106:	6818      	ldr	r0, [r3, #0]
  8002108:	2300      	movs	r3, #0
  800210a:	2200      	movs	r2, #0
  800210c:	2100      	movs	r1, #0
  800210e:	f004 fb21 	bl	8006754 <xQueueGenericSend>
-                            if (temp==current_selected_drone) {
+                                if (temp==current_selected_drone) {
  8002112:	4b86      	ldr	r3, [pc, #536]	@ (800232c <routing_task+0x2c4>)
  8002114:	781b      	ldrb	r3, [r3, #0]
  8002116:	b2db      	uxtb	r3, r3
  8002118:	f897 2068 	ldrb.w	r2, [r7, #104]	@ 0x68
  800211c:	429a      	cmp	r2, r3
  800211e:	f040 814f 	bne.w	80023c0 <routing_task+0x358>
-                                current_selected_drone=CURRENT_SELECTED_DRONE_THIS_DRONE;
+                                    current_selected_drone=CURRENT_SELECTED_DRONE_THIS_DRONE;
  8002122:	4b82      	ldr	r3, [pc, #520]	@ (800232c <routing_task+0x2c4>)
  8002124:	22ff      	movs	r2, #255	@ 0xff
  8002126:	701a      	strb	r2, [r3, #0]
-                            }
+                                }
 
-                            continue;
+                                continue;
  8002128:	e14a      	b.n	80023c0 <routing_task+0x358>
                     }
 
@@ -4625,7 +4627,7 @@ void routing_task(void *args) {
 
                 continue;
  8002196:	e118      	b.n	80023ca <routing_task+0x362>
-                        break;
+                            break;
  8002198:	bf00      	nop
                 continue;
  800219a:	e116      	b.n	80023ca <routing_task+0x362>
@@ -4916,7 +4918,7 @@ void routing_task(void *args) {
 
                 continue;
  80023be:	e004      	b.n	80023ca <routing_task+0x362>
-                            continue;
+                                continue;
  80023c0:	bf00      	nop
  80023c2:	e655      	b.n	8002070 <routing_task+0x8>
                             continue;
