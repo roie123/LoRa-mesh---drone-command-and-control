@@ -7,6 +7,7 @@
 #include <stdio.h>
 
 #include "commands.h"
+#include "Logger.h"
 #include "NetworkData.h"
 QueueHandle_t command_queue=NULL;
 volatile uint8_t current_selected_drone = CURRENT_SELECTED_DRONE_THIS_DRONE;  // 0xff / 255 value means this is the current selected drone to command
@@ -25,13 +26,16 @@ volatile uint8_t current_selected_drone = CURRENT_SELECTED_DRONE_THIS_DRONE;  //
 QueueHandle_t Command_Queue_init() {
     current_selected_drone_mutex_handle=xSemaphoreCreateMutex();
     if (current_selected_drone_mutex_handle==NULL) {
+        log(FATAL, SYSTEM , "Could not create RC mutex ");
+
         return NULL;
     }
 command_queue = xQueueCreate(5,sizeof(Commands));
     if (command_queue != NULL) {
         return command_queue;
     }else {
-        printf("Command_Queue_init failed\n");
+        log(FATAL, SYSTEM , "Could not create RC queue ");
+
         return NULL;
     }
 

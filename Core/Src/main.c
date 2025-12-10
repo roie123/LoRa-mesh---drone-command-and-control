@@ -43,7 +43,7 @@
 #include "../Inc/TX_Queue.h"
 #include "../Inc/arm_test.h"
 #include "LoRa_Startup.h"
-#include "TEST/Logger.h"
+#include "../Inc/Logger.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -150,10 +150,8 @@ int main(void)
     LoRa_Startup();
     network_data_init();
     Drone_link_init();
-  logger_init();
-  uint8_t test_message[] = "UART3 Test Success!\r\n";
-  size_t message_length = sizeof(test_message) - 1;
-  HAL_StatusTypeDef status = HAL_UART_Transmit_DMA(&huart3, test_message, message_length);
+    logger_init();
+
   /* USER CODE END 2 */
 
   /* Init scheduler */
@@ -190,7 +188,7 @@ int main(void)
         tasks_created_successfully = xTaskCreate(xPing_task, "Ping Task", 500, 0, 5, &pingTaskHandle);
         tasks_created_successfully = xTaskCreate(xTX_task, "TX_Task", 500, 0, 5, &txTaskHandle);
         tasks_created_successfully = xTaskCreate(xDrone_link_task, "Drone_Link_Task", 300, 0, 5, &drone_linkTaskHandle);
-
+        log(INFO,SYSTEM,tasks_created_successfully ? "all Tasks created successfully" : "a task did not create successfully");
 
 
     //

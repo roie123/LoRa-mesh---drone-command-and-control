@@ -17,6 +17,7 @@
 #include "task.h"
 #include "../Inc/LoRa.h"
 #include "../../Inc/LoRa_Startup.h"
+#include "../../Inc/Logger.h"
 
 
 /**
@@ -57,15 +58,15 @@ void xRX_Task(void *args) {
 
     for (;;) {
         uint8_t notified = ulTaskNotifyTake(pdTRUE,portMAX_DELAY);
-
+        log(INFO,LORA,"xRx received transmission");
         if (notified) {
             if (LoRa_receive_safe(&myLoRa,
                 received_bytes_array,
                 sizeof(received_bytes_array),
                 lora_mutex_handle)) {
                 received_bytes_array[RSSI_INDEX]=LoRa_getRSSI(&myLoRa);
-                if (xQueueSend(rx_queue_handle,received_bytes_array,pdMS_TO_TICKS(2000))==pdTRUE) {
-
+                if (xQueueSend(rx_queue_handle,received_bytes_array,pdMS_TO_TICKS(2000))!=pdTRUE) {
+                    log(WARNING,LORA,"xRx could not send byte array to rx queue");
 
                 };
 

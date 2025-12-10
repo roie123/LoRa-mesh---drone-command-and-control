@@ -13,6 +13,7 @@
 #include "packet.h"
 #include "queue.h"
 #include "stdio.h"
+#include "../../Inc/Logger.h"
 
 QueueHandle_t rx_queue_handle = NULL;
 
@@ -21,7 +22,7 @@ QueueHandle_t RX_Queue_init() {
     if (rx_queue_handle != NULL) {
         return rx_queue_handle;
     }else {
-        printf("RX Queue creation failed : NO MEMORY \n");
+        log(FATAL, SYSTEM , "Could not create RC queue ");
         return NULL;
     }
 

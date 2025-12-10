@@ -12,6 +12,7 @@
 #include "../../Inc/Connect_to_node_task.h"
 #include "General.h"
 #include "id.h"
+#include "Logger.h"
 #include "../../Inc/NetworkData.h"
 #include "packet.h"
 #include "queue.h"
@@ -50,6 +51,8 @@ void routing_task(void *args) {
                     case SWITCH : {
                         if (current_selected_drone==CURRENT_SELECTED_DRONE_THIS_DRONE) {
                             current_selected_drone=0;
+                            char msg[20] = {0};
+
                             continue;
                         }else {
 
