@@ -12,7 +12,8 @@ static SemaphoreHandle_t flags_mutex = NULL;
 
 
 
-volatile bool  dma_busy = false;
+volatile bool  uart2_dma_busy = false;
+volatile bool  uart3_dma_busy = false;
 
 
 // Return pointer to singleton

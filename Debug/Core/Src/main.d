@@ -51,7 +51,7 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Core/Src/../Inc/RX_Queue.h ../Core/Src/../Inc/routing_task.h \
  ../Core/Src/../Inc/RX_Task.h ../Core/Src/../Inc/tranmit_test.h \
  ../Core/Src/../Inc/TX_Queue.h ../Core/Src/../Inc/arm_test.h \
- ../Core/Inc/LoRa_Startup.h
+ ../Core/Inc/LoRa_Startup.h ../Core/Src/TEST/Logger.h
 ../Core/Inc/main.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
 ../Core/Inc/stm32f1xx_hal_conf.h:
@@ -117,3 +117,4 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Core/Src/../Inc/TX_Queue.h:
 ../Core/Src/../Inc/arm_test.h:
 ../Core/Inc/LoRa_Startup.h:
+../Core/Src/TEST/Logger.h:

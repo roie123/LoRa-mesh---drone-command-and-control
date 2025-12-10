@@ -10,6 +10,7 @@
 "./Core/Src/Routing/Connect_to_node_task.o"
 "./Core/Src/Routing/NetworkData.o"
 "./Core/Src/Routing/routing_task.o"
+"./Core/Src/TEST/Logger.o"
 "./Core/Src/TEST/arm_test.o"
 "./Core/Src/TEST/tranmit_test.o"
 "./Core/Src/TX/TX_Queue.o"

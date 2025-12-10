@@ -20,5 +20,7 @@ SemaphoreHandle_t get_flags_mutex(void);
 
 
 void flags_init(void);
-extern volatile bool dma_busy;
+extern volatile bool uart2_dma_busy;
+extern volatile bool  uart3_dma_busy;
+
 #endif // FLAGS_H

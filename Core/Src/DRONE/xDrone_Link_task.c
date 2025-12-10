@@ -121,10 +121,10 @@ void xDrone_link_task(void *args) {
 
         if (xSemaphoreTake(dma_mutex_handle,0)) {
 
-            if (!dma_busy) {
+            if (!uart2_dma_busy) {
                 static uint8_t buffer[sizeof(MSP_RC_Frame)];
                 memcpy(buffer, &msp_rc_frame, sizeof(MSP_RC_Frame));
-                dma_busy = true;
+                uart2_dma_busy = true;
                 HAL_UART_Transmit_DMA(&huart2, buffer, sizeof(MSP_RC_Frame));
                 counter--;
             }

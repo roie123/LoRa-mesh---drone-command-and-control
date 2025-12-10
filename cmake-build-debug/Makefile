@@ -424,6 +424,30 @@ Core/Src/Routing/routing_task.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/routing_task.c.s
 .PHONY : Core/Src/Routing/routing_task.c.s
 
+Core/Src/TEST/Logger.obj: Core/Src/TEST/Logger.c.obj
+.PHONY : Core/Src/TEST/Logger.obj
+
+# target to build an object file
+Core/Src/TEST/Logger.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TEST/Logger.c.obj
+.PHONY : Core/Src/TEST/Logger.c.obj
+
+Core/Src/TEST/Logger.i: Core/Src/TEST/Logger.c.i
+.PHONY : Core/Src/TEST/Logger.i
+
+# target to preprocess a source file
+Core/Src/TEST/Logger.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TEST/Logger.c.i
+.PHONY : Core/Src/TEST/Logger.c.i
+
+Core/Src/TEST/Logger.s: Core/Src/TEST/Logger.c.s
+.PHONY : Core/Src/TEST/Logger.s
+
+# target to generate assembly for a file
+Core/Src/TEST/Logger.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TEST/Logger.c.s
+.PHONY : Core/Src/TEST/Logger.c.s
+
 Core/Src/TEST/arm_test.obj: Core/Src/TEST/arm_test.c.obj
 .PHONY : Core/Src/TEST/arm_test.obj
 
@@ -1438,6 +1462,9 @@ help:
 	@echo "... Core/Src/Routing/routing_task.obj"
 	@echo "... Core/Src/Routing/routing_task.i"
 	@echo "... Core/Src/Routing/routing_task.s"
+	@echo "... Core/Src/TEST/Logger.obj"
+	@echo "... Core/Src/TEST/Logger.i"
+	@echo "... Core/Src/TEST/Logger.s"
 	@echo "... Core/Src/TEST/arm_test.obj"
 	@echo "... Core/Src/TEST/arm_test.i"
 	@echo "... Core/Src/TEST/arm_test.s"
