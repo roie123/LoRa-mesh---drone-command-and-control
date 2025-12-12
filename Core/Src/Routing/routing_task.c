@@ -159,19 +159,6 @@ void routing_task(void *args) {
 
             if (pkt.dst_id == BROADCAST_ADDRESS) {
                 switch (command) {
-                    case CONNECT_REQUEST: {
-                        //TODO : implement some security check
-                        if (!is_connection_request_exist(pkt.src_id, network_data_mutex_handle)) {
-                            add_connection_request(pkt.src_id, network_data_mutex_handle);
-                            add_connected_node(pkt.src_id, 0, 0, network_data_mutex_handle);
-                            send_connection_made_to_node(pkt.src_id, tx_Queue_handle);
-                        } else {
-                            continue;
-                        }
-
-
-                        continue;
-                    }
 
                     case PING_COMMAND: {
                         add_connected_node(pkt.src_id, 0, 0, network_data_mutex_handle);
@@ -194,7 +181,7 @@ void routing_task(void *args) {
                     add_received_packet(&compressed_packet);
                     pkt.max_hops--;
                     xQueueSend(tx_Queue_handle, &pkt, pdMS_TO_TICKS(100)); //forwarding
-                } else {
+                } else {// i already sent this packet once
                     continue;
                 }
 

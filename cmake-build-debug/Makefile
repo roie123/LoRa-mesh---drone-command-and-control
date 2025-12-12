@@ -280,6 +280,30 @@ Core/Src/Mesh/packet.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Mesh/packet.c.s
 .PHONY : Core/Src/Mesh/packet.c.s
 
+Core/Src/Mesh/xPacket_recovery_task.obj: Core/Src/Mesh/xPacket_recovery_task.c.obj
+.PHONY : Core/Src/Mesh/xPacket_recovery_task.obj
+
+# target to build an object file
+Core/Src/Mesh/xPacket_recovery_task.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Mesh/xPacket_recovery_task.c.obj
+.PHONY : Core/Src/Mesh/xPacket_recovery_task.c.obj
+
+Core/Src/Mesh/xPacket_recovery_task.i: Core/Src/Mesh/xPacket_recovery_task.c.i
+.PHONY : Core/Src/Mesh/xPacket_recovery_task.i
+
+# target to preprocess a source file
+Core/Src/Mesh/xPacket_recovery_task.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Mesh/xPacket_recovery_task.c.i
+.PHONY : Core/Src/Mesh/xPacket_recovery_task.c.i
+
+Core/Src/Mesh/xPacket_recovery_task.s: Core/Src/Mesh/xPacket_recovery_task.c.s
+.PHONY : Core/Src/Mesh/xPacket_recovery_task.s
+
+# target to generate assembly for a file
+Core/Src/Mesh/xPacket_recovery_task.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Mesh/xPacket_recovery_task.c.s
+.PHONY : Core/Src/Mesh/xPacket_recovery_task.c.s
+
 Core/Src/Network/PING_task.obj: Core/Src/Network/PING_task.c.obj
 .PHONY : Core/Src/Network/PING_task.obj
 
@@ -1444,6 +1468,9 @@ help:
 	@echo "... Core/Src/Mesh/packet.obj"
 	@echo "... Core/Src/Mesh/packet.i"
 	@echo "... Core/Src/Mesh/packet.s"
+	@echo "... Core/Src/Mesh/xPacket_recovery_task.obj"
+	@echo "... Core/Src/Mesh/xPacket_recovery_task.i"
+	@echo "... Core/Src/Mesh/xPacket_recovery_task.s"
 	@echo "... Core/Src/Network/PING_task.obj"
 	@echo "... Core/Src/Network/PING_task.i"
 	@echo "... Core/Src/Network/PING_task.s"

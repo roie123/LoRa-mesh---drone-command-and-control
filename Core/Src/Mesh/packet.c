@@ -73,6 +73,7 @@ int mesh_build_packet(MeshPacket *pkt, uint8_t src, uint8_t dst, uint8_t flags, 
     pkt->max_hops  = 10;
     pkt->msg_id    = msg_id;
     pkt->length    = length;
+    pkt->retry_count=5;
     if (payload && length > 0) {
         memcpy(pkt->payload, payload, length);
     }

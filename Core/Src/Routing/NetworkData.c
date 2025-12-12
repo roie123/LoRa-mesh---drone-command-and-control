@@ -18,11 +18,8 @@ CompressedPacket last_packets_sent[LAST_PACKETS_SENT_MAX] = {0};
 SemaphoreHandle_t network_data_mutex_handle;
 
 
-
-
-
 uint8_t network_data_init(void) {
-    network_data_mutex_handle= xSemaphoreCreateMutex();
+    network_data_mutex_handle = xSemaphoreCreateMutex();
     return 1;
 }
 
@@ -196,25 +193,30 @@ static uint8_t fifo_start_sent = 0;
 static uint8_t fifo_count_sent = 0;
 
 // Compute key
-static inline uint8_t packet_key(const CompressedPacket* pkt) {
+static inline uint8_t packet_key(const CompressedPacket *pkt) {
     return pkt->dst_id ^ pkt->msg_id;
 }
 
 // Add a packet (FIFO, overwrite oldest if full)
-void last_packets_sent_add(const CompressedPacket* pkt) {
-    if (fifo_count_sent < LAST_PACKETS_SENT_MAX) {
-        uint8_t end = (fifo_start_sent + fifo_count_sent) % LAST_PACKETS_SENT_MAX;
-        last_packets_sent[end] = *pkt;
-        fifo_count_sent++;
-    } else {
-        // FIFO full → overwrite oldest
-        last_packets_sent[fifo_start_sent] = *pkt;
-        fifo_start_sent = (fifo_start_sent + 1) % LAST_PACKETS_SENT_MAX;
+void last_packets_sent_add(const CompressedPacket *pkt) {
+    if (xSemaphoreTake(network_data_mutex_handle, pdMS_TO_TICKS(10))) {
+        if (fifo_count_sent < LAST_PACKETS_SENT_MAX) {
+            uint8_t end = (fifo_start_sent + fifo_count_sent) % LAST_PACKETS_SENT_MAX;
+            last_packets_sent[end] = *pkt;
+            fifo_count_sent++;
+        } else {
+            // FIFO full → overwrite oldest
+            last_packets_sent[fifo_start_sent] = *pkt;
+            fifo_start_sent = (fifo_start_sent + 1) % LAST_PACKETS_SENT_MAX;
+        }
+
+
+        xSemaphoreGive(network_data_mutex_handle);
     }
 }
 
 // Find a packet by key (dst_id ^ msg_id)
-CompressedPacket* last_packets_sent_find(uint8_t dst_id, uint8_t msg_id) {
+CompressedPacket *last_packets_sent_find(uint8_t dst_id, uint8_t msg_id) {
     uint8_t key = dst_id ^ msg_id;
     for (uint8_t i = 0; i < fifo_count_sent; i++) {
         uint8_t idx = (fifo_start_sent + i) % LAST_PACKETS_SENT_MAX;
@@ -234,7 +236,7 @@ bool last_packets_sent_remove(uint8_t dst_id, uint8_t msg_id) {
             // shift everything after it left
             for (uint8_t j = i; j < fifo_count_sent - 1; j++) {
                 uint8_t from = (fifo_start_sent + j + 1) % LAST_PACKETS_SENT_MAX;
-                uint8_t to   = (fifo_start_sent + j) % LAST_PACKETS_SENT_MAX;
+                uint8_t to = (fifo_start_sent + j) % LAST_PACKETS_SENT_MAX;
                 last_packets_sent[to] = last_packets_sent[from];
             }
             fifo_count_sent--;

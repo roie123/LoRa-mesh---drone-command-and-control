@@ -156,10 +156,24 @@ CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Mesh/packet.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Mesh/packet.c.s"
 	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/Mesh/packet.c -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Mesh/packet.c.s
 
+CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Mesh/xPacket_recovery_task.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/flags.make
+CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Mesh/xPacket_recovery_task.c.obj: /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/Mesh/xPacket_recovery_task.c
+CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Mesh/xPacket_recovery_task.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Mesh/xPacket_recovery_task.c.obj"
+	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Mesh/xPacket_recovery_task.c.obj -MF CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Mesh/xPacket_recovery_task.c.obj.d -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Mesh/xPacket_recovery_task.c.obj -c /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/Mesh/xPacket_recovery_task.c
+
+CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Mesh/xPacket_recovery_task.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Mesh/xPacket_recovery_task.c.i"
+	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/Mesh/xPacket_recovery_task.c > CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Mesh/xPacket_recovery_task.c.i
+
+CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Mesh/xPacket_recovery_task.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Mesh/xPacket_recovery_task.c.s"
+	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/Mesh/xPacket_recovery_task.c -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Mesh/xPacket_recovery_task.c.s
+
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Network/PING_task.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/flags.make
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Network/PING_task.c.obj: /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/Network/PING_task.c
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Network/PING_task.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Network/PING_task.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Network/PING_task.c.obj"
 	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Network/PING_task.c.obj -MF CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Network/PING_task.c.obj.d -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Network/PING_task.c.obj -c /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/Network/PING_task.c
 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Network/PING_task.c.i: cmake_force
@@ -173,7 +187,7 @@ CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Network/PING_task.c.s: cmake_force
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/RX/RX_Queue.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/flags.make
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/RX/RX_Queue.c.obj: /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/RX/RX_Queue.c
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/RX/RX_Queue.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/RX/RX_Queue.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/RX/RX_Queue.c.obj"
 	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/RX/RX_Queue.c.obj -MF CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/RX/RX_Queue.c.obj.d -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/RX/RX_Queue.c.obj -c /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/RX/RX_Queue.c
 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/RX/RX_Queue.c.i: cmake_force
@@ -187,7 +201,7 @@ CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/RX/RX_Queue.c.s: cmake_force
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/RX/RX_Task.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/flags.make
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/RX/RX_Task.c.obj: /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/RX/RX_Task.c
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/RX/RX_Task.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/RX/RX_Task.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/RX/RX_Task.c.obj"
 	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/RX/RX_Task.c.obj -MF CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/RX/RX_Task.c.obj.d -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/RX/RX_Task.c.obj -c /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/RX/RX_Task.c
 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/RX/RX_Task.c.i: cmake_force
@@ -201,7 +215,7 @@ CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/RX/RX_Task.c.s: cmake_force
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/Connect_to_node_task.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/flags.make
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/Connect_to_node_task.c.obj: /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/Routing/Connect_to_node_task.c
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/Connect_to_node_task.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/Connect_to_node_task.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/Connect_to_node_task.c.obj"
 	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/Connect_to_node_task.c.obj -MF CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/Connect_to_node_task.c.obj.d -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/Connect_to_node_task.c.obj -c /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/Routing/Connect_to_node_task.c
 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/Connect_to_node_task.c.i: cmake_force
@@ -215,7 +229,7 @@ CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/Connect_to_node_task.c.s: 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/NetworkData.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/flags.make
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/NetworkData.c.obj: /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/Routing/NetworkData.c
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/NetworkData.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/NetworkData.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/NetworkData.c.obj"
 	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/NetworkData.c.obj -MF CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/NetworkData.c.obj.d -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/NetworkData.c.obj -c /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/Routing/NetworkData.c
 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/NetworkData.c.i: cmake_force
@@ -229,7 +243,7 @@ CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/NetworkData.c.s: cmake_for
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/routing_task.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/flags.make
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/routing_task.c.obj: /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/Routing/routing_task.c
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/routing_task.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/routing_task.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/routing_task.c.obj"
 	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/routing_task.c.obj -MF CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/routing_task.c.obj.d -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/routing_task.c.obj -c /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/Routing/routing_task.c
 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/routing_task.c.i: cmake_force
@@ -243,7 +257,7 @@ CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Routing/routing_task.c.s: cmake_fo
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TEST/Logger.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/flags.make
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TEST/Logger.c.obj: /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/TEST/Logger.c
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TEST/Logger.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TEST/Logger.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TEST/Logger.c.obj"
 	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TEST/Logger.c.obj -MF CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TEST/Logger.c.obj.d -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TEST/Logger.c.obj -c /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/TEST/Logger.c
 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TEST/Logger.c.i: cmake_force
@@ -257,7 +271,7 @@ CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TEST/Logger.c.s: cmake_force
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TEST/arm_test.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/flags.make
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TEST/arm_test.c.obj: /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/TEST/arm_test.c
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TEST/arm_test.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TEST/arm_test.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TEST/arm_test.c.obj"
 	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TEST/arm_test.c.obj -MF CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TEST/arm_test.c.obj.d -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TEST/arm_test.c.obj -c /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/TEST/arm_test.c
 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TEST/arm_test.c.i: cmake_force
@@ -271,7 +285,7 @@ CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TEST/arm_test.c.s: cmake_force
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TEST/tranmit_test.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/flags.make
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TEST/tranmit_test.c.obj: /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/TEST/tranmit_test.c
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TEST/tranmit_test.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TEST/tranmit_test.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TEST/tranmit_test.c.obj"
 	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TEST/tranmit_test.c.obj -MF CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TEST/tranmit_test.c.obj.d -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TEST/tranmit_test.c.obj -c /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/TEST/tranmit_test.c
 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TEST/tranmit_test.c.i: cmake_force
@@ -285,7 +299,7 @@ CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TEST/tranmit_test.c.s: cmake_force
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TX/TX_Queue.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/flags.make
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TX/TX_Queue.c.obj: /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/TX/TX_Queue.c
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TX/TX_Queue.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TX/TX_Queue.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TX/TX_Queue.c.obj"
 	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TX/TX_Queue.c.obj -MF CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TX/TX_Queue.c.obj.d -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TX/TX_Queue.c.obj -c /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/TX/TX_Queue.c
 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TX/TX_Queue.c.i: cmake_force
@@ -299,7 +313,7 @@ CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TX/TX_Queue.c.s: cmake_force
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TX/TX_Task.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/flags.make
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TX/TX_Task.c.obj: /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/TX/TX_Task.c
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TX/TX_Task.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TX/TX_Task.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TX/TX_Task.c.obj"
 	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TX/TX_Task.c.obj -MF CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TX/TX_Task.c.obj.d -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TX/TX_Task.c.obj -c /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/TX/TX_Task.c
 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TX/TX_Task.c.i: cmake_force
@@ -313,7 +327,7 @@ CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/TX/TX_Task.c.s: cmake_force
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Util/Flags.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/flags.make
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Util/Flags.c.obj: /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/Util/Flags.c
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Util/Flags.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Util/Flags.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Util/Flags.c.obj"
 	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Util/Flags.c.obj -MF CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Util/Flags.c.obj.d -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Util/Flags.c.obj -c /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/Util/Flags.c
 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Util/Flags.c.i: cmake_force
@@ -327,7 +341,7 @@ CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Util/Flags.c.s: cmake_force
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Util/id.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/flags.make
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Util/id.c.obj: /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/Util/id.c
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Util/id.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Util/id.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Util/id.c.obj"
 	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Util/id.c.obj -MF CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Util/id.c.obj.d -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Util/id.c.obj -c /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/Util/id.c
 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Util/id.c.i: cmake_force
@@ -341,7 +355,7 @@ CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Util/id.c.s: cmake_force
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Util/queue_implementation.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/flags.make
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Util/queue_implementation.c.obj: /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/Util/queue_implementation.c
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Util/queue_implementation.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Util/queue_implementation.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Util/queue_implementation.c.obj"
 	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Util/queue_implementation.c.obj -MF CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Util/queue_implementation.c.obj.d -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Util/queue_implementation.c.obj -c /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/Util/queue_implementation.c
 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Util/queue_implementation.c.i: cmake_force
@@ -355,7 +369,7 @@ CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Util/queue_implementation.c.s: cma
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/freertos.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/flags.make
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/freertos.c.obj: /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/freertos.c
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/freertos.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/freertos.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/freertos.c.obj"
 	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/freertos.c.obj -MF CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/freertos.c.obj.d -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/freertos.c.obj -c /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/freertos.c
 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/freertos.c.i: cmake_force
@@ -369,7 +383,7 @@ CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/freertos.c.s: cmake_force
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/main.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/flags.make
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/main.c.obj: /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/main.c
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/main.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/main.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/main.c.obj"
 	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/main.c.obj -MF CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/main.c.obj.d -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/main.c.obj -c /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/main.c
 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/main.c.i: cmake_force
@@ -383,7 +397,7 @@ CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/main.c.s: cmake_force
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/flags.make
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj: /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/stm32f1xx_hal_msp.c
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj"
 	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj -MF CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj.d -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj -c /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/stm32f1xx_hal_msp.c
 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/stm32f1xx_hal_msp.c.i: cmake_force
@@ -397,7 +411,7 @@ CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/stm32f1xx_hal_msp.c.s: cmake_force
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/stm32f1xx_hal_timebase_tim.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/flags.make
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/stm32f1xx_hal_timebase_tim.c.obj: /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/stm32f1xx_hal_timebase_tim.c
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/stm32f1xx_hal_timebase_tim.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/stm32f1xx_hal_timebase_tim.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/stm32f1xx_hal_timebase_tim.c.obj"
 	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/stm32f1xx_hal_timebase_tim.c.obj -MF CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/stm32f1xx_hal_timebase_tim.c.obj.d -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/stm32f1xx_hal_timebase_tim.c.obj -c /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/stm32f1xx_hal_timebase_tim.c
 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/stm32f1xx_hal_timebase_tim.c.i: cmake_force
@@ -411,7 +425,7 @@ CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/stm32f1xx_hal_timebase_tim.c.s: cm
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/stm32f1xx_it.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/flags.make
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/stm32f1xx_it.c.obj: /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/stm32f1xx_it.c
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/stm32f1xx_it.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/stm32f1xx_it.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/stm32f1xx_it.c.obj"
 	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/stm32f1xx_it.c.obj -MF CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/stm32f1xx_it.c.obj.d -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/stm32f1xx_it.c.obj -c /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/stm32f1xx_it.c
 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/stm32f1xx_it.c.i: cmake_force
@@ -425,7 +439,7 @@ CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/stm32f1xx_it.c.s: cmake_force
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/syscalls.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/flags.make
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/syscalls.c.obj: /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/syscalls.c
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/syscalls.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/syscalls.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/syscalls.c.obj"
 	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/syscalls.c.obj -MF CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/syscalls.c.obj.d -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/syscalls.c.obj -c /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/syscalls.c
 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/syscalls.c.i: cmake_force
@@ -439,7 +453,7 @@ CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/syscalls.c.s: cmake_force
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/sysmem.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/flags.make
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/sysmem.c.obj: /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/sysmem.c
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/sysmem.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/sysmem.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/sysmem.c.obj"
 	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/sysmem.c.obj -MF CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/sysmem.c.obj.d -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/sysmem.c.obj -c /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/sysmem.c
 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/sysmem.c.i: cmake_force
@@ -453,7 +467,7 @@ CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/sysmem.c.s: cmake_force
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/system_stm32f1xx.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/flags.make
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/system_stm32f1xx.c.obj: /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/system_stm32f1xx.c
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/system_stm32f1xx.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/system_stm32f1xx.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/system_stm32f1xx.c.obj"
 	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/system_stm32f1xx.c.obj -MF CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/system_stm32f1xx.c.obj.d -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/system_stm32f1xx.c.obj -c /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Src/system_stm32f1xx.c
 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/system_stm32f1xx.c.i: cmake_force
@@ -466,7 +480,7 @@ CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/system_stm32f1xx.c.s: cmake_force
 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Startup/startup_stm32f103c8tx.s.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/flags.make
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Startup/startup_stm32f103c8tx.s.obj: /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Startup/startup_stm32f103c8tx.s
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building ASM object CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Startup/startup_stm32f103c8tx.s.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building ASM object CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Startup/startup_stm32f103c8tx.s.obj"
 	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Startup/startup_stm32f103c8tx.s.obj -c /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Core/Startup/startup_stm32f103c8tx.s
 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Startup/startup_stm32f103c8tx.s.i: cmake_force
@@ -480,7 +494,7 @@ CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Startup/startup_stm32f103c8tx.s.s: cma
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/flags.make
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj: /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj"
 	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj -MF CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj.d -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj -c /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c
 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.i: cmake_force
@@ -494,7 +508,7 @@ CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/flags.make
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj: /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj"
 	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj -MF CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj.d -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj -c /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c
 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.i: cmake_force
@@ -508,7 +522,7 @@ CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/flags.make
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj: /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj"
 	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj -MF CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj.d -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj -c /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c
 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.i: cmake_force
@@ -522,7 +536,7 @@ CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/flags.make
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c.obj: /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c.obj"
 	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c.obj -MF CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c.obj.d -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c.obj -c /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c
 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c.i: cmake_force
@@ -536,7 +550,7 @@ CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/flags.make
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c.obj: /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c.obj"
 	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c.obj -MF CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c.obj.d -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c.obj -c /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c
 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c.i: cmake_force
@@ -550,7 +564,7 @@ CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/flags.make
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c.obj: /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c.obj"
 	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c.obj -MF CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c.obj.d -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c.obj -c /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c
 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c.i: cmake_force
@@ -564,7 +578,7 @@ CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/flags.make
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj: /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj"
 	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj -MF CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj.d -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj -c /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c
 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.i: cmake_force
@@ -578,7 +592,7 @@ CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/flags.make
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c.obj: /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c.obj"
 	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c.obj -MF CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c.obj.d -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c.obj -c /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c
 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c.i: cmake_force
@@ -592,7 +606,7 @@ CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/flags.make
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c.obj: /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c.obj"
 	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c.obj -MF CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c.obj.d -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c.obj -c /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c
 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c.i: cmake_force
@@ -606,7 +620,7 @@ CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/flags.make
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj: /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj"
 	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj -MF CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj.d -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj -c /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c
 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.i: cmake_force
@@ -620,7 +634,7 @@ CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/flags.make
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.obj: /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.obj"
 	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.obj -MF CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.obj.d -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.obj -c /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c
 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.i: cmake_force
@@ -634,7 +648,7 @@ CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/flags.make
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c.obj: /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c.obj"
 	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c.obj -MF CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c.obj.d -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c.obj -c /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c
 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c.i: cmake_force
@@ -648,7 +662,7 @@ CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/flags.make
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj: /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj"
 	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj -MF CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj.d -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj -c /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c
 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.i: cmake_force
@@ -662,7 +676,7 @@ CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/flags.make
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj: /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj"
 	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj -MF CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj.d -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj -c /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c
 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.i: cmake_force
@@ -676,7 +690,7 @@ CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/flags.make
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj: /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj"
 	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj -MF CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj.d -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj -c /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c
 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.i: cmake_force
@@ -690,7 +704,7 @@ CMakeFiles/mesh-drones-FRTOS.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/flags.make
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj: /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj"
 	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj -MF CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj.d -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj -c /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c
 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.i: cmake_force
@@ -704,7 +718,7 @@ CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMS
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/flags.make
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj: /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Middlewares/Third_Party/FreeRTOS/Source/croutine.c
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj"
 	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj -MF CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj.d -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj -c /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Middlewares/Third_Party/FreeRTOS/Source/croutine.c
 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.i: cmake_force
@@ -718,7 +732,7 @@ CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/cro
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/flags.make
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj: /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj"
 	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj -MF CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj.d -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj -c /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c
 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.i: cmake_force
@@ -732,7 +746,7 @@ CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/eve
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/flags.make
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj: /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Middlewares/Third_Party/FreeRTOS/Source/list.c
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj"
 	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj -MF CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj.d -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj -c /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Middlewares/Third_Party/FreeRTOS/Source/list.c
 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.i: cmake_force
@@ -746,7 +760,7 @@ CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/lis
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/flags.make
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.obj: /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.obj"
 	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.obj -MF CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.obj.d -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.obj -c /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c
 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.i: cmake_force
@@ -760,7 +774,7 @@ CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/por
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/flags.make
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj: /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj"
 	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj -MF CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj.d -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj -c /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c
 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.i: cmake_force
@@ -774,7 +788,7 @@ CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/por
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/flags.make
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj: /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Middlewares/Third_Party/FreeRTOS/Source/queue.c
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj"
 	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj -MF CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj.d -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj -c /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Middlewares/Third_Party/FreeRTOS/Source/queue.c
 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.i: cmake_force
@@ -788,7 +802,7 @@ CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/que
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/flags.make
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj: /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj"
 	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj -MF CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj.d -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj -c /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c
 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.i: cmake_force
@@ -802,7 +816,7 @@ CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/str
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/flags.make
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj: /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Middlewares/Third_Party/FreeRTOS/Source/tasks.c
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj"
 	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj -MF CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj.d -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj -c /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Middlewares/Third_Party/FreeRTOS/Source/tasks.c
 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.i: cmake_force
@@ -816,7 +830,7 @@ CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tas
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/flags.make
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj: /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Middlewares/Third_Party/FreeRTOS/Source/timers.c
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj: CMakeFiles/mesh-drones-FRTOS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj"
 	/home/royivri/st/stm32cubeclt_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj -MF CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj.d -o CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj -c /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/Middlewares/Third_Party/FreeRTOS/Source/timers.c
 
 CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.i: cmake_force
@@ -835,6 +849,7 @@ mesh__drones__FRTOS_elf_OBJECTS = \
 "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/LoRa/LoRa.c.obj" \
 "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/LoRa/LoRa_Startup.c.obj" \
 "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Mesh/packet.c.obj" \
+"CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Mesh/xPacket_recovery_task.c.obj" \
 "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Network/PING_task.c.obj" \
 "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/RX/RX_Queue.c.obj" \
 "CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/RX/RX_Task.c.obj" \
@@ -893,6 +908,7 @@ mesh-drones-FRTOS.elf: CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/DRONE/xDron
 mesh-drones-FRTOS.elf: CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/LoRa/LoRa.c.obj
 mesh-drones-FRTOS.elf: CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/LoRa/LoRa_Startup.c.obj
 mesh-drones-FRTOS.elf: CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Mesh/packet.c.obj
+mesh-drones-FRTOS.elf: CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Mesh/xPacket_recovery_task.c.obj
 mesh-drones-FRTOS.elf: CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/Network/PING_task.c.obj
 mesh-drones-FRTOS.elf: CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/RX/RX_Queue.c.obj
 mesh-drones-FRTOS.elf: CMakeFiles/mesh-drones-FRTOS.elf.dir/Core/Src/RX/RX_Task.c.obj
@@ -943,7 +959,7 @@ mesh-drones-FRTOS.elf: CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Pa
 mesh-drones-FRTOS.elf: CMakeFiles/mesh-drones-FRTOS.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
 mesh-drones-FRTOS.elf: CMakeFiles/mesh-drones-FRTOS.elf.dir/build.make
 mesh-drones-FRTOS.elf: CMakeFiles/mesh-drones-FRTOS.elf.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Linking C executable mesh-drones-FRTOS.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Linking C executable mesh-drones-FRTOS.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/mesh-drones-FRTOS.elf.dir/link.txt --verbose=$(VERBOSE)
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Building /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/mesh-drones-FRTOS.hex"
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Building /home/royivri/STM32CubeIDE/workspace_1.19.0/mesh-drones-FRTOS/cmake-build-debug/mesh-drones-FRTOS.bin"

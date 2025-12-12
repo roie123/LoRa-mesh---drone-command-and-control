@@ -4,6 +4,7 @@
 "./Core/Src/LoRa/LoRa.o"
 "./Core/Src/LoRa/LoRa_Startup.o"
 "./Core/Src/Mesh/packet.o"
+"./Core/Src/Mesh/xPacket_recovery_task.o"
 "./Core/Src/Network/PING_task.o"
 "./Core/Src/RX/RX_Queue.o"
 "./Core/Src/RX/RX_Task.o"

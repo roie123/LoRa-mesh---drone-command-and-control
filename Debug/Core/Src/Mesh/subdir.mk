@@ -5,13 +5,16 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../Core/Src/Mesh/packet.c 
+../Core/Src/Mesh/packet.c \
+../Core/Src/Mesh/xPacket_recovery_task.c 
 
 OBJS += \
-./Core/Src/Mesh/packet.o 
+./Core/Src/Mesh/packet.o \
+./Core/Src/Mesh/xPacket_recovery_task.o 
 
 C_DEPS += \
-./Core/Src/Mesh/packet.d 
+./Core/Src/Mesh/packet.d \
+./Core/Src/Mesh/xPacket_recovery_task.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -21,7 +24,7 @@ Core/Src/Mesh/%.o Core/Src/Mesh/%.su Core/Src/Mesh/%.cyclo: ../Core/Src/Mesh/%.c
 clean: clean-Core-2f-Src-2f-Mesh
 
 clean-Core-2f-Src-2f-Mesh:
-	-$(RM) ./Core/Src/Mesh/packet.cyclo ./Core/Src/Mesh/packet.d ./Core/Src/Mesh/packet.o ./Core/Src/Mesh/packet.su
+	-$(RM) ./Core/Src/Mesh/packet.cyclo ./Core/Src/Mesh/packet.d ./Core/Src/Mesh/packet.o ./Core/Src/Mesh/packet.su ./Core/Src/Mesh/xPacket_recovery_task.cyclo ./Core/Src/Mesh/xPacket_recovery_task.d ./Core/Src/Mesh/xPacket_recovery_task.o ./Core/Src/Mesh/xPacket_recovery_task.su
 
 .PHONY: clean-Core-2f-Src-2f-Mesh
 

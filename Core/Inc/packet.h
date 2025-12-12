@@ -37,6 +37,7 @@ typedef struct __attribute__((packed)) {
     uint8_t payload[MESH_MAX_PAYLOAD];
     uint8_t crc;
     int8_t rssi;
+    uint8_t retry_count;
 } MeshPacket;
 
 
@@ -44,7 +45,10 @@ typedef struct {
     uint8_t dst_id;
     uint8_t flags;
     uint8_t msg_id;
+    uint8_t retries_count;
+    uint32_t last_sent_time;
     uint8_t payload[MESH_MAX_PAYLOAD];
+    uint8_t payload_length;
 
 
 } CompressedPacket;
