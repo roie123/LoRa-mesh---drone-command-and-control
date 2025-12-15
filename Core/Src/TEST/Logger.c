@@ -49,7 +49,7 @@ void uart3_transmit_safe(uint8_t *buffer, uint16_t len) {
 
         HAL_UART_Transmit_DMA(&huart3, buffer, len);
 
-        while (uart3_dma_busy != pdFALSE) {
+        while (uart3_dma_busy != pdTRUE) {
             vTaskDelay(1);
         }
 

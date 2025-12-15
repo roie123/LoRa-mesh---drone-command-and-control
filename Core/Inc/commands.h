@@ -22,7 +22,8 @@ typedef enum {
     STABLE=11,
     SWITCH=12,
     PITCH_UP=13,
-    PITCH_DOWN=14
+    PITCH_DOWN=14,
+    ARM=15
 
 
 }Commands;

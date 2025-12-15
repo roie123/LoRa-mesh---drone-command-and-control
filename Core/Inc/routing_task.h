@@ -20,7 +20,15 @@ typedef struct {
 
 
 void routing_task(void *args);
-
+void control_next_drone();
+void safe_control_next_drone();
+void control_myself();
+void safe_control_myself();
+MeshPacket* build_forward_command(MeshPacket *packet,uint8_t command);
+MeshPacket* safe_build_forward_command(MeshPacket *packet,uint8_t command);
+void safe_updateRSSI_in_connected_nodes(MeshPacket *packet);
+void build_ack(MeshPacket *packet);
+void forward_command();
 uint8_t handle_my_packets(MeshPacket *packet);
 
 uint8_t handle_broadcasts(MeshPacket *packet);

@@ -22,9 +22,6 @@
 #include "../../Inc/TX_Queue.h"
 
 
-
-
-
 /**
  * @brief Routes incoming mesh packets and performs local handling.
  *
@@ -44,113 +41,52 @@ void routing_task(void *args) {
     MeshPacket packet_to_send;
     for (;;) {
         if (xQueueReceive(rx_queue_handle, received_byte_array,portMAX_DELAY) == pdPASS) {
-
-            if (received_byte_array[0]==MANUAL_COMMAND_IDENTIFIER) { //MANUAL DRONE CONTROL
+            if (received_byte_array[0] == MANUAL_COMMAND_IDENTIFIER) {
+                //MANUAL DRONE CONTROL
                 Commands cmd = received_byte_array[1];
                 switch (cmd) {
-                    case SWITCH : {
-                        if (current_selected_drone==CURRENT_SELECTED_DRONE_THIS_DRONE) {
-                            current_selected_drone=0;
-                            char msg[20] = {0};
-
+                    case SWITCH: {
+                        if (current_selected_drone == CURRENT_SELECTED_DRONE_THIS_DRONE) {
+                            safe_control_myself();
                             continue;
-                        }else {
-
-
-                            uint8_t temp = current_selected_drone;
-                            if (xSemaphoreTake(network_data_mutex_handle,10)==pdPASS) {
-
-                                for (int i = current_selected_drone+1; i < MAX_NODES; ++i) {
-                                    if (connected_nodes[i].id!=0) {
-                                        current_selected_drone=i;
-                                        break;
-                                    }
-
-                                }
-                                xSemaphoreGive(network_data_mutex_handle);
-                                if (temp==current_selected_drone) {
-                                    current_selected_drone=CURRENT_SELECTED_DRONE_THIS_DRONE;
-                                }
-
-                                continue;
-                            }
-
+                        } else {
+                            safe_control_next_drone();
                             break;
-
-
-
                         }
-
-
                     }
 
 
+                    default: {
+                        safe_build_forward_command(&packet_to_send, received_byte_array[1]);
 
-                        default: {
-                        uint8_t packet_payload[1]={received_byte_array[1]}; // this is the command
-
-                        xSemaphoreTake(network_data_mutex_handle,10);
-                        uint8_t temp_address = connected_nodes[current_selected_drone].id;
-                        mesh_build_packet(&packet_to_send,
-                            mesh_id,
-                            temp_address,
-                            0,0,packet_payload,sizeof(packet_payload));
-
-                        xSemaphoreGive(network_data_mutex_handle);
-                        xQueueSend(tx_Queue_handle,&packet_to_send,10);
+                        xQueueSend(tx_Queue_handle, &packet_to_send, 10);
                     }
-
-
-
-
-
                 }
 
 
                 continue;
-            }
-            memcpy(&pkt, received_byte_array, sizeof(MeshPacket));
-            uint8_t source_node_local_index = find_node_safe(pkt.src_id,network_data_mutex_handle);
-            if (source_node_local_index >-1) {
-                if (xSemaphoreTake(network_data_mutex_handle,10) == pdPASS) {
-                    connected_nodes[source_node_local_index].rssi= pkt.rssi;
+            } /// END OF MANUAL CONTROL
 
-                    xSemaphoreGive(network_data_mutex_handle);
-                }
-            }
-            
+            memcpy(&pkt, received_byte_array, sizeof(MeshPacket));
+            safe_updateRSSI_in_connected_nodes(&pkt);
+
             Commands command = (Commands) pkt.payload[0];
 
 
-            if (pkt.dst_id == (uint8_t)mesh_id) {
+            if (pkt.dst_id == (uint8_t) mesh_id) {
                 switch (command) {
-                    case CONNECTION_ACK: {
-                        remove_connection_request(pkt.src_id,network_data_mutex_handle);
-                        add_connected_node(pkt.src_id, 0, 0, network_data_mutex_handle);
-                        last_packets_sent_remove(pkt.src_id, pkt.msg_id);
-
-
-                        continue;
-                    }
-
-
                     case ACKNOWLEDGE: {
                         last_packets_sent_remove(pkt.src_id, pkt.msg_id);
                         continue;
                     }
                 }
-          
+
 
                 Commands cmd_to_queue = command;
                 xQueueSend(command_queue, &cmd_to_queue, pdMS_TO_TICKS(20));
 
-                uint8_t ack_payload[1] = {ACKNOWLEDGE};
-                mesh_build_packet(&packet_to_send, mesh_id, pkt.src_id, 0, 0, ack_payload, sizeof(ack_payload));
-
+                build_ack(&packet_to_send);
                 xQueueSend(tx_Queue_handle, &packet_to_send, pdMS_TO_TICKS(100));
-
-
-
 
 
                 continue;
@@ -159,7 +95,6 @@ void routing_task(void *args) {
 
             if (pkt.dst_id == BROADCAST_ADDRESS) {
                 switch (command) {
-
                     case PING_COMMAND: {
                         add_connected_node(pkt.src_id, 0, 0, network_data_mutex_handle);
                         continue;
@@ -172,7 +107,8 @@ void routing_task(void *args) {
 
             if (pkt.dst_id != mesh_id && pkt.dst_id != BROADCAST_ADDRESS) {
                 // i need to forward this packet
-                if (!find_in_last_packets(pkt.dst_id, pkt.msg_id)) {// i check if i didnt already got this packet
+                if (!find_in_last_packets(pkt.dst_id, pkt.msg_id)) {
+                    // i check if i didnt already got this packet
                     compressed_packet.dst_id = pkt.dst_id;
                     compressed_packet.msg_id = pkt.msg_id;
                     memcpy(&compressed_packet.payload, pkt.payload, sizeof(pkt.payload));
@@ -181,7 +117,8 @@ void routing_task(void *args) {
                     add_received_packet(&compressed_packet);
                     pkt.max_hops--;
                     xQueueSend(tx_Queue_handle, &pkt, pdMS_TO_TICKS(100)); //forwarding
-                } else {// i already sent this packet once
+                } else {
+                    // i already sent this packet once
                     continue;
                 }
 
@@ -190,4 +127,75 @@ void routing_task(void *args) {
             }
         }
     }
+}
+
+void control_next_drone() {
+    uint8_t temp = current_selected_drone;
+
+    for (int i = current_selected_drone + 1; i < MAX_NODES; ++i) {
+        if (connected_nodes[i].id != 0) {
+            current_selected_drone = i;
+            break;
+        }
+    }
+    if (temp == current_selected_drone) {
+        current_selected_drone = CURRENT_SELECTED_DRONE_THIS_DRONE;
+    }
+}
+
+void safe_control_next_drone() {
+    if (xSemaphoreTake(network_data_mutex_handle, 10) == pdPASS) {
+        control_next_drone();
+        xSemaphoreGive(network_data_mutex_handle);
+    }
+}
+
+void control_myself() {
+    current_selected_drone = 0;
+}
+
+void safe_control_myself() {
+    if (xSemaphoreTake(network_data_mutex_handle, 10) == pdPASS) {
+        control_myself();
+        xSemaphoreGive(network_data_mutex_handle);
+    } else {
+        log(WARNING, SYSTEM, "safe_control_myself timed out (network mutex)");
+    }
+}
+
+
+MeshPacket *build_forward_command(MeshPacket *packet, uint8_t command) {
+    uint8_t temp_address = connected_nodes[current_selected_drone].id;
+    uint8_t packet_payload[1] = {command};
+    mesh_build_packet(packet,
+                      mesh_id,
+                      temp_address,
+                      0, 0, packet_payload, sizeof(packet_payload));
+    return packet;
+}
+
+MeshPacket *safe_build_forward_command(MeshPacket *packet, uint8_t command) {
+    if (xSemaphoreTake(network_data_mutex_handle, 10) == pdPASS) {
+        return build_forward_command(packet, command);
+    } else {
+        log(WARNING, SYSTEM, "safe_build_forward_command timed out (network mutex)");
+        return NULL;
+    }
+}
+
+void safe_updateRSSI_in_connected_nodes(MeshPacket *packet) {
+    uint8_t source_node_local_index = find_node_safe(packet->src_id, network_data_mutex_handle);
+    if (source_node_local_index > -1) {
+        if (xSemaphoreTake(network_data_mutex_handle, 10) == pdPASS) {
+            connected_nodes[source_node_local_index].rssi = packet->rssi;
+
+            xSemaphoreGive(network_data_mutex_handle);
+        }
+    }
+}
+
+void build_ack(MeshPacket *packet) {
+    uint8_t ack_payload[1] = {ACKNOWLEDGE};
+    mesh_build_packet(&packet, mesh_id, packet->src_id, 0, 0, ack_payload, sizeof(ack_payload));
+
 }

@@ -5,7 +5,7 @@
 #include "../../Inc/RC_Values.h"
 
 
-Rc_values current_rc_values = {900,900,900,900};
+Rc_values current_rc_values = {1500,1500,1500,1500};
 
 
 
