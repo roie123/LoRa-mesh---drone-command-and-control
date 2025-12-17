@@ -28,12 +28,12 @@ void log(LOG_SEVERITY severity, LOG_CATEGORY category, const char *msg) {
     if (msg_mask & log_control_mask == 0) {
 
         int len = snprintf(
-        log_buffer,                          // Destination buffer
-        LOG_BUFFER_SIZE,                     // Max size of buffer
-        "[%s] [%s] %s\r\n",                  // The complete, easy-to-read format string
-        severity_str,                        // Arg 1: Severity string
-        category_str,                        // Arg 2: Category string
-        msg                                  // Arg 3: The actual log message
+        log_buffer,
+        LOG_BUFFER_SIZE,
+        "[%s] [%s] %s\r\n",
+        severity_str,
+        category_str,
+        msg
     );
         uart3_transmit_safe((uint8_t*)log_buffer, (uint16_t)len);
 
