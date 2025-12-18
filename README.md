@@ -1,4 +1,4 @@
-# 🕸️ LoRa Mesh Network for FOV Drones  
+# 🕸️ LoRa Mesh Network for FPV Drones  
 **STM32F103 • LoRa RA-02 • FreeRTOS • Ad-Hoc Routing**
 
 This repository contains a lightweight **mesh networking implementation** for FOV drones using **LoRa RA-02** radios and an **STM32F103** microcontroller.  
