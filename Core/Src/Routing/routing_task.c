@@ -47,10 +47,9 @@ void routing_task(void *args) {
                 switch (cmd) {
                     case SWITCH: {
                         if (current_selected_drone == CURRENT_SELECTED_DRONE_THIS_DRONE) {
-                            safe_control_myself();
+                            safe_control_next_drone();
                             continue;
                         } else {
-                            safe_control_next_drone();
                             break;
                         }
                     }
@@ -197,5 +196,4 @@ void safe_updateRSSI_in_connected_nodes(MeshPacket *packet) {
 void build_ack(MeshPacket *packet) {
     uint8_t ack_payload[1] = {ACKNOWLEDGE};
     mesh_build_packet(&packet, mesh_id, packet->src_id, 0, 0, ack_payload, sizeof(ack_payload));
-
 }
