@@ -74,7 +74,9 @@ int is_connection_request_exist(uint8_t value, SemaphoreHandle_t network_data_mu
 
 int add_connected_node(uint8_t id, uint8_t type, int rssi, SemaphoreHandle_t network_data_mutex) {
     // Already exists? Update it
-
+if(id == CURRENT_SELECTED_DRONE_THIS_DRONE){
+    return -1;
+}
 
     if (xSemaphoreTake(network_data_mutex, portMAX_DELAY) == pdTRUE) {
         int idx = find_node(id);

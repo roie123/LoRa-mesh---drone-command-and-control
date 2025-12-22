@@ -46,19 +46,15 @@ void routing_task(void *args) {
                 Commands cmd = received_byte_array[1];
                 switch (cmd) {
                     case SWITCH: {
-                        if (current_selected_drone == CURRENT_SELECTED_DRONE_THIS_DRONE) {
-                            safe_control_next_drone();
-                            continue;
-                        } else {
-                            break;
-                        }
+                       safe_control_next_drone();
+                        break;
                     }
 
 
                     default: {
                         safe_build_forward_command(&packet_to_send, received_byte_array[1]);
 
-                        xQueueSend(tx_Queue_handle, &packet_to_send, 10);
+                        xQueueSend(tx_Queue_handle, &packet_to_send, portMAX_DELAY);
                     }
                 }
 
@@ -115,7 +111,7 @@ void routing_task(void *args) {
 
                     add_received_packet(&compressed_packet);
                     pkt.max_hops--;
-                    xQueueSend(tx_Queue_handle, &pkt, pdMS_TO_TICKS(100)); //forwarding
+                    xQueueSend(tx_Queue_handle, &pkt, portMAX_DELAY); //forwarding
                 } else {
                     // i already sent this packet once
                     continue;
@@ -131,7 +127,7 @@ void routing_task(void *args) {
 void control_next_drone() {
     uint8_t temp = current_selected_drone;
 
-    for (int i = current_selected_drone + 1; i < MAX_NODES; ++i) {
+    for (uint8_t i = current_selected_drone + 1; i < MAX_NODES; ++i) {
         if (connected_nodes[i].id != 0) {
             current_selected_drone = i;
             break;
@@ -143,7 +139,7 @@ void control_next_drone() {
 }
 
 void safe_control_next_drone() {
-    if (xSemaphoreTake(network_data_mutex_handle, 10) == pdPASS) {
+    if (xSemaphoreTake(network_data_mutex_handle, portMAX_DELAY) == pdPASS) {
         control_next_drone();
         xSemaphoreGive(network_data_mutex_handle);
     }
@@ -154,7 +150,7 @@ void control_myself() {
 }
 
 void safe_control_myself() {
-    if (xSemaphoreTake(network_data_mutex_handle, 10) == pdPASS) {
+    if (xSemaphoreTake(network_data_mutex_handle, portMAX_DELAY) == pdPASS) {
         control_myself();
         xSemaphoreGive(network_data_mutex_handle);
     } else {
@@ -174,22 +170,27 @@ MeshPacket *build_forward_command(MeshPacket *packet, uint8_t command) {
 }
 
 MeshPacket *safe_build_forward_command(MeshPacket *packet, uint8_t command) {
-    if (xSemaphoreTake(network_data_mutex_handle, 10) == pdPASS) {
-        return build_forward_command(packet, command);
-    } else {
-        log(WARNING, SYSTEM, "safe_build_forward_command timed out (network mutex)");
+    if (xSemaphoreTake(network_data_mutex_handle, portMAX_DELAY) == pdPASS) {
+        build_forward_command(packet, command);
+        return packet;
+        xSemaphoreGive(network_data_mutex_handle);
+    }else {
+        log(FATAL, SYSTEM, "safe_build_forward_command timed out (network mutex)");
         return NULL;
     }
+
 }
 
 void safe_updateRSSI_in_connected_nodes(MeshPacket *packet) {
-    uint8_t source_node_local_index = find_node_safe(packet->src_id, network_data_mutex_handle);
-    if (source_node_local_index > -1) {
-        if (xSemaphoreTake(network_data_mutex_handle, 10) == pdPASS) {
-            connected_nodes[source_node_local_index].rssi = packet->rssi;
 
-            xSemaphoreGive(network_data_mutex_handle);
-        }
+    if (xSemaphoreTake(network_data_mutex_handle, portMAX_DELAY) == pdPASS) {
+        int source_node_local_index = find_node(packet->src_id);
+        if (source_node_local_index > -1) {
+                connected_nodes[source_node_local_index].rssi = packet->rssi;
+
+            }
+
+        xSemaphoreGive(network_data_mutex_handle);
     }
 }
 

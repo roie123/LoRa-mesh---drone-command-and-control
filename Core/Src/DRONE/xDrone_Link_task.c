@@ -104,7 +104,7 @@ void xDrone_link_task(void *args) {
             case STABLE:
                 msp_rc_frame.channels[0] = 1500;
                 msp_rc_frame.channels[1] = 1500;
-                msp_rc_frame.channels[2] = 990;
+                msp_rc_frame.channels[2] = 999;
                 msp_rc_frame.channels[3] = 1500;
                 break;
 
