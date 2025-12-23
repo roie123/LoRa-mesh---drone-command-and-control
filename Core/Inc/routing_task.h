@@ -34,4 +34,5 @@ uint8_t handle_my_packets(MeshPacket *packet);
 uint8_t handle_broadcasts(MeshPacket *packet);
 
 uint8_t handle_forwarding(MeshPacket *packet);
+uint8_t decrement_hops(MeshPacket *packet);
 #endif //ROUTING_TASK_H

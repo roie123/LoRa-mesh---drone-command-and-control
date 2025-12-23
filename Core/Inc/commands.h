@@ -5,6 +5,7 @@
 #ifndef COMMANDS_H
 #define COMMANDS_H
 #define MANUAL_COMMAND_IDENTIFIER 0x00
+#define MANUAL_COMMAND_IDENTIFIER_INDEX 1U
 
 
 typedef enum {

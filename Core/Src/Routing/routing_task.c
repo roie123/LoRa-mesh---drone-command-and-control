@@ -41,9 +41,9 @@ void routing_task(void *args) {
     MeshPacket packet_to_send;
     for (;;) {
         if (xQueueReceive(rx_queue_handle, received_byte_array,portMAX_DELAY) == pdPASS) {
-            if (received_byte_array[0] == MANUAL_COMMAND_IDENTIFIER) {
+            if (received_byte_array[MANUAL_COMMAND_IDENTIFIER_INDEX] == MANUAL_COMMAND_IDENTIFIER) {
                 //MANUAL DRONE CONTROL
-                Commands cmd = received_byte_array[1];
+                Commands cmd = (Commands) received_byte_array[MANUAL_COMMAND_IDENTIFIER_INDEX];
                 switch (cmd) {
                     case SWITCH: {
                        safe_control_next_drone();
@@ -78,10 +78,16 @@ void routing_task(void *args) {
 
 
                 Commands cmd_to_queue = command;
-                xQueueSend(command_queue, &cmd_to_queue, pdMS_TO_TICKS(20));
+                if (xQueueSend(command_queue, &cmd_to_queue, portMAX_DELAY)!=pdPASS) {
+                    log(FATAL,SYSTEM,"ROUTER  :: could not send command to queue");
+                }
+
 
                 build_ack(&packet_to_send);
-                xQueueSend(tx_Queue_handle, &packet_to_send, pdMS_TO_TICKS(100));
+                if (xQueueSend(tx_Queue_handle, &packet_to_send,portMAX_DELAY)!=pdPASS) {
+                    log(FATAL,SYSTEM,"ROUTER  :: could not send acknowledge to TX queue");
+                }
+                ;
 
 
                 continue;
@@ -110,7 +116,7 @@ void routing_task(void *args) {
 
 
                     add_received_packet(&compressed_packet);
-                    pkt.max_hops--;
+                    decrement_hops(&pkt);
                     xQueueSend(tx_Queue_handle, &pkt, portMAX_DELAY); //forwarding
                 } else {
                     // i already sent this packet once
@@ -170,6 +176,7 @@ MeshPacket *build_forward_command(MeshPacket *packet, uint8_t command) {
 }
 
 MeshPacket *safe_build_forward_command(MeshPacket *packet, uint8_t command) {
+    MeshPacket *ret = NULL;
     if (xSemaphoreTake(network_data_mutex_handle, portMAX_DELAY) == pdPASS) {
         build_forward_command(packet, command);
         xSemaphoreGive(network_data_mutex_handle);
@@ -177,8 +184,8 @@ MeshPacket *safe_build_forward_command(MeshPacket *packet, uint8_t command) {
         return packet;
     }else {
         log(FATAL, SYSTEM, "safe_build_forward_command timed out (network mutex)");
-        return NULL;
     }
+    return ret;
 
 }
 
@@ -197,5 +204,14 @@ void safe_updateRSSI_in_connected_nodes(MeshPacket *packet) {
 
 void build_ack(MeshPacket *packet) {
     uint8_t ack_payload[1] = {ACKNOWLEDGE};
-    mesh_build_packet(&packet, mesh_id, packet->src_id, 0, 0, ack_payload, sizeof(ack_payload));
+    mesh_build_packet(packet, mesh_id, packet->src_id, 0, 0, ack_payload, sizeof(ack_payload));
+}
+
+uint8_t decrement_hops(MeshPacket *packet) {
+    if (packet->max_hops>0) {
+        packet->max_hops--;
+        return 1;
+    }else {
+        return 0;
+    }
 }
