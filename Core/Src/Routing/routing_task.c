@@ -172,8 +172,9 @@ MeshPacket *build_forward_command(MeshPacket *packet, uint8_t command) {
 MeshPacket *safe_build_forward_command(MeshPacket *packet, uint8_t command) {
     if (xSemaphoreTake(network_data_mutex_handle, portMAX_DELAY) == pdPASS) {
         build_forward_command(packet, command);
-        return packet;
         xSemaphoreGive(network_data_mutex_handle);
+
+        return packet;
     }else {
         log(FATAL, SYSTEM, "safe_build_forward_command timed out (network mutex)");
         return NULL;
