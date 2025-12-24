@@ -4,8 +4,9 @@
 
 #ifndef COMMANDS_H
 #define COMMANDS_H
-#define MANUAL_COMMAND_IDENTIFIER 0x00
-#define MANUAL_COMMAND_IDENTIFIER_INDEX 1U
+#define MANUAL_COMMAND_IDENTIFIER 0x00 //sits at the start of an incoming array
+#define MANUAL_COMMAND_IDENTIFIER_INDEX 0U// the identifier for a command array
+#define MANUAL_COMMAND_INDEX 1U // the index of the actual command
 
 
 typedef enum {

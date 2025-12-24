@@ -514,8 +514,7 @@ void vApplicationStackOverflowHook(TaskHandle_t xTask, char *pcTaskName) {
 void StartDefaultTask(void *argument)
 {
   /* USER CODE BEGIN 5 */
-    vTaskDelete(defaultTaskHandle);
-    /* Infinite loop */
+    vTaskSuspend(NULL);  // safe    /* Infinite loop */
     for (;;) {
         osDelay(1);
     }

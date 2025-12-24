@@ -43,7 +43,7 @@ void routing_task(void *args) {
         if (xQueueReceive(rx_queue_handle, received_byte_array,portMAX_DELAY) == pdPASS) {
             if (received_byte_array[MANUAL_COMMAND_IDENTIFIER_INDEX] == MANUAL_COMMAND_IDENTIFIER) {
                 //MANUAL DRONE CONTROL
-                Commands cmd = (Commands) received_byte_array[MANUAL_COMMAND_IDENTIFIER_INDEX];
+                Commands cmd = (Commands) received_byte_array[MANUAL_COMMAND_INDEX];
                 switch (cmd) {
                     case SWITCH: {
                        safe_control_next_drone();
@@ -52,7 +52,7 @@ void routing_task(void *args) {
 
 
                     default: {
-                        safe_build_forward_command(&packet_to_send, received_byte_array[1]);
+                        safe_build_forward_command(&packet_to_send, received_byte_array[MANUAL_COMMAND_INDEX]);
 
                         xQueueSend(tx_Queue_handle, &packet_to_send, portMAX_DELAY);
                     }
