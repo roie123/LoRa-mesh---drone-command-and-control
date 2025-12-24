@@ -11,6 +11,7 @@
 #include "commands.h"
 #include "General.h"
 #include "id.h"
+#include "Logger.h"
 #include "packet.h"
 #include "TX_Queue.h"
 #include "../../Inc/NetworkData.h"
@@ -48,6 +49,11 @@ void xPing_task(void *args) {
                     connected_nodes[i].type = 0;
                     connected_nodes[i].last_seen = 0;
                     }
+                if (connected_nodes[i].id != 0) {
+                    char buffer[50]={0};
+                    sprintf(buffer,"CONNECTED NODE ID :  %d",connected_nodes[i].id);
+                    log(INFO,MESH,buffer);
+                }
             }
             xSemaphoreGive(network_data_mutex_handle);
         }
