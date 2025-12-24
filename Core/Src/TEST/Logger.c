@@ -20,13 +20,13 @@ void logger_init() {
 void log(LOG_SEVERITY severity, LOG_CATEGORY category, const char *msg) {
     const char *severity_str = GetSeverityString(severity);
     const char *category_str = GetCategoryString(category);
-    char log_buffer[LOG_BUFFER_SIZE];
+    static char log_buffer[LOG_BUFFER_SIZE];
 
     uint32_t msg_mask = (uint32_t) severity | (uint32_t) category;
 
 
     if (msg_mask & log_control_mask == 0) {
-
+        memset(log_buffer, 0, LOG_BUFFER_SIZE);
         int len = snprintf(
         log_buffer,
         LOG_BUFFER_SIZE,

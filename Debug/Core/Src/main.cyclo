@@ -9,5 +9,5 @@
 ../Core/Src/main.c:490:6:HAL_UART_TxCpltCallback	3
 ../Core/Src/main.c:501:6:vApplicationStackOverflowHook	1
 ../Core/Src/main.c:514:6:StartDefaultTask	1
-../Core/Src/main.c:533:6:HAL_TIM_PeriodElapsedCallback	2
-../Core/Src/main.c:551:6:Error_Handler	1
+../Core/Src/main.c:532:6:HAL_TIM_PeriodElapsedCallback	2
+../Core/Src/main.c:550:6:Error_Handler	1
