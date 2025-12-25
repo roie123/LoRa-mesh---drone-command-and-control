@@ -50,7 +50,7 @@ void xPing_task(void *args) {
                     connected_nodes[i].last_seen = 0;
                     }
                 if (connected_nodes[i].id != 0) {
-                    char buffer[50]={0};
+                    char buffer[MSG_DEFAULT_BUFFER_SIZE]={0};
                     sprintf(buffer,"CONNECTED NODE ID :  %d",connected_nodes[i].id);
                     log(INFO,MESH,buffer);
                 }

@@ -23,7 +23,9 @@
 #define LOG_DRONE_MASK (1U << 10)
 #define LOG_LORA_MASK (1U << 11)
 
-
+#define MSG_DEFAULT_BUFFER_SIZE 64
+#define MSG_LARGE_BUFFER_SIZE 128
+#define MSG_SMALL_BUFFER_SIZE 32
 
 extern UART_HandleTypeDef huart3;
 extern SemaphoreHandle_t uart3_mutex_handle;

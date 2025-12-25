@@ -65,7 +65,7 @@ void routing_task(void *args) {
             memcpy(&pkt, received_byte_array, sizeof(MeshPacket));
             safe_updateRSSI_in_connected_nodes(&pkt);
 
-            Commands command = (Commands) pkt.payload[0];
+            Commands command = (Commands) pkt.payload[0]; //MISRA : payload(uint8_t) fits in the enum <256
 
 
             if (pkt.dst_id == (uint8_t) mesh_id) {
@@ -131,16 +131,20 @@ void routing_task(void *args) {
 }
 
 void control_next_drone() {
-    uint8_t temp = current_selected_drone;
+    uint8_t temp = current_selected_drone_index;
 
-    for (uint8_t i = current_selected_drone + 1; i < MAX_NODES; ++i) {
+    for (uint8_t i = current_selected_drone_index + 1; i < MAX_NODES; ++i) {// wraparound is intended here
         if (connected_nodes[i].id != 0) {
-            current_selected_drone = i;
+            current_selected_drone_index = i;
+            char buffer[MSG_DEFAULT_BUFFER_SIZE]; // i dont need to memset because i do sprintf
+            sprintf(buffer,"ROUTER :: switched to : 0x%X",connected_nodes[i].id);
+            log(INFO,SYSTEM,buffer);
             break;
         }
     }
-    if (temp == current_selected_drone) {
-        current_selected_drone = CURRENT_SELECTED_DRONE_THIS_DRONE;
+    if (temp == current_selected_drone_index) {
+        current_selected_drone_index = CURRENT_SELECTED_DRONE_THIS_DRONE;
+        log(INFO, SYSTEM, "ROUTER :: no more drones to control - reverting to  self");
     }
 }
 
@@ -152,7 +156,7 @@ void safe_control_next_drone() {
 }
 
 void control_myself() {
-    current_selected_drone = 0;
+    current_selected_drone_index = 0;
 }
 
 void safe_control_myself() {
@@ -166,7 +170,7 @@ void safe_control_myself() {
 
 
 MeshPacket *build_forward_command(MeshPacket *packet, uint8_t command) {
-    uint8_t temp_address = connected_nodes[current_selected_drone].id;
+    uint8_t temp_address = connected_nodes[current_selected_drone_index].id;
     uint8_t packet_payload[1] = {command};
     mesh_build_packet(packet,
                       mesh_id,

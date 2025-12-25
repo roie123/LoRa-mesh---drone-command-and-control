@@ -13,7 +13,7 @@
 #include "semphr.h"
 
 extern QueueHandle_t command_queue;
-extern volatile uint8_t current_selected_drone;
+extern volatile uint8_t current_selected_drone_index;
 extern SemaphoreHandle_t current_selected_drone_mutex_handle;
 
 
